@@ -21,7 +21,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.3.2",
-    "typeface-roboto-mono": "0.0.54"
+    "typeface-roboto-mono": "0.0.54",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
@@ -44,7 +45,9 @@
     "start": "npm run develop",
     "build": "gatsby build",
     "now-build": "npm run build",
-    "test": "xo && stylelint 'src/**/*.js'"
+    "test": "xo && stylelint 'src/**/*.js'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -70,5 +73,6 @@
     "rules": {
       "import/no-unassigned-import": "off"
     }
-  }
+  },
+  "snyk": true
 }
