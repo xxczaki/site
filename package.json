@@ -48,7 +48,7 @@
         "babel-plugin-styled-components": "^1.10.7",
         "eslint-config-xo-react": "^0.23.0",
         "eslint-plugin-react": "^7.19.0",
-        "eslint-plugin-react-hooks": "^2.5.1",
+        "eslint-plugin-react-hooks": "^3.0.0",
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-svgo": "^7.1.0",
         "next-fonts": "^1.0.3",
