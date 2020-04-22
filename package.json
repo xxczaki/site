@@ -51,7 +51,7 @@
         "next": "^9.3.5",
         "nprogress": "^0.2.0",
         "react": "0.0.0-experimental-e5d06e34b",
-        "react-dom": "0.0.0-experimental-e5d06e34b",
+        "react-dom": "0.14.1",
         "react-simple-img": "^2.3.9",
         "swr": "^0.2.0"
     },
