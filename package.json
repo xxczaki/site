@@ -1,83 +1,87 @@
 {
-    "name": "kepinski.me",
-    "version": "1.0.0",
-    "description": "Personal site",
-    "private": true,
-    "scripts": {
-        "build": "next build",
-        "dev": "next dev",
-        "start": "next start",
-        "test": "xo && stylelint './**/*.ts'"
+  "name": "kepinski.me",
+  "version": "1.0.0",
+  "description": "Personal site",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "start": "next start",
+    "test": "xo && stylelint './**/*.ts'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "extends": [
+      "xo-typescript",
+      "xo-react"
+    ],
+    "rules": {
+      "import/no-unassigned-import": "off",
+      "import/extensions": "off",
+      "unicorn/string-content": "off",
+      "no-mixed-operators": "off",
+      "@typescript-eslint/prefer-readonly-parameter-types": "off",
+      "@typescript-eslint/restrict-template-expressions": "off"
     },
-    "engines": {
-        "node": "12.x"
+    "settings": {
+      "react": {
+        "version": "16.13"
+      }
     },
-    "xo": {
-        "envs": [
-            "node",
-            "browser"
-        ],
-        "extends": [
-            "xo-typescript",
-            "xo-react"
-        ],
-        "rules": {
-            "import/no-unassigned-import": "off",
-            "import/extensions": "off",
-            "unicorn/string-content": "off",
-            "no-mixed-operators": "off",
-            "@typescript-eslint/prefer-readonly-parameter-types": "off",
-            "@typescript-eslint/restrict-template-expressions": "off"
-        },
-        "settings": {
-            "react": {
-                "version": "16.13"
-            }
-        },
-        "extensions": [
-            "tsx",
-            "ts"
-        ],
-        "ignores": [
-            "babel.config.js",
-            "next.config.js",
-            "linaria.config.js"
-        ]
-    },
-    "dependencies": {
-        "core-js": "^3.6.5",
-        "graphql-request": "^1.8.2",
-        "lodash.debounce": "^4.0.8",
-        "next": "^9.4.0",
-        "nprogress": "^0.2.0",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
-        "react-simple-img": "^2.3.9",
-        "styled-components": "^5.1.0",
-        "swr": "^0.2.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.9.6",
-        "@types/lodash.debounce": "^4.0.6",
-        "@types/nprogress": "^0.2.0",
-        "@types/react": "^16.9.35",
-        "@types/styled-components": "^5.1.0",
-        "@typescript-eslint/eslint-plugin": "^2.32.0",
-        "@typescript-eslint/parser": "^2.32.0",
-        "babel-plugin-styled-components": "^1.10.7",
-        "eslint-config-xo-react": "^0.23.0",
-        "eslint-config-xo-typescript": "^0.28.0",
-        "eslint-plugin-react": "^7.19.0",
-        "eslint-plugin-react-hooks": "^4.0.0",
-        "imagemin-mozjpeg": "^8.0.0",
-        "imagemin-svgo": "^7.1.0",
-        "json-schema": "^0.2.5",
-        "next-fonts": "^1.1.0",
-        "next-offline": "^5.0.2",
-        "next-optimized-images": "^2.6.0",
-        "stylelint": "^13.3.3",
-        "stylelint-config-recommended": "^3.0.0",
-        "typescript": "^3.8.3",
-        "xo": "^0.30.0"
-    }
+    "extensions": [
+      "tsx",
+      "ts"
+    ],
+    "ignores": [
+      "babel.config.js",
+      "next.config.js",
+      "linaria.config.js"
+    ]
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "graphql-request": "^1.8.2",
+    "lodash.debounce": "^4.0.8",
+    "next": "^9.4.0",
+    "nprogress": "^0.2.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-simple-img": "^2.3.9",
+    "styled-components": "^5.1.0",
+    "swr": "^0.2.0",
+    "snyk": "^1.320.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^16.9.35",
+    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "@typescript-eslint/parser": "^2.32.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint-config-xo-react": "^0.23.0",
+    "eslint-config-xo-typescript": "^0.28.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-svgo": "^7.1.0",
+    "json-schema": "^0.2.5",
+    "next-fonts": "^1.1.0",
+    "next-offline": "^5.0.2",
+    "next-optimized-images": "^2.6.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0",
+    "typescript": "^3.8.3",
+    "xo": "^0.30.0"
+  },
+  "snyk": true
 }
