@@ -59,7 +59,7 @@
 		"react-dom": "16.13.1",
 		"react-parallax-tilt": "^1.4.65",
 		"react-simple-img": "^2.3.9",
-		"recoil": "0.0.10",
+		"recoil": "0.0.11",
 		"styled-components": "^5.2.0",
 		"swr": "^0.3.2"
 	},
