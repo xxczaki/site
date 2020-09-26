@@ -30,8 +30,8 @@ const GlobalStyle = createGlobalStyle<{theme: Theme}>`
 		font-weight: 400;
 		font-display: swap;
 		src: local(''),
-			url('/fonts/inter-v1-latin-regular.woff2') format('woff2'),
-			url('/fonts/inter-v1-latin-regular.woff') format('woff');
+			url('fonts/inter-v1-latin-regular.woff2') format('woff2'),
+			url('fonts/inter-v1-latin-regular.woff') format('woff');
 	}
 
 	@font-face {
@@ -40,8 +40,8 @@ const GlobalStyle = createGlobalStyle<{theme: Theme}>`
 		font-weight: 800;
 		font-display: swap;
 		src: local(''),
-			url('../public/fonts/inter-v1-latin-800.woff2') format('woff2'),
-			url('../public/fonts/inter-v1-latin-800.woff') format('woff');
+			url('fonts/inter-v1-latin-800.woff2') format('woff2'),
+			url('fonts/inter-v1-latin-800.woff') format('woff');
 	}
 
 	body {
