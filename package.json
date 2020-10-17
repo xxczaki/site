@@ -46,7 +46,7 @@
         ]
     },
     "dependencies": {
-        "@n8tb1t/use-scroll-position": "^1.0.47",
+        "@n8tb1t/use-scroll-position": "^2.0.3",
         "@styled-icons/ionicons-outline": "^10.18.0",
         "@styled-icons/ionicons-solid": "^10.18.0",
         "core-js": "^3.6.5",
