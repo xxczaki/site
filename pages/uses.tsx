@@ -33,13 +33,13 @@ const Index: NextPage<unknown> = () => {
 					<ul>
 						<li>Visual Studio Code</li>
 						<li>Google Chrome</li>
-						<li>Tidal</li>
+						<li>Spotify</li>
 						<li>1Password</li>
 					</ul>
 				</li>
 				<li>Personal gear
 					<ul>
-						<li>iPhone 8 64GB</li>
+						<li>iPhone 12 Pro 128GB</li>
 						<li>YubiKey 5 NFC</li>
 						<li><ExtLink target="_blank" rel="noopener noreferrer" href="https://redcanoebrands.com/shop/the-nasa-rocket-science-backpack/">Red Canoe NASA Backpack</ExtLink></li>
 						<li>Kross Hexagon X9 2014 Bike</li>
