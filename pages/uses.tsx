@@ -24,7 +24,7 @@ const Index: NextPage<unknown> = () => {
 						</li>
 						<li>Dell Latitude E7440 Notebook</li>
 						<li>2x 24&quot; Dell U2410 Monitor</li>
-						<li>Logitech G413 Keyboard</li>
+						<li><s>Logitech G413 Keyboard</s> Broken, using the good old Logitech G105 instead</li>
 						<li>Logitech MX Master 3 Mouse</li>
 						<li>Bose QuietComfort 25 Headphones</li>
 					</ul>
