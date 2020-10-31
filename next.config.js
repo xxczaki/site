@@ -25,6 +25,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	experimental: {
 		modern: true,
+		reactMode: 'concurrent',
 		optimizeFonts: true,
 		optimizeImages: true,
 	}
