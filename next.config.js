@@ -24,7 +24,8 @@ const nextConfig = {
 	},
 	reactStrictMode: true,
 	experimental: {
-		modern: true
+		modern: true,
+		reactMode: 'concurrent'
 	}
 };
 
