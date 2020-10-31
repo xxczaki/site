@@ -1,15 +1,13 @@
-export type Theme = {
-	[name: string]: {
-		background: string;
-		text: string;
-		accent: string;
-		lightAccent: string;
-		hover: string;
-		selection: string;
-		header: string;
-		headerBorder: string;
-	};
-};
+export type Theme = Record<string, {
+	background: string;
+	text: string;
+	accent: string;
+	lightAccent: string;
+	hover: string;
+	selection: string;
+	header: string;
+	headerBorder: string;
+}>;
 
 export const themes: Theme = {
 	dark: {
