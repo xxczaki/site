@@ -141,9 +141,6 @@ export default class MyDocument extends Document {
 				<body>
 					<Main/>
 					<NextScript/>
-					{/* Simple Analytics */}
-					<script async defer src="https://sa.kepinski.me/app.js"/>
-					<noscript><img src="https://sa.kepinski.me/image.gif" alt=""/></noscript>
 				</body>
 			</Html>
 		);
