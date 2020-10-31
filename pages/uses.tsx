@@ -5,6 +5,8 @@ import Main from '../components/main';
 import ExtLink from '../components/extlink';
 import Details from '../components/details';
 
+export const config = {amp: true};
+
 const Index: NextPage<unknown> = () => {
 	return (
 		<Main>
