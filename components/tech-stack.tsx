@@ -1,6 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
-import {SimpleImg} from 'react-simple-img';
 
 import Header from './header';
 
@@ -42,8 +42,9 @@ const Wrapper = styled.div`
 const Block = styled.a<Props>`
 	background: ${props => props.background};
 	color: ${props => props.color ?? '#121212'};
-    display: inline-block;
-    width: 175px;
+    display: flex;
+	flex-direction: column;
+    width: 165px;
     height: 100px;
     padding: 20px;
     flex: 0 0 auto;
@@ -52,6 +53,7 @@ const Block = styled.a<Props>`
     transition: all 200ms ease-in-out;
 	text-decoration: none;
 	user-select: none;
+	align-items: center;
 
 	&:hover {
 		opacity: 0.8;
@@ -59,13 +61,10 @@ const Block = styled.a<Props>`
 	}
 `;
 
-const Image = styled(SimpleImg)`
-	margin-bottom: -0.5em;
-`;
-
 const Heading = styled.h3`
 	font-size: 1em;
 	text-align: center;
+	margin-top: .5rem;
 `;
 
 const TechStack = (): JSX.Element => (
@@ -75,111 +74,101 @@ const TechStack = (): JSX.Element => (
 			<Wrapper>
 				<Block background="#f0db4f" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/" target="_blank" rel="noopener noreferrer" aria-label="JavaScript">
 					<Image
-						src={require('../public/images/logo-javascript.svg')}
-						placeholder="#f0db4f"
-						// @ts-expect-error
+						src="/images/logo-javascript.svg"
 						draggable={false}
 						alt="JavaScript"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>JavaScript (ES6+)</Heading>
 				</Block>
 				<Block background="#3178c6" color="#fff" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript">
 					<Image
-						src={require('../public/images/logo-typescript.svg')}
-						placeholder="#3178c6"
-						// @ts-expect-error
+						src="/images/logo-typescript.svg"
 						draggable={false}
 						alt="TypeScript"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>TypeScript</Heading>
 				</Block>
 				<Block background="#61dafb" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" aria-label="React">
 					<Image
-						src={require('../public/images/logo-react.svg')}
-						placeholder="#61dafb"
-						// @ts-expect-error
+						src="/images/logo-react.svg"
 						draggable={false}
 						alt="React"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>React</Heading>
 				</Block>
 				<Block background="#000" color="#fff" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Next.js">
 					<Image
-						src={require('../public/images/logo-nextjs.svg')}
-						placeholder="#000"
-						// @ts-expect-error
+						src="/images/logo-nextjs.svg"
 						draggable={false}
 						alt="Next.js"
-						height="3.5em"
+						width={100}
+						height={65}
 					/>
 					<Heading>Next.js</Heading>
 				</Block>
 				<Block background="#663399" color="#fff" href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Gatsby">
 					<Image
-						src={require('../public/images/logo-gatsby.svg')}
-						placeholder="#663399"
-						// @ts-expect-error
+						src="/images/logo-gatsby.svg"
 						draggable={false}
 						alt="Gatsby"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>Gatsby</Heading>
 				</Block>
 				<Block background="#61dafb" href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer" aria-label="React Native">
 					<Image
-						src={require('../public/images/logo-react.svg')}
-						placeholder="#61dafb"
-						// @ts-expect-error
+						src="/images/logo-react.svg"
 						draggable={false}
 						alt="React Native"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>React Native</Heading>
 				</Block>
 				<Block background="#2b2e3b" color="#fff" href="https://www.electronjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Electron">
 					<Image
-						src={require('../public/images/logo-electron.svg')}
-						placeholder="#2b2e3b"
-						// @ts-expect-error
+						src="/images/logo-electron.svg"
 						draggable={false}
 						alt="Electron"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>Electron</Heading>
 				</Block>
 				<Block background="#68A063" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" aria-label="Node.js">
 					<Image
-						src={require('../public/images/logo-nodejs.svg')}
-						placeholder="#68A063"
-						// @ts-expect-error
+						src="/images/logo-nodejs.svg"
 						draggable={false}
 						alt="Node.js"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>Node.js</Heading>
 				</Block>
 				<Block background="#dea584" href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer" aria-label="Rust">
 					<Image
-						src={require('../public/images/logo-rust.svg')}
-						placeholder="#dea584"
-						// @ts-expect-error
+						src="/images/logo-rust.svg"
 						draggable={false}
 						alt="Rust"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>Rust</Heading>
 				</Block>
 				<Block background="#654ff0" color="#fff" href="https://webassembly.org/" target="_blank" rel="noopener noreferrer" aria-label="WebAssembly">
 					<Image
-						src={require('../public/images/logo-wasm.svg')}
-						placeholder="#654ff0"
-						// @ts-expect-error
+						src="/images/logo-wasm.svg"
 						draggable={false}
 						alt="WebAssembly"
-						height="3.5em"
+						width={65}
+						height={65}
 					/>
 					<Heading>WebAssembly</Heading>
 				</Block>

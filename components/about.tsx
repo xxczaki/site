@@ -1,14 +1,13 @@
 import React from 'react';
+import Image from 'next/image';
 import styled from 'styled-components';
 import Tilt from 'react-parallax-tilt';
-import {SimpleImg} from 'react-simple-img';
 import {useReducedMotion} from '../hooks/use-reduced-motion';
 
 import Header from './header';
 import ExtLink from './extlink';
 import getAge from '../utils/get-age';
 
-import placeholder from '../public/images/me-placeholder.svg';
 import me from '../public/images/me.jpg';
 
 const Container = styled.div`
@@ -26,12 +25,15 @@ const Box = styled.div`
 	max-width: 36rem;
 `;
 
-const Image = styled(SimpleImg)`
-	user-select: none;
-
+const Tilted = styled(Tilt)`
 	@media (min-width: 150px) and (max-width: 891px) {
-		display: none !important;
+		display: none;
 	}
+`;
+
+const Me = styled(Image)`
+	user-select: none;
+	border-radius: var(--inline-radius);
 `;
 
 const Divider = styled.hr`
@@ -59,17 +61,15 @@ const About = (): JSX.Element => {
 						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:a@kepinski.me"><b>email</b></ExtLink> &lt;3
 					</p>
 				</Box>
-				<Tilt tiltMaxAngleX={shouldReduceMotion ? 0 : 10} tiltMaxAngleY={shouldReduceMotion ? 0 : 10}>
-					<Image
+				<Tilted tiltMaxAngleX={shouldReduceMotion ? 0 : 10} tiltMaxAngleY={shouldReduceMotion ? 0 : 10}>
+					<Me
 						src={me}
-						placeholder={placeholder}
-						// @ts-expect-error
 						draggable={false}
-						alt="Me"
-						height="13.5em"
-						imgStyle={{borderRadius: 'var(--inline-radius)'}}
+						alt="Selfie made in Switzerland"
+						width={260}
+						height={260}
 					/>
-				</Tilt>
+				</Tilted>
 			</Container>
 			<Divider/>
 			<Header>About</Header>
