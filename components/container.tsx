@@ -95,12 +95,12 @@ const Container = ({children}: Props): JSX.Element => {
 						<NavLink title="Projects" href="/projects"/>
 						{theme === 'dark' ? (
 							<abbr title="Light mode">
-								<Light title="Light mode" onClick={() => setTheme('light')} />
+								<Light title="Light mode" onClick={() => setTheme('light')}/>
 							</abbr>
 						) : (
-								<abbr title="Dark mode">
-							<Dark title="Dark mode" onClick={() => setTheme('dark')}/>
-								</abbr>
+							<abbr title="Dark mode">
+								<Dark title="Dark mode" onClick={() => setTheme('dark')}/>
+							</abbr>
 						)}
 					</Nav>
 				</Wrapper>
