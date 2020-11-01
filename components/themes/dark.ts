@@ -1,7 +1,7 @@
-import {ColorPalette} from '@styled-icons/ionicons-outline';
+import {Moon} from '@styled-icons/ionicons-outline';
 import styled from 'styled-components';
 
-const ThemeChange = styled(ColorPalette)`
+const Dark = styled(Moon)`
     width: 1.5em;
     cursor: pointer;
     transition: background-color var(--transition);
@@ -16,4 +16,4 @@ const ThemeChange = styled(ColorPalette)`
     }
 `;
 
-export default ThemeChange;
+export default Dark;

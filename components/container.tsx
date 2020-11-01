@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import styled, {ThemeProvider} from 'styled-components';
 import {Mail, LogoTwitter, LogoGithub, LogoInstagram} from '@styled-icons/ionicons-solid';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
@@ -10,16 +9,12 @@ import GlobalStyle from './global-style';
 import Logo from './logo';
 import Nav from './nav';
 import NavLink from './navlink';
-import ThemeChange from './theme-change';
+import Light from './themes/light';
+import Dark from './themes/dark';
 import Footer from './footer';
-import Theme from './theme/theme';
 
 import {themes} from '../utils/themes';
 import {_theme} from '../lib/recoil-atoms';
-
-const ThemePicker = dynamic(async () => import('./theme/picker'));
-const Section = dynamic(async () => import('./theme/section'));
-const ThemeSelector = dynamic(async () => import('./theme/selector'));
 
 interface Props {
 	children: React.ReactNode;
@@ -71,7 +66,6 @@ const Box = styled.a`
 
 const Container = ({children}: Props): JSX.Element => {
 	const [scrolled, setScrolled] = useState(false);
-	const [isVisible, setVisible] = useState(false);
 	const [theme, setTheme] = useRecoilState(_theme);
 
 	useScrollPosition(({currPos}) => {
@@ -91,31 +85,6 @@ const Container = ({children}: Props): JSX.Element => {
 	return (
 		<ThemeProvider theme={themes[theme]}>
 			<GlobalStyle/>
-			{isVisible && (
-				<ThemePicker>
-					<h3>Select theme</h3>
-					<Section>
-						<ThemeSelector>
-							<Theme
-								background={themes.dark.background}
-								color={themes.dark.text}
-								selected={theme === 'dark'}
-								onClick={() => setTheme('dark')}
-							>
-								<h4>Dark</h4>
-							</Theme>
-							<Theme
-								background={themes.light.background}
-								color={themes.light.text}
-								selected={theme === 'light'}
-								onClick={() => setTheme('light')}
-							>
-								<h4>Light</h4>
-							</Theme>
-						</ThemeSelector>
-					</Section>
-				</ThemePicker>
-			)}
 			<Header scrolled={scrolled}>
 				<Wrapper>
 					<Link href="/">
@@ -124,20 +93,15 @@ const Container = ({children}: Props): JSX.Element => {
 					<Nav>
 						<NavLink title="Home" href="/"/>
 						<NavLink title="Projects" href="/projects"/>
-						<ThemeChange
-							title="Change theme"
-							onClick={() => {
-								if (isVisible) {
-									setVisible(false);
-								} else {
-									window.scroll({
-										top: 0,
-										behavior: 'smooth'
-									});
-									setVisible(true);
-								}
-							}}
-						/>
+						{theme === 'dark' ? (
+							<abbr title="Light mode">
+								<Light title="Light mode" onClick={() => setTheme('light')} />
+							</abbr>
+						) : (
+								<abbr title="Dark mode">
+							<Dark title="Dark mode" onClick={() => setTheme('dark')}/>
+								</abbr>
+						)}
 					</Nav>
 				</Wrapper>
 			</Header>
