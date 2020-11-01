@@ -1,6 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import styled from 'styled-components';
+import Image from 'next/image';
+import {BlurhashCanvas} from 'react-blurhash';
 import Tilt from 'react-parallax-tilt';
 import {useReducedMotion} from '../hooks/use-reduced-motion';
 
@@ -62,6 +63,22 @@ const About = (): JSX.Element => {
 					</p>
 				</Box>
 				<Tilted tiltMaxAngleX={shouldReduceMotion ? 0 : 10} tiltMaxAngleY={shouldReduceMotion ? 0 : 10}>
+					<BlurhashCanvas
+						hash="LPE:9w.9GWM}?^%hbdS0Y6o%%2Rk"
+						width={32}
+						height={32}
+						punch={1}
+						style={{
+							position: 'absolute',
+							top: 0,
+							left: 0,
+							right: 0,
+							bottom: 0,
+							width: 'calc(100% - 1px)',
+							height: 'calc(100% - 1px)',
+							borderRadius: 'var(--radius)'
+						}}
+					/>
 					<Me
 						src={me}
 						draggable={false}
