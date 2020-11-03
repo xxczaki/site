@@ -7,8 +7,7 @@
 		},
 		{
 			"source": "/spotify",
-			"destination": "https://stopify.co/624ZUN",
-			"permanent": true
+			"destination": "https://stopify.co/624ZUN"
 		}
 	],
 	"headers": [
