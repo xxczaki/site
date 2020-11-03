@@ -5,11 +5,11 @@
 			"source": "/service-worker.js",
 			"destination": "/_next/static/service-worker.js"
 		},
-		}
+		{
 			"source": "/spotify",
 			"destination": "https://stopify.co/624ZUN",
 			"permanent": true
-		{
+		}
 	],
 	"headers": [
 		{
