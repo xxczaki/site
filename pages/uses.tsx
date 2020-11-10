@@ -13,18 +13,17 @@ const Index: NextPage<unknown> = () => {
 			<ul>
 				<li>Hardware and Desk
 					<ul>
-						<li>Computer
+						<li>MacBook Pro 13&quot;
 							<ul>
-								<li>Intel Core I5-4690K</li>
-								<li>Nvidia GeForce GTX 750 Ti 4GB</li>
-								<li>8GB RAM (DDR3, 1333MHz)</li>
-								<li>1TB HDD + 128GB SSD</li>
-								<li>Linux Mint 20</li>
+								<li>Intel Core I5 2,0-3,8 GHz (10th generation)</li>
+								<li>16GB RAM (DDR4, 3733 MHz</li>
+								<li>512GB SSD PCIe</li>
+								<li>4x Thunderbolt 3 (USB-C)</li>
+								<li>Touch Bar</li>
 							</ul>
 						</li>
-						<li>Dell Latitude E7440 Notebook</li>
-						<li>2x 24&quot; Dell U2410 Monitor</li>
-						<li><s>Logitech G413 Keyboard</s> Broken, using the good old Logitech G105 instead</li>
+						<li>Green Cell HUB GC Connect60 8in1</li>
+						<li>24&quot; Dell U2410 Monitor</li>
 						<li>Logitech MX Master 3 Mouse</li>
 						<li>Bose QuietComfort 25 Headphones</li>
 					</ul>
