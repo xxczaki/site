@@ -64,7 +64,6 @@ const Block = styled.a<Props>`
 const Heading = styled.h3`
 	font-size: 1em;
 	text-align: center;
-	margin-top: .5rem;
 `;
 
 const TechStack = (): JSX.Element => (
@@ -77,8 +76,8 @@ const TechStack = (): JSX.Element => (
 						src="/images/logo-javascript.svg"
 						draggable={false}
 						alt="JavaScript"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
 					<Heading>JavaScript (ES6+)</Heading>
 				</Block>
