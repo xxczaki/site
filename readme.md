@@ -56,7 +56,6 @@ I took some inspiration from the following, truly amazing personal sites:
 - [gabrielvaldivia.com](https://www.gabrielvaldivia.com/)
 - [robhope.com](https://robhope.com/)
 - [zcole.me](http://zcole.me/)
-- [mxb.dev](https://mxb.dev)
 
 ### License
 
