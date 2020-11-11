@@ -73,9 +73,8 @@ const About = (): JSX.Element => {
 							top: 0,
 							left: 0,
 							right: 0,
-							bottom: 0,
 							width: 'calc(100% - 1px)',
-							height: 'calc(100% - 1px)',
+							height: 'calc(100% - 12px)',
 							borderRadius: 'var(--radius)'
 						}}
 					/>
@@ -85,6 +84,7 @@ const About = (): JSX.Element => {
 						alt="Selfie made in Switzerland"
 						width={260}
 						height={260}
+						priority={true}
 					/>
 				</Tilted>
 			</Container>
