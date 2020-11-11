@@ -16,7 +16,7 @@ const Index: NextPage<unknown> = () => {
 						<li>MacBook Pro 13&quot;
 							<ul>
 								<li>Intel Core I5 2,0-3,8 GHz (10th generation)</li>
-								<li>16GB RAM (DDR4, 3733 MHz</li>
+								<li>16GB RAM (DDR4, 3733 MHz)</li>
 								<li>512GB SSD PCIe</li>
 								<li>4x Thunderbolt 3 (USB-C)</li>
 								<li>Touch Bar</li>
