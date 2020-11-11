@@ -79,12 +79,12 @@ const About = (): JSX.Element => {
 						}}
 					/>
 					<Me
+						priority
 						src={me}
 						draggable={false}
 						alt="Selfie made in Switzerland"
 						width={260}
 						height={260}
-						priority={true}
 					/>
 				</Tilted>
 			</Container>
