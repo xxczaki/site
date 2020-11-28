@@ -37,6 +37,7 @@ const Wrapper = styled.div`
 	grid-gap: 1em;
 	grid-template-columns: repeat(auto-fit, 1fr);
 	grid-auto-flow: column;
+	height: 20rem;
 `;
 
 const Block = styled.a<Props>`
@@ -44,16 +45,16 @@ const Block = styled.a<Props>`
 	color: ${props => props.color ?? '#121212'};
     display: flex;
 	flex-direction: column;
-    width: 165px;
-    height: 100px;
-    padding: 20px;
-    flex: 0 0 auto;
+	width: 12rem;
+	height: 8rem;
+    padding: 1rem;
     border-bottom-style: none;
     border-radius: var(--radius);
     transition: all 200ms ease-in-out;
 	text-decoration: none;
 	user-select: none;
 	align-items: center;
+	justify-content: center;
 
 	&:hover {
 		opacity: 0.8;
@@ -76,8 +77,8 @@ const TechStack = (): JSX.Element => (
 						src="/images/logo-javascript.svg"
 						draggable={false}
 						alt="JavaScript"
-						width={64}
-						height={64}
+						width={65}
+						height={65}
 					/>
 					<Heading>JavaScript (ES6+)</Heading>
 				</Block>
