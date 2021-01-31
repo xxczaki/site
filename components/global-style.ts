@@ -1,6 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
-const GlobalStyle = createGlobalStyle<{theme: Theme}>`
+const GlobalStyle = createGlobalStyle`
 	:root {
 		--gap-half: 0.5rem;
 		--gap: 1rem;
