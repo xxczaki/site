@@ -12,7 +12,7 @@ interface WrapperProps {
 	active: boolean;
 }
 
-const Wrapper = styled.a<WrapperProps>`
+const Wrapper = styled.div<WrapperProps>`
 	border-radius: 8px;
 	text-decoration: none;
     display: flex;
