@@ -1,7 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
 
-import {Theme} from '../utils/themes';
-
 const GlobalStyle = createGlobalStyle<{theme: Theme}>`
 	:root {
 		--gap-half: 0.5rem;
@@ -11,14 +9,14 @@ const GlobalStyle = createGlobalStyle<{theme: Theme}>`
 		--main-content: 55rem;
 		--radius: 8px;
 		--inline-radius: 5px;
-		--background: ${props => props.theme.background};
-		--text: ${props => props.theme.text};
-		--accent: ${props => props.theme.accent};;
-		--light-accent: ${props => props.theme.lightAccent};
-		--hover: ${props => props.theme.hover};
-		--selection: ${props => props.theme.selection};
-		--header: ${props => props.theme.header};
-		--header-border: ${props => props.theme.headerBorder};
+		--background: #1c1d1f;
+		--text: #fff;
+		--accent: #222;
+		--light-accent: #666;
+		--hover: #2b2d30;
+		--selection: hsl(0deg 0% 100% / 99%);
+		--header: #1c1d1fab;
+		--header-border: rgba(255, 255, 255, 0.5);
 		--font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 		--transition: 0.1s ease-in-out;
 		--transition-slow: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;

@@ -1,5 +1,9 @@
 const presets = [
-	'next/babel'
+	['next/babel', {
+		'preset-env': {
+			targets: '>2%, not dead'
+		}
+	}]
 ];
 
 const plugins = [

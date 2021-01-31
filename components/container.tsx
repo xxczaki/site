@@ -1,20 +1,14 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
-import styled, {ThemeProvider} from 'styled-components';
-import {Mail, LogoTwitter, LogoGithub, LogoInstagram} from '@styled-icons/ionicons-solid';
+import styled from 'styled-components';
+import {Twitter, GitHub, Linkedin, Key} from 'react-feather';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
-import {useRecoilState, useRecoilTransactionObserver_UNSTABLE} from 'recoil';
 
 import GlobalStyle from './global-style';
 import Logo from './logo';
 import Nav from './nav';
 import NavLink from './navlink';
-import Light from './themes/light';
-import Dark from './themes/dark';
 import Footer from './footer';
-
-import {themes} from '../utils/themes';
-import {_theme} from '../lib/recoil-atoms';
 
 interface Props {
 	children: React.ReactNode;
@@ -24,7 +18,7 @@ const Header = styled.header<{scrolled: boolean}>`
 	z-index: 2;
     position: sticky;
     padding: 2.5rem 0;
-    top: 0;
+    top: -1px;
 	right: 0px;
 	left: 0px;
     background-color: ${props => props.scrolled ? 'var(--header)' : 'transparent'};
@@ -58,6 +52,8 @@ const Box = styled.a`
 	padding: 5px;
 	border-radius: var(--inline-radius);
 	user-select: none;
+	width: 1.8rem;
+	height: 1.8rem;
 
 	&:hover {
 		background-color: var(--hover);
@@ -66,7 +62,6 @@ const Box = styled.a`
 
 const Container = ({children}: Props): JSX.Element => {
 	const [scrolled, setScrolled] = useState(false);
-	const [theme, setTheme] = useRecoilState(_theme);
 
 	useScrollPosition(({currPos}) => {
 		if (currPos.y <= -20) {
@@ -76,32 +71,17 @@ const Container = ({children}: Props): JSX.Element => {
 		}
 	}, [scrolled]);
 
-	useRecoilTransactionObserver_UNSTABLE(({snapshot}) => {
-		const theme = snapshot.getLoadable(_theme).contents;
-
-		localStorage.setItem('theme', theme as 'dark' | 'light');
-	});
-
 	return (
-		<ThemeProvider theme={themes[theme]}>
+		<>
 			<GlobalStyle/>
 			<Header scrolled={scrolled}>
 				<Wrapper>
 					<Link href="/">
-						<Logo title="Logo"/>
+						<Logo src="/images/logo.svg" alt="Logo" width={55} height={55}/>
 					</Link>
 					<Nav>
 						<NavLink title="Home" href="/"/>
 						<NavLink title="Projects" href="/projects"/>
-						{theme === 'dark' ? (
-							<abbr title="Light mode">
-								<Light title="Light mode" onClick={() => setTheme('light')}/>
-							</abbr>
-						) : (
-							<abbr title="Dark mode">
-								<Dark title="Dark mode" onClick={() => setTheme('dark')}/>
-							</abbr>
-						)}
 					</Nav>
 				</Wrapper>
 			</Header>
@@ -109,21 +89,36 @@ const Container = ({children}: Props): JSX.Element => {
 			<Footer>
 				<p>Antoni Kepinski &copy; {new Date().getFullYear()}</p>
 				<Social>
-					<Box href="mailto:a@kepinski.me" target="_blank" rel="noopener noreferrer" aria-label="Email">
-						<Mail title="Email" color="var(--text)" size="2rem"/>
-					</Box>
 					<Box href="https://twitter.com/dokwadratu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-						<LogoTwitter title="Twitter" color="var(--text)" size="2rem"/>
+						<abbr title="Twitter">
+							<Twitter color="var(--text)" size="1.8rem"/>
+						</abbr>
 					</Box>
 					<Box href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-						<LogoGithub title="GitHub" color="var(--text)" size="2rem"/>
+						<abbr title="GitHub">
+							<GitHub color="var(--text)" size="1.8rem"/>
+						</abbr>
 					</Box>
-					<Box href="https://instagram.com/akepinski" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-						<LogoInstagram title="Instagram" color="var(--text)" size="2rem"/>
+					<Box href="https://linkedin.com/in/akepinski" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+						<abbr title="LinkedIn">
+							<Linkedin color="var(--text)" size="1.8rem"/>
+						</abbr>
+					</Box>
+					<Box
+						href="/key.asc"
+						aria-label="PGP Public Key"
+						onClick={() => {
+							// eslint-disable-next-line no-alert
+							alert('PGP fingerprint: F2D9 43C8 E24D 4C2D 1E35  F603 264B 02F9 7E4E CDE8');
+						}}
+					>
+						<abbr title="PGP Public Key">
+							<Key color="var(--text)" size="1.8rem"/>
+						</abbr>
 					</Box>
 				</Social>
 			</Footer>
-		</ThemeProvider>
+		</>
 	);
 };
 

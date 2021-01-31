@@ -1,0 +1,52 @@
+{
+	"version": 2,
+	"rewrites": [
+		{
+			"source": "/service-worker.js",
+			"destination": "/_next/static/service-worker.js"
+		}
+	],
+	"headers": [
+		{
+			"source": "/",
+			"headers": [
+				{
+					"key": "X-Content-Type-Options",
+					"value": "nosniff"
+				},
+				{
+					"key": "X-Frame-Options",
+					"value": "deny"
+				},
+				{
+					"key": "Content-Security-Policy",
+					"value": "style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self'; frame-src changelog.com; media-src cdn.changelog.com; img-src 'self' data:; connect-src vitals.vercel-analytics.com"
+				},
+				{
+					"key": "X-XSS-Protection",
+					"value": "1"
+				},
+				{
+					"key": "Strict-Transport-Security",
+					"value": "max-age=63072000; includeSubDomains; preload"
+				}
+			]
+		},
+		{
+			"source": "/service-worker.js",
+			"headers": [
+				{
+					"key": "Cache-Control",
+					"value": "public, max-age=43200, immutable"
+				},
+				{
+					"key": "Service-Worker-Allowed",
+					"value": "/"
+				}
+			]
+		}
+	],
+	"regions": [
+		"all"
+	]
+}

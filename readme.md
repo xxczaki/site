@@ -1,5 +1,3 @@
-![Screenshot](screenshot.png)
-
 # [kepinski.me](https://kepinski.me)
 
 > Personal website, built with React, Next.js & more 🚀

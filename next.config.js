@@ -26,7 +26,8 @@ const nextConfig = {
 	experimental: {
 		optimizeFonts: true,
 		optimizeImages: true
-	}
+	},
+	future: {webpack5: true}
 };
 
 module.exports = withOptimizedImages(withOffline(nextConfig));

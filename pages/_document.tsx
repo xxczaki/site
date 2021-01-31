@@ -34,8 +34,8 @@ export default class MyDocument extends Document {
 				<Head>
 					<meta charSet="utf-8"/>
 					<meta name="description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
-					<meta name="theme-color" content="#131415"/>
-					<meta name="msapplication-TileColor" content="#131415"/>
+					<meta name="theme-color" content="#1c1d1f"/>
+					<meta name="msapplication-TileColor" content="#1c1d1f"/>
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
 					<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 					<meta name="twitter:card" content="summary_large_image"/>
@@ -136,7 +136,6 @@ export default class MyDocument extends Document {
 						rel="apple-touch-startup-image"
 						href="/apple-splash-1136-640.png"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/>
-					<link rel="preconnect" href="https://changelog.com" crossOrigin=""/>
 				</Head>
 				<body>
 					<Main/>
