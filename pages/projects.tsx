@@ -1,6 +1,5 @@
 import React from 'react';
 import {NextPage, GetStaticProps} from 'next';
-import useSWR from 'swr';
 
 import Main from '../components/main';
 import Projects from '../components/projects';
@@ -19,9 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Index: NextPage<Props> = (props: Readonly<Props>) => {
-	const initialData = props.data;
-
-	const {data} = useSWR('stars', fetcher, {initialData});
+	const {data} = props;
 
 	return (
 		<Main>

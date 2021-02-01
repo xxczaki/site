@@ -55,8 +55,7 @@
         "next": "^10.0.6-canary.12",
         "react": "17.0.1",
         "react-dom": "17.0.1",
-        "react-feather": "^2.0.9",
-        "swr": "^0.4.1"
+        "react-feather": "^2.0.9"
     },
     "devDependencies": {
         "@babel/core": "^7.12.10",
