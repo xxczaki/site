@@ -1,7 +1,6 @@
 import React from 'react';
 import {styled} from 'goober';
 
-import ExtLink from '../extlink';
 import {Response} from '../../utils/fetcher';
 import data from './data.json';
 
