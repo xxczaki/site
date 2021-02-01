@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import {styled} from 'goober';
 
 const Logo = styled(Image)`
     cursor: pointer;

@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import {styled} from 'goober';
 
-const Main = styled.main`
+const Main = styled('main')`
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;

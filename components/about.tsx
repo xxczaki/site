@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import {styled} from 'goober';
 import Image from 'next/image';
 import {BlurhashCanvas} from 'react-blurhash';
-import Tilt from 'react-parallax-tilt';
-import {useReducedMotion} from '../hooks/use-reduced-motion';
 
 import Header from './header';
 import ExtLink from './extlink';
@@ -11,14 +9,14 @@ import getAge from '../utils/get-age';
 
 import me from '../public/images/me.jpg';
 
-const Container = styled.div`
+const Container = styled('div')`
 	display: flex;
 	flex-wrap: wrap-reverse;
 	justify-content: space-between;
 	width: 100%;
 `;
 
-const Box = styled.div`
+const Box = styled('div')`
 	display: flex;
 	flex-direction: column;
 	padding-right: 1.25em;
@@ -26,8 +24,12 @@ const Box = styled.div`
 	max-width: 36rem;
 `;
 
-const Tilted = styled(Tilt)`
-	@media (min-width: 150px) and (max-width: 891px) {
+const ImageBox = styled('div')`
+	position: relative;
+	height: 260px;
+	border-radius: var(--inline-radius);
+
+	@media (max-width: 930px) {
 		display: none;
 	}
 `;
@@ -35,9 +37,14 @@ const Tilted = styled(Tilt)`
 const Me = styled(Image)`
 	user-select: none;
 	border-radius: var(--inline-radius);
+	transition: all var(--transition-slow);
+
+	&:hover {
+		filter: hue-rotate(90deg);
+	}
 `;
 
-const Divider = styled.hr`
+const Divider = styled('hr')`
 	border: none;
 	padding: var(--gap-double);
 
@@ -50,8 +57,6 @@ const Divider = styled.hr`
 `;
 
 const About = (): JSX.Element => {
-	const shouldReduceMotion = useReducedMotion();
-
 	return (
 		<>
 			<Container>
@@ -62,11 +67,11 @@ const About = (): JSX.Element => {
 						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:a@kepinski.me"><b>email</b></ExtLink> &lt;3
 					</p>
 				</Box>
-				<Tilted tiltMaxAngleX={shouldReduceMotion ? 0 : 10} tiltMaxAngleY={shouldReduceMotion ? 0 : 10}>
+				<ImageBox>
 					<BlurhashCanvas
 						hash="LPE:9w.9GWM}?^%hbdS0Y6o%%2Rk"
-						width={32}
-						height={32}
+						width={260}
+						height={260}
 						punch={1}
 						style={{
 							position: 'absolute',
@@ -86,7 +91,7 @@ const About = (): JSX.Element => {
 						width={260}
 						height={260}
 					/>
-				</Tilted>
+				</ImageBox>
 			</Container>
 			<Divider/>
 			<Header>About</Header>

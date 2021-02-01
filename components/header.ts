@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import {styled} from 'goober';
 
-const Header = styled.h2`
+const Header = styled('h2')`
 	margin-top: var(--gap-double);
 `;
 

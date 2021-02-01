@@ -6,11 +6,4 @@ const presets = [
 	}]
 ];
 
-const plugins = [
-	['babel-plugin-styled-components', {
-		ssr: true,
-		pure: true
-	}]
-]
-
-module.exports = {presets, plugins};
+module.exports = {presets};

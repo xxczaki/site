@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import {styled} from 'goober';
 
-const Details = styled.details`
+const Details = styled('details')`
 	summary {
 		cursor: pointer;
 		outline: none;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import {styled} from 'goober';
 
 import ExtLink from '../extlink';
 import {Response} from '../../utils/fetcher';
@@ -25,7 +25,7 @@ const getRandomArbitrary = (min: number, max: number) => {
 	return Math.random() * (max - min) + min;
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled('div')`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	grid-gap: 1rem;
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Element = styled.a<ElementProps>`
+const Element = styled('a')<ElementProps>`
 	box-shadow: var(--accent) 1em;
     display: flex;
     justify-content: space-between;
@@ -63,26 +63,26 @@ const Element = styled.a<ElementProps>`
 	}
 `;
 
-const Top = styled.div`
+const Top = styled('div')`
 	display: flex;
 	justify-content: space-between;
 `;
 
-const Header = styled.h5`
+const Header = styled('h5')`
 	font-size: 22px;
 	margin: 0px 0px 10px;
 `;
 
-const Count = styled.p`
+const Count = styled('p')`
 	font-size: 12px;
 	margin-top: -1em;
 `;
 
-const Description = styled.p`
+const Description = styled('p')`
 	margin: 0px 0px 15px;
 `;
 
-const Tags = styled.ul`
+const Tags = styled('ul')`
 	display: flex;
     align-items: flex-end;
     flex-grow: 1;
@@ -92,7 +92,7 @@ const Tags = styled.ul`
     list-style: none;
 `;
 
-const Tag = styled.li`
+const Tag = styled('li')`
 	font-size: 13px;
     color: #8892B0;
     line-height: 1.75;

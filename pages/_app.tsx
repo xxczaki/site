@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';
+import {setup} from 'goober';
 
 import Container from '../components/container';
 
@@ -19,6 +20,8 @@ Router.events.on('routeChangeError', () => {
 	start.cancel();
 	nprogress.done();
 });
+
+setup(React.createElement);
 
 const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 	return (

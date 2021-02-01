@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import {styled} from 'goober';
 
-const Nav = styled.nav`
+const Nav = styled('nav')`
     display: flex;
     height: 36px;
     padding: 8px 2px;

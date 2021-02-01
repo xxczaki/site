@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
+import {styled} from 'goober';
 import {Twitter, GitHub, Linkedin, Key} from 'react-feather';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 
@@ -14,7 +14,7 @@ interface Props {
 	children: React.ReactNode;
 }
 
-const Header = styled.header<{scrolled: boolean}>`
+const Header = styled('header')<{scrolled: boolean}>`
 	z-index: 2;
     position: sticky;
     padding: 2.5rem 0;
@@ -28,7 +28,7 @@ const Header = styled.header<{scrolled: boolean}>`
 	align-items: center;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled('div')`
 	height: 0px;
 	margin: 0 auto;
 	padding: 0 1.5rem;
@@ -38,13 +38,13 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 `;
 
-const Social = styled.div`
+const Social = styled('div')`
 	display: flex;
 	justify-content: space-between;
 	width: 12rem;
 `;
 
-const Box = styled.a`
+const Box = styled('a')`
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import styled from 'styled-components';
+import {styled} from 'goober';
 
 import Header from './header';
 
@@ -9,7 +9,7 @@ interface Props {
 	color?: string;
 }
 
-const Section = styled.div`
+const Section = styled('div')`
 	overflow-x: scroll;
 	overflow-y: hidden;
 	width: 100%;
@@ -32,7 +32,7 @@ const Section = styled.div`
 	}
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled('div')`
 	display: grid;
 	grid-gap: 1em;
 	grid-template-columns: repeat(auto-fit, 1fr);
@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 	height: 20rem;
 `;
 
-const Block = styled.a<Props>`
+const Block = styled('div')<Props>`
 	background: ${props => props.background};
 	color: ${props => props.color ?? '#121212'};
     display: flex;
@@ -62,7 +62,7 @@ const Block = styled.a<Props>`
 	}
 `;
 
-const Heading = styled.h3`
+const Heading = styled('h3')`
 	font-size: 1em;
 	text-align: center;
 `;

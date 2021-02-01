@@ -1,18 +1,31 @@
-import styled from 'styled-components';
+import {styled} from 'goober';
 
-const ExtLink = styled.a`
-    background-image: linear-gradient(90deg, var(--light-accent), var(--light-accent));
-    background-size: 100% 1px;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    text-shadow: .1em 0 var(--background),-.1em 0 var(--background),.05em 0 var(--background),-.05em 0 var(--background);
-    transition: color var(--transition);
-    outline: none;
-    color: inherit;
+const ExtLink = styled('a')`
+    position: relative;
+    padding-bottom: 7.5px;
     text-decoration: none;
+    color: var(--foreground);
+    transition: all var(--transition);
 
-    &:hover {
-        color: var(--light-accent);
+    &:before {
+        content: "";
+        position: absolute;
+        margin: 5px 0 0;
+        bottom: 4px;
+        left: 0;
+        height: 3.5px;
+        width: 100%;
+        background-color: var(--light-accent);
+    }
+
+    &:hover::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        height: 3.5px;
+        width: 100%;
+        background: linear-gradient(102deg,#4551b5 9.16%,#5643cc 32.02%,#543fd7 64.72%);
     }
 `;
 

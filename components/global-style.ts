@@ -1,6 +1,6 @@
-import {createGlobalStyle} from 'styled-components';
+import {createGlobalStyles} from 'goober/global';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyles`
 	:root {
 		--gap-half: 0.5rem;
 		--gap: 1rem;

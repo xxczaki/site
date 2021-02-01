@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import {styled} from 'goober';
 
-const Footer = styled.footer`
+const Footer = styled('footer')`
 	height: 32px;
 	margin: calc(var(--small-gap) + var(--gap)) auto;
 	padding: 0 1.5rem;

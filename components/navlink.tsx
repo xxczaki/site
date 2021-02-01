@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
-import styled from 'styled-components';
+import {styled} from 'goober';
 
 interface Props {
 	title: string;
@@ -12,7 +12,7 @@ interface WrapperProps {
 	active: boolean;
 }
 
-const Wrapper = styled.div<WrapperProps>`
+const Wrapper = styled('div')<WrapperProps>`
 	border-radius: 8px;
 	text-decoration: none;
     display: flex;
