@@ -59,6 +59,13 @@ const Box = styled('a')`
 	}
 `;
 
+const Notice = styled('p')`
+	text-align: center;
+	color: var(--text);
+	font-size: .9rem;
+	opacity: 0.5;
+`;
+
 const Container = ({children}: Props): JSX.Element => {
 	const [scrolled, setScrolled] = useState(false);
 
@@ -120,6 +127,7 @@ const Container = ({children}: Props): JSX.Element => {
 					</Box>
 				</Social>
 			</Footer>
+			<Notice>This website does not track you.</Notice>
 		</>
 	);
 };
