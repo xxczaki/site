@@ -1,6 +1,6 @@
 # [kepinski.me](https://kepinski.me)
 
-> Personal website, built with React, Next.js & more 🚀
+> Personal website, built with Preact, Next.js & more 🚀
 
 [![Build Status](https://travis-ci.org/xxczaki/site.svg?branch=master)](https://travis-ci.org/xxczaki/site)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
@@ -21,14 +21,12 @@
 
 **Main:**
 
-- [React](https://reactjs.org/)
+- [Preact](https://preactjs.com/)
 - [Next.js](https://nextjs.org/)
-- [Styled Components](https://styled-components.com/)
-- [Recoil](https://recoiljs.org/)
+- [Goober](https://goober.js.org/)
 
 **Additional:**
 
-- [React Simple Image](https://react-simple-img.now.sh) - image lazy loading
 - [NProgress](https://ricostacruz.com/nprogress/) - progress bar
 
 ## Development
