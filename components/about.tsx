@@ -71,7 +71,7 @@ const About = (): JSX.Element => {
 						priority
 						src={me}
 						draggable={false}
-						alt="Selfie made in Switzerland"
+						alt="My face"
 						width={260}
 						height={260}
 					/>

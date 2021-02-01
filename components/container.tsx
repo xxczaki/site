@@ -91,17 +91,17 @@ const Container = ({children}: Props): JSX.Element => {
 				<Social>
 					<Box href="https://twitter.com/dokwadratu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
 						<abbr title="Twitter">
-							<Twitter color="var(--text)" size="1.8rem"/>
+							<Twitter color="var(--text)" size={30}/>
 						</abbr>
 					</Box>
 					<Box href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 						<abbr title="GitHub">
-							<GitHub color="var(--text)" size="1.8rem"/>
+							<GitHub color="var(--text)" size={30}/>
 						</abbr>
 					</Box>
 					<Box href="https://linkedin.com/in/akepinski" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
 						<abbr title="LinkedIn">
-							<Linkedin color="var(--text)" size="1.8rem"/>
+							<Linkedin color="var(--text)" size={30}/>
 						</abbr>
 					</Box>
 					<Box
@@ -113,7 +113,7 @@ const Container = ({children}: Props): JSX.Element => {
 						}}
 					>
 						<abbr title="PGP Public Key">
-							<Key color="var(--text)" size="1.8rem"/>
+							<Key color="var(--text)" size={30}/>
 						</abbr>
 					</Box>
 				</Social>
