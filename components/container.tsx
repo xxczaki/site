@@ -16,7 +16,6 @@ interface Props {
 
 const Header = styled('header')<{scrolled: boolean}>`
 	z-index: 2;
-    position: sticky;
     padding: 2.5rem 0;
     top: -1px;
 	right: 0px;
@@ -74,7 +73,10 @@ const Container = ({children}: Props): JSX.Element => {
 	return (
 		<>
 			<GlobalStyle/>
-			<Header scrolled={scrolled}>
+			<Header
+				scrolled={scrolled}
+				style={{position: 'sticky'}}
+			>
 				<Wrapper>
 					<Link href="/">
 						<Logo src="/images/logo.svg" alt="Logo" width={55} height={55}/>

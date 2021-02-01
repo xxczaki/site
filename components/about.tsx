@@ -4,13 +4,14 @@ import Image from 'next/image';
 
 import Header from './header';
 import ExtLink from './extlink';
-import getAge from '../utils/get-age';
 
 const Container = styled('div')`
 	display: flex;
-	flex-wrap: wrap-reverse;
+	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	width: 100%;
+	gap: 1rem;
 `;
 
 const Box = styled('div')`
@@ -19,15 +20,21 @@ const Box = styled('div')`
 	padding-right: 1.25em;
 	width: 100%;
 	max-width: 36rem;
+	justify-content: center;
 `;
 
 const ImageBox = styled('div')`
-	position: relative;
-	height: 260px;
-	border-radius: var(--inline-radius);
-
-	@media (max-width: 930px) {
+	@media (max-width: 950px) {
 		display: none;
+	}
+`;
+
+const Cover = styled('div')`
+	@media (max-width: 980px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
 	}
 `;
 
@@ -60,7 +67,7 @@ const About = (): JSX.Element => {
 				<Box>
 					<h1>Hi, my name is Antoni 👋</h1>
 					<p>
-						Thanks for visiting my site! Below you can find more information about me and projects.
+						Thanks for visiting my site! Below you can find more information about me and my projects.
 						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:a@kepinski.me"><b>email</b></ExtLink> &lt;3
 					</p>
 				</Box>
@@ -77,12 +84,26 @@ const About = (): JSX.Element => {
 			</Container>
 			<Divider/>
 			<Header>About</Header>
-			<p>
-				I&apos;m a {getAge()} years old developer, currently based near Poznań, Poland.
-				Since late 2019 I&apos;m helping maintain <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings Fetch API to Node.js.
-				I also maintain a collection of my own open source projects.
-			</p>
-			<p>When it comes to offline activities, I hugely enjoy travelling, riding a bike and listening to music.</p>
+			<Container>
+				<Cover>
+					<Me
+						src="/images/cover.jpg"
+						draggable={false}
+						alt="Me with my cat"
+						width={260}
+						height={275}
+					/>
+				</Cover>
+				<Box>
+					<p>
+						Hey, I’m Antoni. I’m a full stack developer and open-source enthusiast.
+						Since late 2019 I&apos;m maintaining <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings Fetch API to Node.js.
+						I also maintain a collection of my own open source projects.
+						I&apos;m currently in the 2nd year of high school (grade 11), focusing mainly on math, physics and computer science.
+					</p>
+					<p>I spend my free time riding a bike, listening to <ExtLink href="https://open.spotify.com/playlist/5uSQ5tEGfTf6BAEwNRtsr1?si=ExHFeCz_TSmoQJyxVLu-2Q">classical music</ExtLink> or playing computer games with my friends.</p>
+				</Box>
+			</Container>
 		</>
 	);
 };

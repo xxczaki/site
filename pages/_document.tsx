@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					<meta charSet="utf-8"/>
-					<meta name="description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
+					<meta name="description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
 					<meta name="theme-color" content="#1c1d1f"/>
 					<meta name="msapplication-TileColor" content="#1c1d1f"/>
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -23,12 +23,12 @@ export default class MyDocument extends Document {
 					<meta name="twitter:card" content="summary_large_image"/>
 					<meta name="twitter:site" content="@dokwadratu"/>
 					<meta name="twitter:title" content="Antoni Kepinski"/>
-					<meta name="twitter:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
+					<meta name="twitter:description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
 					<meta name="twitter:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
 					<meta property="og:title" content="Antoni Kepinski"/>
 					<meta property="og:site_name" content="Antoni Kepinski"/>
 					<meta property="og:url" content="https://kepinski.me"/>
-					<meta property="og:description" content="Hi, my name is Antoni Kepinski and I like programming, especially in JavaScript & Rust. Come and visit my site!"/>
+					<meta property="og:description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
 					<meta property="og:type" content="website"/>
 					<meta property="og:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
 					<link rel="manifest" href="/manifest.json"/>

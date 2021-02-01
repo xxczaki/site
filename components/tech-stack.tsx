@@ -13,7 +13,7 @@ const Section = styled('div')`
 	overflow-x: scroll;
 	overflow-y: hidden;
 	width: 100%;
-	height: 10em;
+	height: 12em;
 
 	::-webkit-scrollbar {
 		width: 0px;
@@ -46,7 +46,7 @@ const Block = styled('a')<Props>`
     display: flex;
 	flex-direction: column;
 	width: 12rem;
-	height: 8rem;
+	height: 10rem;
     padding: 1rem;
     border-bottom-style: none;
     border-radius: var(--radius);
