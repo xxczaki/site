@@ -103,9 +103,10 @@ const ExternalLink = styled('a')`
 	background: none;
 	padding-top: var(--gap);
 	grid-column: 1 / -1;
+	color: var(--text);
 
 	&:hover {
-		color: var(--accent);
+		color: var(--hover);
 	}
 `;
 
