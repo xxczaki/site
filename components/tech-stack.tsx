@@ -13,7 +13,7 @@ const Section = styled('div')`
 	overflow-x: scroll;
 	overflow-y: hidden;
 	width: 100%;
-	height: 12em;
+	height: 12rem;
 
 	::-webkit-scrollbar {
 		width: 0px;
@@ -34,37 +34,32 @@ const Section = styled('div')`
 
 const Wrapper = styled('div')`
 	display: grid;
-	grid-gap: 1em;
+	grid-gap: 1rem;
 	grid-template-columns: repeat(auto-fit, 1fr);
 	grid-auto-flow: column;
-	height: 20rem;
 `;
 
 const Block = styled('a')<Props>`
-	background: ${props => props.background};
-	color: ${props => props.color ?? '#121212'};
     display: flex;
-	flex-direction: column;
-	width: 12rem;
-	height: 10rem;
-    padding: 1rem;
-    border-bottom-style: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     border-radius: var(--radius);
-    transition: all 200ms ease-in-out;
-	text-decoration: none;
-	user-select: none;
-	align-items: center;
-	justify-content: center;
+    background-color: ${props => props.background};
+    color: ${props => props.color ?? 'black'};
+    text-decoration: none;
+    width: 13rem;
+    height: 10rem;
+    transition: opacity var(--transition);
 
-	&:hover {
-		opacity: 0.8;
-    	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
-	}
-`;
+    h3 {
+        margin: 0;
+    }
 
-const Heading = styled('h3')`
-	font-size: 1em;
-	text-align: center;
+    &:hover {
+        opacity: .8;
+        box-shadow: 0px 1px 20px var(--accent);
+    }
 `;
 
 const TechStack = (): JSX.Element => (
@@ -77,30 +72,30 @@ const TechStack = (): JSX.Element => (
 						src="/images/logo-javascript.svg"
 						draggable={false}
 						alt="JavaScript"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>JavaScript (ES6+)</Heading>
+					<h3>JavaScript (ES6+)</h3>
 				</Block>
 				<Block background="#3178c6" color="#fff" href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer" aria-label="TypeScript">
 					<Image
 						src="/images/logo-typescript.svg"
 						draggable={false}
 						alt="TypeScript"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>TypeScript</Heading>
+					<h3>TypeScript</h3>
 				</Block>
 				<Block background="#61dafb" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" aria-label="React">
 					<Image
 						src="/images/logo-react.svg"
 						draggable={false}
 						alt="React"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>React</Heading>
+					<h3>React</h3>
 				</Block>
 				<Block background="#000" color="#fff" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Next.js">
 					<Image
@@ -108,69 +103,69 @@ const TechStack = (): JSX.Element => (
 						draggable={false}
 						alt="Next.js"
 						width={100}
-						height={65}
+						height={64}
 					/>
-					<Heading>Next.js</Heading>
+					<h3>Next.js</h3>
 				</Block>
 				<Block background="#663399" color="#fff" href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Gatsby">
 					<Image
 						src="/images/logo-gatsby.svg"
 						draggable={false}
 						alt="Gatsby"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>Gatsby</Heading>
+					<h3>Gatsby</h3>
 				</Block>
 				<Block background="#61dafb" href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer" aria-label="React Native">
 					<Image
 						src="/images/logo-react.svg"
 						draggable={false}
 						alt="React Native"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>React Native</Heading>
+					<h3>React Native</h3>
 				</Block>
 				<Block background="#2b2e3b" color="#fff" href="https://www.electronjs.org/" target="_blank" rel="noopener noreferrer" aria-label="Electron">
 					<Image
 						src="/images/logo-electron.svg"
 						draggable={false}
 						alt="Electron"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>Electron</Heading>
+					<h3>Electron</h3>
 				</Block>
 				<Block background="#68A063" href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" aria-label="Node.js">
 					<Image
 						src="/images/logo-nodejs.svg"
 						draggable={false}
 						alt="Node.js"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>Node.js</Heading>
+					<h3>Node.js</h3>
 				</Block>
 				<Block background="#dea584" href="https://www.rust-lang.org/" target="_blank" rel="noopener noreferrer" aria-label="Rust">
 					<Image
 						src="/images/logo-rust.svg"
 						draggable={false}
 						alt="Rust"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>Rust</Heading>
+					<h3>Rust</h3>
 				</Block>
 				<Block background="#654ff0" color="#fff" href="https://webassembly.org/" target="_blank" rel="noopener noreferrer" aria-label="WebAssembly">
 					<Image
 						src="/images/logo-wasm.svg"
 						draggable={false}
 						alt="WebAssembly"
-						width={65}
-						height={65}
+						width={64}
+						height={64}
 					/>
-					<Heading>WebAssembly</Heading>
+					<h3>WebAssembly</h3>
 				</Block>
 			</Wrapper>
 		</Section>
