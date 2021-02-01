@@ -25,10 +25,6 @@
 - [Next.js](https://nextjs.org/)
 - [Goober](https://goober.js.org/)
 
-**Additional:**
-
-- [NProgress](https://ricostacruz.com/nprogress/) - progress bar
-
 ## Development
 
 > Hosted with [Vercel ▲](https://vercel.com)

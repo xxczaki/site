@@ -6,8 +6,6 @@ import Header from './header';
 import ExtLink from './extlink';
 import getAge from '../utils/get-age';
 
-import me from '../public/images/me.jpg';
-
 const Container = styled('div')`
 	display: flex;
 	flex-wrap: wrap-reverse;
@@ -69,7 +67,7 @@ const About = (): JSX.Element => {
 				<ImageBox>
 					<Me
 						priority
-						src={me}
+						src="/images/me.jpg"
 						draggable={false}
 						alt="My face"
 						width={260}

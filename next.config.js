@@ -1,4 +1,3 @@
-const withOptimizedImages = require('next-optimized-images');
 const withOffline = require('next-offline');
 
 const nextConfig = {
@@ -25,10 +24,12 @@ const nextConfig = {
 	reactStrictMode: true,
 	experimental: {
 		optimizeFonts: true,
-		optimizeImages: true
+		optimizeImages: true,
+		optimizeCss: true,
+		scrollRestoration: true
 	},
 	future: {webpack5: true}
 };
 
-module.exports = withOptimizedImages(withOffline(nextConfig));
+module.exports = withOffline(nextConfig);
 
