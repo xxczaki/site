@@ -1,2 +1,3 @@
-User-agent: *
-Sitemap: https://kepinski.me/sitemap.xml
+user-agent: *
+allow: /
+sitemap: https://kepinski.me/sitemap.xml
