@@ -14,6 +14,11 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<style
+						id="_goober"
+						// @ts-expect-error
+						dangerouslySetInnerHTML={{__html: ' ' + this.props.css}}
+					/>
 					<meta charSet="utf-8"/>
 					<meta name="description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
 					<meta name="theme-color" content="#1c1d1f"/>
@@ -38,11 +43,6 @@ export default class MyDocument extends Document {
 					<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152.png"/>
 					<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120.png"/>
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
-					<style
-						id="_goober"
-						// @ts-expect-error
-						dangerouslySetInnerHTML={{__html: ' ' + this.props.css}}
-					/>
 					<link
 						rel="apple-touch-startup-image"
 						href="/apple-splash-2048-2732.png"

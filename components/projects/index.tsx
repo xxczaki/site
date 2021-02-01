@@ -99,11 +99,15 @@ const Tag = styled('li')`
     margin-right: 15px;
 `;
 
-const ExternalLink = styled(ExtLink)`
+const ExternalLink = styled('a')`
 	text-align: center;
 	background: none;
 	padding-top: var(--gap);
 	grid-column: 1 / -1;
+
+	&:hover {
+		color: var(--accent);
+	}
 `;
 
 const Projects = ({stars}: Props): JSX.Element => (
