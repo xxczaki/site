@@ -1,7 +1,6 @@
 import React from 'react';
 import {styled} from 'goober';
 import Image from 'next/image';
-import {BlurhashCanvas} from 'react-blurhash';
 
 import Header from './header';
 import ExtLink from './extlink';
@@ -68,21 +67,6 @@ const About = (): JSX.Element => {
 					</p>
 				</Box>
 				<ImageBox>
-					<BlurhashCanvas
-						hash="LPE:9w.9GWM}?^%hbdS0Y6o%%2Rk"
-						width={260}
-						height={260}
-						punch={1}
-						style={{
-							position: 'absolute',
-							top: 0,
-							left: 0,
-							right: 0,
-							width: 'calc(100% - 1px)',
-							height: 'calc(100% - 12px)',
-							borderRadius: 'var(--radius)'
-						}}
-					/>
 					<Me
 						priority
 						src={me}
