@@ -40,7 +40,7 @@ const Wrapper = styled('div')`
 	height: 20rem;
 `;
 
-const Block = styled('div')<Props>`
+const Block = styled('a')<Props>`
 	background: ${props => props.background};
 	color: ${props => props.color ?? '#121212'};
     display: flex;
