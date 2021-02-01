@@ -2,7 +2,7 @@ import {styled} from 'goober';
 
 const Footer = styled('footer')`
 	height: 32px;
-	margin: var(--gap) auto;
+	margin: var(--small-gap) auto;
 	padding: 0 1.5rem;
 	max-width: var(--main-content);
 	display: flex;
