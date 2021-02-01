@@ -1,10 +1,10 @@
 import React from 'react';
 import {NextPage} from 'next';
-import styled from 'styled-components';
+import {styled} from 'goober';
 
 import Main from '../components/main';
 
-const Quote = styled.blockquote`
+const Quote = styled('blockquote')`
 	font-style: italic;
     margin: 0;
     padding-left: 1rem;
