@@ -41,7 +41,7 @@ export default class MyDocument extends Document {
 					<style
 						id="_goober"
 						// @ts-expect-error
-						dangerouslySetInnerHTML={{__html: this.props.css}}
+						dangerouslySetInnerHTML={{__html: ' ' + this.props.css}}
 					/>
 					<link
 						rel="apple-touch-startup-image"
