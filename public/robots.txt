@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://kepinski.me/sitemap.xml
