@@ -84,26 +84,13 @@ const About = (): JSX.Element => {
 			</Container>
 			<Divider/>
 			<Header>About</Header>
-			<Container>
-				<Cover>
-					<Me
-						src="/images/cover.jpg"
-						draggable={false}
-						alt="Me with my cat"
-						width={260}
-						height={275}
-					/>
-				</Cover>
-				<Box>
-					<p>
-						Hey, I’m Antoni. I’m a full stack developer and open-source enthusiast.
-						Since late 2019 I&apos;m maintaining <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings Fetch API to Node.js.
-						I also maintain a collection of my own open source projects.
-						I&apos;m currently in the 2nd year of high school (grade 11), focusing mainly on math, physics and computer science.
-					</p>
-					<p>I spend my free time riding a bike, listening to <ExtLink href="https://open.spotify.com/playlist/5uSQ5tEGfTf6BAEwNRtsr1?si=ExHFeCz_TSmoQJyxVLu-2Q">classical music</ExtLink> or playing computer games with my friends.</p>
-				</Box>
-			</Container>
+			<p>
+				Hey, I’m Antoni. I’m a full stack developer and open-source enthusiast.
+				Since late 2019 I&apos;m maintaining <ExtLink href="https://github.com/node-fetch/node-fetch">node-fetch</ExtLink>, a lightweight library, which brings Fetch API to Node.js.
+				I also maintain a collection of my own open source projects.
+				I&apos;m currently in the 2nd year of high school (grade 11), focusing mainly on math, physics and computer science.
+			</p>
+			<p>I spend my free time riding a bike, listening to <ExtLink href="https://open.spotify.com/playlist/5uSQ5tEGfTf6BAEwNRtsr1?si=ExHFeCz_TSmoQJyxVLu-2Q">classical music</ExtLink> or playing computer games with my friends.</p>
 		</>
 	);
 };
