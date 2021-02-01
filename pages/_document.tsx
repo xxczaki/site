@@ -1,7 +1,15 @@
 import React from 'react';
-import Document, {Html, Head, Main, NextScript} from 'next/document';
+import Document, {Html, Head, Main, NextScript, DocumentContext} from 'next/document';
+import {extractCss} from 'goober';
 
 export default class MyDocument extends Document {
+	static async getInitialProps(ctx: DocumentContext) {
+		const page = ctx.renderPage();
+		const css = extractCss();
+
+		return {...page, css};
+	}
+
 	render(): JSX.Element {
 		return (
 			<Html lang="en">
