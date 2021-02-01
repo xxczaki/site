@@ -82,8 +82,7 @@ const Container = ({children}: Props): JSX.Element => {
 			<GlobalStyle/>
 			<Header
 				scrolled={scrolled}
-				// @ts-expect-error
-				style={{position: 'sticky', '-webkit-backdrop-filter:': 'blur(5px)'}}
+				style={{position: 'sticky', WebkitBackdropFilter: 'blur(5px)'}}
 			>
 				<Wrapper>
 					<Link href="/">
