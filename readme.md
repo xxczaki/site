@@ -1,20 +1,18 @@
-# [kepinski.me](https://kepinski.me)
+# [Personal Site](https://kepinski.ch)
 
-> Personal website, built with Preact, Next.js & more 🚀
-
-[![Build Status](https://travis-ci.org/xxczaki/site.svg?branch=master)](https://travis-ci.org/xxczaki/site)
+> Personal website, built with Preact and Next.js, focused on performance, a11y and privacy 🚀
+    
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
-[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
-
-*The website targets the latest version of Chrome, Safari, and Firefox.
 
 ---
 
 ## Highlights
 
-- Blazing fast (Next.js + Incremental SSG)
-- Works offline (PWA)
-- 100% Responsive & Accessible
+- **Performant** - uses Preact and Next.js with SSG.
+- **Accessible** - follows [WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics).
+- **Secure** - uses a hardened NGINX reverse proxy, perfect score on [Security Headers](https://securityheaders.com).
+- **Private** - hosted in 🇮🇸 Iceland, no trackers, analytics, or CDN.
+- **Responsive** - uses latest CSS features and looks great on all devices.
 - Written in TypeScript
 
 ## Built with:
@@ -26,8 +24,6 @@
 - [Goober](https://goober.js.org/)
 
 ## Development
-
-> Hosted with [Vercel ▲](https://vercel.com)
 
 ```bash
 # Run in development mode
