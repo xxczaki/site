@@ -68,7 +68,7 @@ const About = (): JSX.Element => {
 					<h1>Hi, my name is Antoni 👋</h1>
 					<p>
 						Thanks for visiting my site! Below you can find more information about me and my projects.
-						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:a@kepinski.me"><b>email</b></ExtLink> &lt;3
+						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:antoni@kepinski.ch"><b>email</b></ExtLink> &lt;3
 					</p>
 				</Box>
 				<ImageBox>

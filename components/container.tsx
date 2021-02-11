@@ -14,16 +14,16 @@ interface Props {
 	children: React.ReactNode;
 }
 
-const Header = styled('header')<{scrolled: boolean}>`
+const Header = styled('header') < {'data-scrolled': boolean}>`
 	z-index: 2;
     padding: 2.5rem 0;
     top: -1px;
 	right: 0px;
 	left: 0px;
-    background-color: ${props => props.scrolled ? 'var(--header)' : 'transparent'};
+    background-color: ${props => props['data-scrolled'] ? 'var(--header)' : 'transparent'};
     backdrop-filter: blur(5px);
     transition: border-bottom 150ms ease 0s, top 250ms ease 0s, background-color 300ms ease 0s;
-	border-bottom: 1px solid ${props => props.scrolled ? 'var(--header-border)' : 'transparent'};
+	border-bottom: 1px solid ${props => props['data-scrolled'] ? 'var(--header-border)' : 'transparent'};
 	align-items: center;
 `;
 
@@ -81,7 +81,7 @@ const Container = ({children}: Props): JSX.Element => {
 		<>
 			<GlobalStyle/>
 			<Header
-				scrolled={scrolled}
+				data-scrolled={scrolled}
 				style={{position: 'sticky', WebkitBackdropFilter: 'blur(5px)'}}
 			>
 				<Wrapper>
