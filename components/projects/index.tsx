@@ -106,7 +106,7 @@ const ExternalLink = styled('a')`
 	color: var(--text);
 
 	&:hover {
-		color: var(--hover);
+		color: var(--light-accent);
 	}
 `;
 
