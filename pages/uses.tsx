@@ -3,107 +3,35 @@ import {NextPage} from 'next';
 
 import Main from '../components/main';
 import ExtLink from '../components/extlink';
-import Details from '../components/details';
 
 const Index: NextPage<unknown> = () => {
 	return (
 		<Main>
 			<h1>Uses</h1>
-			<p>Here you can find information about the hardware or software I own and use. Inspired by <ExtLink target="_blank" rel="noopener noreferrer" href="https://uses.tech/">/uses</ExtLink>.</p>
+			<p>Here you can find information about the all the hardware and software I own and use. I update this page regularly, so be sure to check it out later. Idea inspired by <ExtLink target="_blank" rel="noopener noreferrer" href="https://uses.tech/">/uses</ExtLink>.</p>
+			<h2>Desk</h2>
+			<p>Since November 2020 I&apos;m using a <b>MacBook Pro 13&quot;</b> with the following specs:</p>
 			<ul>
-				<li>Hardware and Desk
-					<ul>
-						<li>MacBook Pro 13&quot;
-							<ul>
-								<li>Intel Core I5 2,0-3,8 GHz (10th generation)</li>
-								<li>16GB RAM (DDR4, 3733 MHz)</li>
-								<li>512GB SSD PCIe</li>
-								<li>4x Thunderbolt 3 (USB-C)</li>
-								<li>Touch Bar</li>
-							</ul>
-						</li>
-						<li>Green Cell HUB GC Connect60 8in1</li>
-						<li>24&quot; Dell U2410 Monitor</li>
-						<li>Logitech MX Master 3 Mouse</li>
-						<li>Bose QuietComfort 25 Headphones</li>
-					</ul>
-				</li>
-				<li>Software
-					<ul>
-						<li>Visual Studio Code</li>
-						<li>Google Chrome</li>
-						<li>Spotify</li>
-						<li>1Password</li>
-					</ul>
-				</li>
-				<li>Personal gear
-					<ul>
-						<li>iPhone 8 64GB</li>
-						<li>YubiKey 5 NFC</li>
-						<li><ExtLink target="_blank" rel="noopener noreferrer" href="https://redcanoebrands.com/shop/the-nasa-rocket-science-backpack/">Red Canoe NASA Backpack</ExtLink></li>
-						<li>Kross Hexagon X9 2014 Bike</li>
-					</ul>
-				</li>
+				<li>Intel Core I5 2,0-3,8 GHz (10th generation)</li>
+				<li>16GB RAM (DDR4, 3733 MHz)</li>
+				<li>512GB SSD PCIe</li>
+				<li>4x Thunderbolt 3 (USB-C)</li>
+				<li>Touch Bar (<i>yes, I actually like it</i>)</li>
 			</ul>
-			<h3>VS Code setup:</h3>
-			<Details>
-				<summary>
-					Settings
-				</summary>
-				<p>Check out my <ExtLink target="_blank" rel="noopener noreferrer" href="https://github.com/xxczaki/dotfiles">dotfiles repository</ExtLink>.</p>
-			</Details>
-			<Details>
-				<summary>
-					Themes
-				</summary>
-				<ul>
-					<li>Atom One Dark Theme</li>
-					<li>Material Icon Theme</li>
-				</ul>
-			</Details>
-			<Details>
-				<summary>
-					Plugins
-				</summary>
-				<ul>
-					<li>Auto Close Tag</li>
-					<li>Auto Rename Tag</li>
-					<li>AVA</li>
-					<li>Better Comments</li>
-					<li>Bracket Pair Colorizer 2</li>
-					<li>Code Spell Checker</li>
-					<li>Color Highlight</li>
-					<li>crates</li>
-					<li>Docker</li>
-					<li>DotENV</li>
-					<li>EditorConfig for VS Code</li>
-					<li>ES7 React/Redux/GraphQL/React-Native snippets</li>
-					<li>Even Better TOML</li>
-					<li>File Utils</li>
-					<li>GitLens - Git supercharged</li>
-					<li>GraphQL</li>
-					<li>GraphQL for VSCode</li>
-					<li>Highlight Matching Tag</li>
-					<li>Image preview</li>
-					<li>JS Refactor</li>
-					<li>Markdown All in One</li>
-					<li>npm Intellisense</li>
-					<li>open in browser</li>
-					<li>Path Intellisense</li>
-					<li>Rainbow Brackets</li>
-					<li>Reload</li>
-					<li>Rust</li>
-					<li>Scope Info</li>
-					<li>SCSS IntelliSense</li>
-					<li>Text Pastry</li>
-					<li>Toggle Quotes</li>
-					<li>Version Lens</li>
-					<li>Visual Studio IntelliCode</li>
-					<li>vscode-styled-components</li>
-					<li>XO</li>
-					<li>YAML</li>
-				</ul>
-			</Details>
+			<p>Before that I was using a custom PC with Linux Mint for about 3 years.</p>
+			<h2>Accessories</h2>
+			<p>I&apos;m using a USB hub (<b>Green Cell HUB GC Connect60 8in1</b>) in order to connect stuff like my 24&quot; <b>Dell U2410 monitor</b> (rather old now, but it works just fine) or the <b>Logitech MX Master 3</b> mouse to my laptop. My favorite MacBook stand is the <b>Twelve South Curve</b>. <b>Logitech K350</b> is my wireless, ergonomic keyboard.</p>
+			<p>I use <b>Bose QuietComfort 25 headphones</b> for anything sound-related.</p>
+			<h2>Other gear</h2>
+			<p>I&apos;m using <b>iPhone 8 (64GB)</b> as my phone. YubiKey 5C NFC is my security key. I save smaller files on <b>SanDisk 64GB Ultra Dual Drive Luxe USB</b>.</p>
+			<h2>Software</h2>
+			<p>I use <b>Mozilla Firefox Developer Edition</b>, optimized for privacy, to browser the internet. <b>1Password</b> is where I store all my passwords. I listen to classical music on <b>Spotify</b> and write everything from travel plans to useful phrases in <b>Notion</b>. <b>Signal</b> is my preferred online messaging service. I write longer texts in <b>iA Writer</b>.</p>
+			<p>I do most of the programming-related stuff in <b>Visual Studio Code</b>, which I carefully configured. I use <b>iTerm 2</b> with the <b>zsh</b> shell for running commands.</p>
+			<p>I&apos;m a huge fan of macOS apps! I use <b>Alfred 4</b> with the Powerpack to quickly move through the OS and perform quick actions. The theme I use is Simple Dark. I also use <b>Bartender 4</b> to remove the clutter in my menu bar. <b>Dato</b> helps me with anything date and time related. I convert videos to high quality GIFs with <b>Gifski</b>. Because I care greatly about my privacy, I&apos;m using <b>Little Snitch</b> for powerful network management and <b>Micro Snitch</b> for camera & microphone usage notifications. <b>Lungo</b> keeps my MacBook awake when needed. I use <b>Rectangle</b> for window management.</p>
+			<h2>Configuration</h2>
+			<p>Settings and preferences for my browser, terminal, code editor and other apps can be found in my personal <ExtLink target="_blank" rel="noopener noreferrer" href="https://github.com/xxczaki/dotfiles">dotfiles repositiory</ExtLink>.</p>
+			<h2>Paid services</h2>
+			<p>Since 2018, I use <b>ProtonMail</b> for keeping my emails private. Their paid plan allows me to connect a custom domain. I also pay a small amount for the previously mentioned <b>1Password</b>. To keep non-confidential data synchronized across my devices, I use <b>iCloud</b>. I mostly use <b>Namecheap</b> for registering domains and <b>Vercel</b> for hosting small websites. I also rent a VPS in Iceland via <b>1984 hosting</b>, which I highly recommend for privacy-related reasons.</p>
 		</Main>
 	);
 };
