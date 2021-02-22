@@ -65,7 +65,7 @@
         "@typescript-eslint/eslint-plugin": "^4.15.0",
         "@typescript-eslint/parser": "^4.15.0",
         "critters": "0.0.6",
-        "eslint-config-xo-react": "^0.23.0",
+        "eslint-config-xo-react": "^0.24.0",
         "eslint-config-xo-typescript": "^0.37.0",
         "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-react-hooks": "^4.2.0",
