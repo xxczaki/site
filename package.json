@@ -64,7 +64,7 @@
         "@types/react": "^17.0.2",
         "@typescript-eslint/eslint-plugin": "^4.15.2",
         "@typescript-eslint/parser": "^4.15.2",
-        "critters": "0.0.7",
+        "critters": "0.0.9",
         "eslint-config-xo-react": "^0.24.0",
         "eslint-config-xo-typescript": "^0.38.0",
         "eslint-plugin-react": "^7.22.0",
