@@ -9,9 +9,6 @@
         "start": "next start",
         "test": "xo"
     },
-    "engines": {
-        "node": "12.x"
-    },
     "xo": {
         "envs": [
             "node",
@@ -30,20 +27,13 @@
             "@typescript-eslint/restrict-template-expressions": "off",
             "node/no-unsupported-features/es-syntax": "off"
         },
-        "settings": {
-            "react": {
-                "version": "16.13"
-            }
-        },
         "extensions": [
             "tsx",
             "ts"
         ],
         "ignores": [
             "babel.config.js",
-            "next.config.js",
-            "next-sitemap.js",
-            "public/embed.js"
+            "next.config.js"
         ]
     },
     "dependencies": {
