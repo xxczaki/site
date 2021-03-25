@@ -25,8 +25,7 @@ const nextConfig = {
 	experimental: {
 		optimizeFonts: true,
 		optimizeImages: true,
-		optimizeCss: true,
-		scrollRestoration: true
+		optimizeCss: true
 	},
 	future: {webpack5: true}
 };

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Link from 'next/link';
+import Link from 'next/link.js';
 import {styled} from 'goober';
 import {Twitter, GitHub, Linkedin, Key} from 'react-feather';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
@@ -118,7 +118,7 @@ const Container = ({children}: Props): JSX.Element => {
 						aria-label="PGP Public Key"
 						onClick={() => {
 							// eslint-disable-next-line no-alert
-							alert('PGP fingerprint: F2D9 43C8 E24D 4C2D 1E35  F603 264B 02F9 7E4E CDE8');
+							alert('PGP fingerprint:\n F2D9 43C8 E24D 4C2D 1E35 F603 264B 02F9 7E4E CDE8');
 						}}
 					>
 						<abbr title="PGP Public Key">
@@ -127,7 +127,7 @@ const Container = ({children}: Props): JSX.Element => {
 					</Box>
 				</Social>
 			</Footer>
-			<Notice>This website does not track you.</Notice>
+			<Notice>🍪 No cookies, no trackers, no analytics.</Notice>
 		</>
 	);
 };
