@@ -1,11 +1,10 @@
 import React from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
-import {setup} from 'goober';
 
 import Container from '../components/container';
 
-setup(React.createElement);
+import 'tailwindcss/tailwind.css';
 
 const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 	return (
@@ -14,7 +13,9 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 				<title>Antoni Kepinski</title>
 			</Head>
 			<Container>
-				<Component {...pageProps}/>
+				<main className="flex flex-col m-auto leading max-w-4xl items-start p-5">
+					<Component {...pageProps}/>
+				</main>
 			</Container>
 		</>
 	);

@@ -1,41 +1,28 @@
 import React from 'react';
 import Document, {Html, Head, Main, NextScript, DocumentContext} from 'next/document';
-import {extractCss} from 'goober';
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
 		const page = ctx.renderPage();
-		const css = extractCss();
 
-		return {...page, css};
+		return {...page};
 	}
 
 	render(): JSX.Element {
 		return (
 			<Html lang="en">
 				<Head>
-					<style
-						id="_goober"
-						// @ts-expect-error
-						dangerouslySetInnerHTML={{__html: ' ' + this.props.css}}
-					/>
 					<meta charSet="utf-8"/>
 					<meta name="description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
-					<meta name="theme-color" content="#1c1d1f"/>
-					<meta name="msapplication-TileColor" content="#1c1d1f"/>
+					<meta name="theme-color" content="#111827"/>
+					<meta name="msapplication-TileColor" content="#111827"/>
 					<meta name="apple-mobile-web-app-capable" content="yes"/>
 					<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-					<meta name="twitter:card" content="summary_large_image"/>
-					<meta name="twitter:site" content="@dokwadratu"/>
-					<meta name="twitter:title" content="Antoni Kepinski"/>
-					<meta name="twitter:description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
-					<meta name="twitter:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
 					<meta property="og:title" content="Antoni Kepinski"/>
 					<meta property="og:site_name" content="Antoni Kepinski"/>
-					<meta property="og:url" content="https://kepinski.me"/>
+					<meta property="og:url" content="https://kepinski.ch"/>
 					<meta property="og:description" content="Personal website of Antoni Kepinski, a full stack developer, open-source enthusiast and classical music enjoyer, currently based near Poznań, Poland."/>
 					<meta property="og:type" content="website"/>
-					<meta property="og:image" content="https://og.kepinski.me/Antoni%20Kepinski.png?theme=dark&md=0&fontSize=125px&images=https%3A%2F%2Fkepinski.me%2Fimages%2Fflash-outline.svg"/>
 					<link rel="manifest" href="/manifest.json"/>
 					<link rel="icon" href="/favicon.png"/>
 					<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180.png"/>
@@ -124,7 +111,7 @@ export default class MyDocument extends Document {
 						href="/apple-splash-1136-640.png"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/>
 				</Head>
-				<body>
+				<body className="items-center justify-center bg-gray-900 text-white font-sans text-lg overflow-x-hidden">
 					<Main/>
 					<NextScript/>
 				</body>

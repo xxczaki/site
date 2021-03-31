@@ -1,7 +1,7 @@
 # [Personal Site](https://kepinski.ch)
 
-> Personal website, built with Preact and Next.js, focused on performance, a11y and privacy 🚀
-    
+> Personal website, built with Preact, Tailwind CSS and Next.js, focused on performance, a11y and privacy 🚀
+
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 ---
@@ -21,7 +21,7 @@
 
 - [Preact](https://preactjs.com/)
 - [Next.js](https://nextjs.org/)
-- [Goober](https://goober.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Development
 

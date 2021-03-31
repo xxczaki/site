@@ -1,3 +1,4 @@
+const withPreact = require('next-plugin-preact');
 const withOffline = require('next-offline');
 
 const nextConfig = {
@@ -27,8 +28,11 @@ const nextConfig = {
 		optimizeImages: true,
 		optimizeCss: true
 	},
-	future: {webpack5: true}
+    future: {
+        webpack5: true,
+        strictPostcssConfiguration: true
+    }
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withPreact(withOffline(nextConfig));
 

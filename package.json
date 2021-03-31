@@ -1,5 +1,5 @@
 {
-    "name": "kepinski.me",
+    "name": "kepinski.ch",
     "version": "1.0.0",
     "description": "Personal site",
     "private": true,
@@ -7,6 +7,7 @@
         "build": "next build",
         "dev": "next dev",
         "start": "next start",
+        "export": "next export",
         "test": "xo"
     },
     "xo": {
@@ -33,27 +34,30 @@
         ],
         "ignores": [
             "babel.config.js",
-            "next.config.js"
+            "next.config.js",
+			"postcss.config.js",
+			"tailwind.config.js"
         ]
     },
     "dependencies": {
         "@n8tb1t/use-scroll-position": "^2.0.3",
-        "goober": "^2.0.35",
         "graphql": "^15.5.0",
         "graphql-request": "^3.4.0",
-        "next": "^10.0.9",
+        "next": "^10.1.2",
         "preact": "^10.5.13",
-        "preact-render-to-string": "^5.1.16",
+        "preact-render-to-string": "^5.1.18",
         "react": "npm:@preact/compat@latest",
         "react-dom": "npm:@preact/compat@latest",
         "react-feather": "^2.0.9",
         "react-ssr-prepass": "npm:preact-ssr-prepass@latest"
     },
     "devDependencies": {
-        "@babel/core": "^7.13.10",
+        "@babel/core": "^7.13.14",
+        "@tailwindcss/jit": "^0.1.18",
         "@types/react": "^17.0.3",
-        "@typescript-eslint/eslint-plugin": "^4.19.0",
-        "@typescript-eslint/parser": "^4.19.0",
+        "@typescript-eslint/eslint-plugin": "^4.20.0",
+        "@typescript-eslint/parser": "^4.20.0",
+        "autoprefixer": "^10.2.5",
         "critters": "0.0.10",
         "eslint-config-xo-react": "^0.24.0",
         "eslint-config-xo-typescript": "^0.38.0",
@@ -61,8 +65,13 @@
         "eslint-plugin-react-hooks": "^4.2.0",
         "json-schema": "^0.3.0",
         "next-offline": "^5.0.3",
+        "next-plugin-preact": "^3.0.4",
+        "postcss": "^8.2.9",
+        "tailwindcss": "^2.0.4",
         "typescript": "^4.2.3",
-        "webpack": "^5.28.0",
         "xo": "^0.38.2"
-    }
+    },
+	"resolutions": {
+		"webpack": "^5.28.0"
+	}
 }

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,7 +20,7 @@
   },
   "exclude": [
     "node_modules",
-		"dist"
+	"dist"
   ],
   "include": [
     "renderer/next-env.d.ts",

@@ -1,27 +1,19 @@
 import React from 'react';
 import {NextPage} from 'next';
-import {styled} from 'goober';
-
-import Main from '../components/main';
-
-const Quote = styled('blockquote')`
-	font-style: italic;
-    margin: 0;
-    padding-left: 1rem;
-    border-left: 3px solid var(--light-accent);
-    transition: border-color var(--transition);
-`;
 
 const Index: NextPage<unknown> = () => (
-	<Main>
-		<h1>This page cannot be found.</h1>
-		<Quote cite="https://www.opensourceshakespeare.org/views/plays/play_view.php?WorkID=henry6p3&Act=3&Scene=3&Scope=scene">
+	<section className="flex flex-col gap-12">
+		<h1 className="text-4xl font-bold">This page cannot be found.</h1>
+		<blockquote
+			className="italic m-0 pl-4 border-l-4 border-gray-400 flex flex-col gap-5"
+			cite="https://www.opensourceshakespeare.org/views/plays/play_view.php?WorkID=henry6p3&Act=3&Scene=3&Scope=scene"
+		>
 			<p>Having nothing, nothing can he lose.</p>
 			<footer>
 				— William Shakespeare
 			</footer>
-		</Quote>
-	</Main>
+		</blockquote>
+	</section>
 );
 
 export default Index;

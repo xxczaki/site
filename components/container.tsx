@@ -1,70 +1,34 @@
-import React, {useState} from 'react';
-import Link from 'next/link.js';
-import {styled} from 'goober';
+import React, {ReactNode, useState} from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {Twitter, GitHub, Linkedin, Key} from 'react-feather';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 
-import GlobalStyle from './global-style';
-import Logo from './logo';
-import Nav from './nav';
 import NavLink from './navlink';
-import Footer from './footer';
 
 interface Props {
 	children: React.ReactNode;
 }
 
-const Header = styled('header') < {'data-scrolled': boolean}>`
-	z-index: 2;
-    padding: 2.5rem 0;
-    top: -1px;
-	right: 0px;
-	left: 0px;
-    background-color: ${props => props['data-scrolled'] ? 'var(--header)' : 'transparent'};
-    backdrop-filter: blur(5px);
-    transition: border-bottom 150ms ease 0s, top 250ms ease 0s, background-color 300ms ease 0s;
-	border-bottom: 1px solid ${props => props['data-scrolled'] ? 'var(--header-border)' : 'transparent'};
-	align-items: center;
-`;
+interface BoxProps {
+	href: string;
+	label: string;
+	onClick?: () => void;
+	children: ReactNode;
+}
 
-const Wrapper = styled('div')`
-	height: 0px;
-	margin: 0 auto;
-	padding: 0 1.5rem;
-	max-width: var(--main-content);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-`;
-
-const Social = styled('div')`
-	display: flex;
-	justify-content: space-between;
-	width: 12rem;
-`;
-
-const Box = styled('a')`
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	transition: background-color var(--transition);
-	padding: 5px;
-	border-radius: var(--inline-radius);
-	user-select: none;
-	width: 1.8rem;
-	height: 1.8rem;
-
-	&:hover {
-		background-color: var(--hover);
-	}
-`;
-
-const Notice = styled('p')`
-	text-align: center;
-	color: var(--text);
-	font-size: .9rem;
-	opacity: 0.5;
-`;
+const Box = ({href, label, onClick, children}: BoxProps) => (
+	<a
+		target="_blank"
+		rel="noopener noreferrer"
+		href={href}
+		aria-label={label}
+		className="items-center justify-center cursor-pointer transition-colors rounded-md select-none w-7 h-7"
+		onClick={onClick}
+	>
+		{children}
+	</a>
+);
 
 const Container = ({children}: Props): JSX.Element => {
 	const [scrolled, setScrolled] = useState(false);
@@ -79,55 +43,60 @@ const Container = ({children}: Props): JSX.Element => {
 
 	return (
 		<>
-			<GlobalStyle/>
-			<Header
-				data-scrolled={scrolled}
-				style={{position: 'sticky', WebkitBackdropFilter: 'blur(5px)'}}
+			<header
+				className={`z-10 pt-10 pb-1 mb-10 pl-0 top-0 right-0 left-0 transition border-b ${scrolled ? 'bg-gray-800 bg-opacity-70 border-gray-400' : 'bg-transparent border-transparent'} sticky w-screen`}
+				style={{backdropFilter: 'blur(5px)'}}
 			>
-				<Wrapper>
+				<div className="h-0 pb-9 pl-5 max-w-4xl w-full flex items-center justify-between m-auto">
 					<Link href="/">
-						<Logo src="/images/logo.svg" alt="Logo" width={55} height={55}/>
+						<Image
+							className="cursor-pointer transition-colors flex !p-1 rounded-md mr-8 hover:bg-gray-700 text-lg"
+							src="/images/logo.svg"
+							alt="Logo"
+							width={45}
+							height={45}
+						/>
 					</Link>
-					<Nav>
+					<nav className="flex items-center justify-between pr-4">
 						<NavLink title="Home" href="/"/>
-						<NavLink title="Projects" href="/projects"/>
-					</Nav>
-				</Wrapper>
-			</Header>
+						<NavLink title="Projects" href="https://github.com/xxczaki"/>
+					</nav>
+				</div>
+			</header>
 			{children}
-			<Footer>
+			<footer className="mb-9 pb-0 pl-6 max-w-4xl flex items-center justify-between text-sm opacity-50 m-auto pt-20 pr-5">
 				<p>Antoni Kepinski &copy; {new Date().getFullYear()}</p>
-				<Social>
-					<Box href="https://twitter.com/dokwadratu" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+				<div className="flex justify-between w-44">
+					<Box href="https://twitter.com/dokwadratu" label="Twitter">
 						<abbr title="Twitter">
-							<Twitter color="var(--text)" size={30}/>
+							<Twitter size={35} className="hover:bg-gray-700 p-1 rounded-md"/>
 						</abbr>
 					</Box>
-					<Box href="https://github.com/xxczaki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+					<Box href="https://github.com/xxczaki" label="GitHub">
 						<abbr title="GitHub">
-							<GitHub color="var(--text)" size={30}/>
+							<GitHub size={35} className="hover:bg-gray-700 p-1 rounded-md"/>
 						</abbr>
 					</Box>
-					<Box href="https://linkedin.com/in/akepinski" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+					<Box href="https://linkedin.com/in/akepinski" label="LinkedIn">
 						<abbr title="LinkedIn">
-							<Linkedin color="var(--text)" size={30}/>
+							<Linkedin size={35} className="hover:bg-gray-700 p-1 rounded-md"/>
 						</abbr>
 					</Box>
 					<Box
 						href="/key.asc"
-						aria-label="PGP Public Key"
+						label="PGP Public Key"
 						onClick={() => {
 							// eslint-disable-next-line no-alert
 							alert('PGP fingerprint:\n F2D9 43C8 E24D 4C2D 1E35 F603 264B 02F9 7E4E CDE8');
 						}}
 					>
 						<abbr title="PGP Public Key">
-							<Key color="var(--text)" size={30}/>
+							<Key size={35} className="hover:bg-gray-700 p-1 rounded-md"/>
 						</abbr>
 					</Box>
-				</Social>
-			</Footer>
-			<Notice>🍪 No cookies, no trackers, no analytics.</Notice>
+				</div>
+			</footer>
+			<p className="text-center text-sm opacity-50 pb-4 pt-10">🍪 No cookies, no trackers, no analytics.</p>
 		</>
 	);
 };
