@@ -25,8 +25,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	experimental: {
 		optimizeFonts: true,
-		optimizeImages: true,
-		optimizeCss: true
+		optimizeImages: true
 	},
     future: {
         webpack5: true,
