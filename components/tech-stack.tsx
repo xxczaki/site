@@ -11,8 +11,8 @@ interface Props {
 
 const Block = ({background, color, href, name, img}: Props) => (
 	<a
-		className={`flex flex-col items-center justify-evenly rounded-lg ${!color && 'text-gray-800'} no-underline w-56 h-40 transition-opacity hover:opacity-80 hover:shadow`}
-		style={{background, color}}
+		className={`flex flex-col items-center justify-evenly rounded-lg ${!color && 'text-gray-800'} no-underline w-56 h-40 transition-opacity hover:opacity-80 hover:shadow text-[${color}]`}
+		style={{background}}
 		href={href}
 		target="_blank"
 		rel="noopener noreferrer"
