@@ -14,15 +14,7 @@ const About = (): JSX.Element => {
 						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:antoni@kepinski.ch"><b>email</b></ExtLink> &lt;3
 					</p>
 				</div>
-				<div className="hidden md:block relative overflow-hidden rounded-md h-[97%]">
-					<img
-						aria-hidden="true"
-						alt=""
-						src="/images/me-placeholder.jpg"
-						className="absolute object-cover object-center filter blur-md transform scale-125"
-						width={260}
-						height={260}
-					/>
+				<div className="hidden md:block">
 					<Image
 						className="select-none transition-all hover:filter hue-rotate-90 pointer-events-none"
 						src="/images/me.jpg"
