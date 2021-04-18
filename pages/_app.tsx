@@ -1,13 +1,15 @@
 import React from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
-import {ThemeProvider} from 'next-themes';
+import {ThemeProvider, useTheme} from 'next-themes';
 
 import Container from '../components/container';
 
 import 'tailwindcss/tailwind.css';
 
 const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
+	const {resolvedTheme} = useTheme();
+
 	return (
 		<ThemeProvider attribute="class">
 			<Head>
