@@ -1,4 +1,3 @@
-const withPreact = require('next-plugin-preact');
 const withOffline = require('next-offline');
 
 const nextConfig = {
@@ -34,5 +33,5 @@ const nextConfig = {
     }
 };
 
-module.exports = withPreact(withOffline(nextConfig));
+module.exports = withOffline(nextConfig);
 

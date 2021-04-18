@@ -1,8 +1,0 @@
-{
-	"__timestamp": 1618753331612,
-	"__ttl": 900000,
-	"postcss": "^8.2.10",
-	"@typescript-eslint/parser": "^4.22.0",
-	"@typescript-eslint/eslint-plugin": "^4.22.0",
-	"next-offline": "^5.0.5"
-}

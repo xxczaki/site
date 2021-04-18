@@ -5,7 +5,7 @@ import ExtLink from '../components/extlink';
 
 const Index: NextPage<unknown> = () => {
 	return (
-		<section className="flex flex-col gap-12">
+		<section className="grid gap-12">
 			<h1 className="text-4xl font-bold">Uses</h1>
 			<p>Here you can find information about the all the hardware and software I own and use. I update this page regularly, so be sure to check it out later. Idea inspired by <ExtLink href="https://uses.tech/">/uses</ExtLink>.</p>
 			<h2 className="text-2xl font-bold">Desk</h2>

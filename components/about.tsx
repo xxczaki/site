@@ -5,10 +5,10 @@ import ExtLink from './extlink';
 
 const About = (): JSX.Element => {
 	return (
-		<section className="flex flex-col gap-12">
-			<div className="flex w-full gap-6">
-				<div className="flex flex-col max-w-xl w-full justify-center gap-10">
-					<h1 className="text-4xl font-bold">Hi, my name is Antoni 👋</h1>
+		<section className="grid gap-12">
+			<div className="flex justify-between h-full">
+				<div className="flex flex-col max-w-xl w-full justify-evenly">
+					<h1 className="text-4xl font-bold pb-8 md:pb-0">Hi, my name is Antoni 👋</h1>
 					<p>
 						Thanks for visiting my site! Below you can find more information about me and my projects.
 						If you need anything else please just drop me a <ExtLink href="https://twitter.com/dokwadratu"><b>Tweet</b></ExtLink> or <ExtLink href="mailto:antoni@kepinski.ch"><b>email</b></ExtLink> &lt;3
@@ -17,7 +17,7 @@ const About = (): JSX.Element => {
 				<div className="hidden md:block">
 					<Image
 						priority
-						className="select-none rounded-md transition-all hover:filter-hue-rotate-90 pointer-events-none"
+						className="select-none rounded-md transition-all hover:filter hue-rotate-90 pointer-events-none"
 						src="/images/me.jpg"
 						draggable={false}
 						alt="My face"

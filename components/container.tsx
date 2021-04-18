@@ -56,7 +56,7 @@ const Container = ({children}: Props): JSX.Element => {
 				<div className="h-0 pb-9 pl-5 max-w-4xl w-full flex items-center justify-between m-auto">
 					<Link href="/">
 						<Image
-							className="cursor-pointer transition-colors flex !p-1 rounded-md mr-8 hover:bg-gray-300 dark:hover:bg-gray-600 text-lg dark:filter dark:invert"
+							className="cursor-pointer transition-colors flex !p-1 rounded-md mr-8 hover:bg-gray-300 text-lg dark:filter dark:invert"
 							src="/images/logo.svg"
 							alt="Logo"
 							width={45}
@@ -69,24 +69,25 @@ const Container = ({children}: Props): JSX.Element => {
 						<button
 							type="button"
 							aria-label="Change theme"
+							className="cursor-pointer hover:bg-gray-300 p-1 dark:hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-30 rounded-md"
 							disabled={!mounted}
 							onClick={() => {
 								setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
 							}}
 						>
-							{resolvedTheme === 'light' ? (
-								<Moon
-									size={30}
-									className="cursor-pointer hover:bg-gray-300 p-1 rounded-md"
-									aria-label="Moon"
-								/>
-							) : (
-								<Sun
-									size={30}
-									className="cursor-pointer hover:bg-gray-600 p-1 rounded-md"
-									aria-label="Sun"
-								/>
-							)}
+							<abbr title="Switch theme">
+								{resolvedTheme === 'light' ? (
+									<Moon
+										size={22}
+										aria-label="Moon"
+									/>
+								) : (
+									<Sun
+										size={22}
+										aria-label="Sun"
+									/>
+								)}
+							</abbr>
 						</button>
 					</nav>
 				</div>

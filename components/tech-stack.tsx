@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 interface Props {
 	background: string;
-	color?: string;
+	color: string;
 	href: string;
 	name: string;
 	img: string;
@@ -11,7 +11,7 @@ interface Props {
 
 const Block = ({background, color, href, name, img}: Props) => (
 	<a
-		className={`flex flex-col items-center justify-evenly rounded-lg ${!color && 'text-gray-800'} no-underline w-56 h-40 transition-opacity hover:opacity-80 hover:shadow text-[${color ?? 'black'}]`}
+		className={`flex flex-col items-center justify-evenly rounded-lg ${!color && 'text-gray-800'} no-underline w-56 h-40 transition-opacity hover:opacity-80 hover:shadow text-${color}`}
 		style={{background}}
 		href={href}
 		target="_blank"
@@ -37,6 +37,7 @@ const TechStack = (): JSX.Element => (
 			<div className="grid gap-4 grid-flow-col">
 				<Block
 					background="#f0db4f"
+					color="black"
 					href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/"
 					name="JavaScript (ES6+)"
 					img="javascript"
@@ -50,6 +51,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#61dafb"
+					color="black"
 					href="https://reactjs.org/"
 					name="React"
 					img="react"
@@ -70,6 +72,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#61dafb"
+					color="black"
 					href="https://reactnative.dev/"
 					name="React Native"
 					img="react"
@@ -83,6 +86,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#68a063"
+					color="black"
 					href="https://nodejs.org/"
 					name="Node.js"
 					img="nodejs"
