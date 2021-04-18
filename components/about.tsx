@@ -16,7 +16,7 @@ const About = (): JSX.Element => {
 				</div>
 				<div className="hidden md:block rounded-md">
 					<Image
-						className="select-none transition-all hover:filter hue-rotate-90 pointer-events-none"
+						className="select-none transition-all hover:filter hue-rotate-90 pointer-events-none rounded-md"
 						src="/images/me.jpg"
 						draggable={false}
 						alt="My face"
