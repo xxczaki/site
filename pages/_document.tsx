@@ -111,7 +111,7 @@ export default class MyDocument extends Document {
 						href="/apple-splash-1136-640.png"
 						media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/>
 				</Head>
-				<body className="items-center justify-center bg-gray-900 text-white font-sans text-lg overflow-x-hidden">
+				<body className="items-center justify-center bg-white dark:bg-black text-black dark:text-white font-sans text-lg">
 					<Main/>
 					<NextScript/>
 				</body>

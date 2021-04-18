@@ -43,7 +43,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#3178c6"
-					color="white"
+					color="#fff"
 					href="https://www.typescriptlang.org/"
 					name="TypeScript"
 					img="typescript"
@@ -56,14 +56,14 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="black"
-					color="white"
+					color="#fff"
 					href="https://nextjs.org/"
 					name="Next.js"
 					img="nextjs"
 				/>
 				<Block
 					background="#663399"
-					color="white"
+					color="#fff"
 					href="https://www.gatsbyjs.org/"
 					name="Gatsby"
 					img="gatsby"
@@ -76,7 +76,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#2b2e3b"
-					color="white"
+					color="#fff"
 					href="https://www.electronjs.org/"
 					name="Electron"
 					img="electron"

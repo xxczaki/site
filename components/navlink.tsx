@@ -14,7 +14,7 @@ const NavLink = ({title, href}: Props): JSX.Element => {
 		<Link href={href}>
 			<button
 				type="button"
-				className={`rounded-lg no-underline flex h-8 mr-0 pr-5 pl-5 items-center border-none cursor-pointer font-bold text-sm ${router.pathname === href ? 'bg-white text-gray-800' : 'bg-auto'}`}
+				className={`rounded-lg no-underline flex h-8 mr-0 pr-5 pl-5 items-center border-none cursor-pointer font-bold text-sm ${router.pathname === href ? 'bg-black dark:bg-white text-white dark:text-black' : 'bg-auto'}`}
 			>
 				{title}
 			</button>

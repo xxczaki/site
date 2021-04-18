@@ -22,7 +22,7 @@ const Index: NextPage<unknown> = () => {
 			<p>I&apos;m using a USB hub (<b>Green Cell HUB GC Connect60 8in1</b>) in order to connect stuff like my 24&quot; <b>Dell U2410</b> monitor (rather old now, but it works just fine) or the <b>Logitech MX Master 3</b> mouse to my laptop. My favorite MacBook stand is the <b>Twelve South Curve</b>. <b>Logitech K350</b> is my wireless, ergonomic keyboard.</p>
 			<p>I use <b>Bang &amp; Olufsen H9 (3rd gen)</b> headphones for anything sound-related.</p>
 			<h2 className="text-2xl font-bold">Other gear</h2>
-			<p>I&apos;m using <b>iPhone 8 (64GB)</b> as my phone. YubiKey 5C NFC is my security key. I keep smaller files on <b>SanDisk 64GB Ultra Dual Drive Luxe USB</b> and large backups on my <b>Samsung Portable SSD T7 (500GB)</b>.</p>
+			<p>I&apos;m using <b>iPhone 12 (64GB)</b> as my phone. YubiKey 5C NFC is my security key. I keep smaller files on <b>SanDisk 64GB Ultra Dual Drive Luxe USB</b> and large backups on my <b>Samsung Portable SSD T7 (500GB)</b>.</p>
 			<h2 className="text-2xl font-bold">Software</h2>
 			<p>I use <b>Mozilla Firefox Developer Edition</b>, optimized for privacy, to browser the internet. <b>1Password</b> is where I store all my passwords. I listen to classical music on <b>Spotify</b> and write everything from travel plans to useful phrases in <b>Notion</b>. <b>Signal</b> is my preferred online messaging service. I write longer texts in <b>iA Writer</b>.</p>
 			<p>I do most of the programming-related stuff in <b>Visual Studio Code</b>, which I carefully configured. I use <b>iTerm 2</b> with the <b>zsh</b> shell for running commands.</p>
