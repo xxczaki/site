@@ -30,7 +30,8 @@ const nextConfig = {
     future: {
         webpack5: true,
         strictPostcssConfiguration: true
-    }
+	},
+	poweredByHeader: false
 };
 
 module.exports = withOffline(nextConfig);
