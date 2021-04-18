@@ -11,7 +11,7 @@ interface Props {
 
 const Block = ({background, color, href, name, img}: Props) => (
 	<a
-		className={`flex flex-col items-center justify-evenly rounded-lg ${!color && 'text-gray-800'} no-underline w-56 h-40 transition-opacity hover:opacity-80 hover:shadow text-[${color}]`}
+		className={`flex flex-col items-center justify-evenly rounded-lg ${!color && 'text-gray-800'} no-underline w-56 h-40 transition-opacity hover:opacity-80 hover:shadow text-[${color ?? 'black'}]`}
 		style={{background}}
 		href={href}
 		target="_blank"
@@ -43,7 +43,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#3178c6"
-					color="#fff"
+					color="white"
 					href="https://www.typescriptlang.org/"
 					name="TypeScript"
 					img="typescript"
@@ -56,14 +56,14 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="black"
-					color="#fff"
+					color="white"
 					href="https://nextjs.org/"
 					name="Next.js"
 					img="nextjs"
 				/>
 				<Block
 					background="#663399"
-					color="#fff"
+					color="white"
 					href="https://www.gatsbyjs.org/"
 					name="Gatsby"
 					img="gatsby"
@@ -76,7 +76,7 @@ const TechStack = (): JSX.Element => (
 				/>
 				<Block
 					background="#2b2e3b"
-					color="#fff"
+					color="white"
 					href="https://www.electronjs.org/"
 					name="Electron"
 					img="electron"

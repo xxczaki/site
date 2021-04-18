@@ -1,7 +1,7 @@
 module.exports = {
 	plugins: {
-		'flex-gap-polyfill': {},
 		tailwindcss: {},
+		'flex-gap-polyfill': {},
 		autoprefixer: {}
   	},
 }
