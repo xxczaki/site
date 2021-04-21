@@ -19,7 +19,7 @@ const Index: NextPage<unknown> = () => {
 			</ul>
 			<p>Before that I was using a custom PC with Linux Mint for about 3 years.</p>
 			<h2 className="text-2xl font-bold">Accessories</h2>
-			<p>I&apos;m using a USB hub (<b>Green Cell HUB GC Connect60 8in1</b>) in order to connect stuff like my 24&quot; <b>Dell U2410</b> monitor (rather old now, but it works just fine) or the <b>Logitech MX Master 3</b> mouse to my laptop. My favorite MacBook stand is the <b>Twelve South Curve</b>. <b>Logitech K350</b> is my wireless, ergonomic keyboard.</p>
+			<p>I&apos;m using a USB hub (<b>Green Cell HUB GC Connect60 8in1</b>) in order to connect stuff like the <b>Logitech MX Master 3</b> mouse to my laptop. My favorite MacBook stand is the <b>Twelve South Curve</b>. Super cheap and reliable <b>Logitech K350</b> is my wireless, ergonomic keyboard.</p>
 			<p>I use <b>Bang &amp; Olufsen H9 (3rd gen)</b> headphones for anything sound-related.</p>
 			<h2 className="text-2xl font-bold">Other gear</h2>
 			<p>I&apos;m using <b>iPhone 12 (64GB)</b> as my phone. YubiKey 5C NFC is my security key. I keep smaller files on <b>SanDisk 64GB Ultra Dual Drive Luxe USB</b> and large backups on my <b>Samsung Portable SSD T7 (500GB)</b>.</p>
@@ -29,7 +29,7 @@ const Index: NextPage<unknown> = () => {
 			<p>I&apos;m a huge fan of macOS apps! I use <b>Alfred 4</b> with the Powerpack to quickly move through the OS and perform quick actions. The theme I use is Simple Dark. I also use <b>Bartender 4</b> to remove the clutter in my menu bar. <b>Dato</b> helps me with anything date and time related. I convert videos to high quality GIFs with <b>Gifski</b>. Because I care greatly about my privacy, I&apos;m using <b>Little Snitch</b> for powerful network management and <b>Micro Snitch</b> for camera & microphone usage notifications. <b>Lungo</b> keeps my MacBook awake when needed. I use <b>Rectangle</b> for window management.</p>
 			<h2 className="text-2xl font-bold">Configuration</h2>
 			<p>Settings and preferences for my browser, terminal, code editor and other apps can be found in my personal <ExtLink href="https://github.com/xxczaki/dotfiles">dotfiles repositiory</ExtLink>.</p>
-			<h2 className="text-2xl font-bold">Paid services</h2>
+			<h2 className="text-2xl font-bold">Other services</h2>
 			<p>Since 2018, I use <b>ProtonMail</b> for keeping my emails private. Their paid plan allows me to connect a custom domain. I also pay a small amount for the previously mentioned <b>1Password</b>, even though since February 2021 I only use their local vault feature. To keep non-confidential data synchronized across my devices, I use <b>iCloud</b>. I mostly use <b>Namecheap</b> for registering domains and <b>Vercel</b> for hosting small websites. I also rent a VPS in Iceland via <b>1984 hosting</b>, which I highly recommend for privacy-related reasons. This website is running on it!</p>
 		</section>
 	);

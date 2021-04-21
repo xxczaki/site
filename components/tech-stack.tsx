@@ -31,7 +31,7 @@ const Block = ({background, color, href, name, img}: Props) => (
 );
 
 const TechStack = (): JSX.Element => (
-	<section className="flex flex-col pt-10 gap-12 w-full">
+	<section className="grid pt-10 gap-12 w-full">
 		<h2 className="text-2xl font-bold">Things I use</h2>
 		<div className="overflow-x-scroll overflow-y-hidden h-48">
 			<div className="grid gap-4 grid-flow-col">
