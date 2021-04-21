@@ -22,14 +22,14 @@ const solutions = [
 		name: 'Home',
 		description: 'Main page with general information',
 		href: '/',
-		icon: Home,
-		isExternal: true
+		icon: Home
 	},
 	{
 		name: 'Projects',
 		description: 'Redirects to my GitHub profile',
 		href: 'https://github.com/xxczaki',
-		icon: Code
+		icon: Code,
+		isExternal: true
 	},
 	{
 		name: 'Uses',
