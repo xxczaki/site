@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint-config-xo-react
+    versions:
+    - 0.24.0
+    - 0.25.0
+  - dependency-name: critters
+    versions:
+    - 0.0.10
+    - 0.0.7
+    - 0.0.8
+    - 0.0.9
+  - dependency-name: eslint-config-xo-typescript
+    versions:
+    - 0.37.0
+    - 0.38.0
+  - dependency-name: xo
+    versions:
+    - 0.37.1
+    - 0.38.1
+  - dependency-name: swr
+    versions:
+    - 0.4.1
+  - dependency-name: json-schema
+    versions:
+    - 0.3.0
