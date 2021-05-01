@@ -1,4 +1,5 @@
 const withOffline = require('next-offline');
+const withPreact = require('next-plugin-preact');
 
 const nextConfig = {
 	workboxOpts: {
@@ -12,12 +13,12 @@ const nextConfig = {
 					networkTimeoutSeconds: 15,
 					expiration: {
 						maxEntries: 150,
-						maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+						maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
 					},
 					cacheableResponse: {
-						statuses: [0, 200]
-					}
-				}
+						statuses: [0, 200],
+					},
+				},
 			}
 		]
 	},
@@ -34,5 +35,5 @@ const nextConfig = {
 	poweredByHeader: false
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withOffline(withPreact(nextConfig));
 
