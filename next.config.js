@@ -1,5 +1,4 @@
 const withOffline = require('next-offline');
-const withPreact = require('next-plugin-preact');
 
 const nextConfig = {
 	workboxOpts: {
@@ -24,7 +23,6 @@ const nextConfig = {
 	},
 	reactStrictMode: true,
 	experimental: {
-		optimizeFonts: true,
 		optimizeImages: true,
 		optimizeCss: true
 	},
@@ -35,5 +33,5 @@ const nextConfig = {
 	poweredByHeader: false
 };
 
-module.exports = withOffline(withPreact(nextConfig));
+module.exports = withOffline(nextConfig);
 

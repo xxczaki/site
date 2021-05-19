@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
 					<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 					<link rel="manifest" href="/manifest.webmanifest"/>
 				</Head>
-				<body className="items-center justify-center bg-white dark:bg-black text-black dark:text-white font-sans text-lg">
+				<body className="items-center justify-center bg-white dark:bg-black text-black dark:text-white font-sans text-lg overflow-x-hidden">
 					<Main/>
 					<NextScript/>
 				</body>
