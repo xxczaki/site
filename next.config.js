@@ -1,5 +1,42 @@
 const withOffline = require('next-offline');
 
+const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-inline\'; img-src \'self\' data:';
+const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\'; img-src \'self\' data:';
+const securityHeaders = [
+	{
+		key: 'X-DNS-Prefetch-Control',
+		value: 'on'
+	},
+	{
+		key: 'X-XSS-Protection',
+		value: '1; mode=block'
+	},
+	{
+		key: 'X-Frame-Options',
+		value: 'SAMEORIGIN'
+	},
+	{
+		key: 'Permissions-Policy',
+		value: 'accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), xr-spatial-tracking=()'
+	},
+	{
+		key: 'X-Content-Type-Options',
+		value: 'nosniff'
+	},
+	{
+		key: 'Referrer-Policy',
+		value: 'no-referrer'
+	},
+	{
+		key: 'Content-Security-Policy',
+		value: process.env.NODE_ENV === 'production' ? cspProd : cspDev
+	},
+	{
+		key: 'Sec-GPC',
+		value: '1'
+	}
+];
+
 const nextConfig = {
 	workboxOpts: {
 		swDest: 'static/service-worker.js',
@@ -12,12 +49,12 @@ const nextConfig = {
 					networkTimeoutSeconds: 15,
 					expiration: {
 						maxEntries: 150,
-						maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
+						maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
 					},
 					cacheableResponse: {
-						statuses: [0, 200],
-					},
-				},
+						statuses: [0, 200]
+					}
+				}
 			}
 		]
 	},
@@ -26,11 +63,18 @@ const nextConfig = {
 		optimizeImages: true,
 		optimizeCss: true
 	},
-    future: {
-        webpack5: true,
-        strictPostcssConfiguration: true
+	future: {
+		strictPostcssConfiguration: true
 	},
-	poweredByHeader: false
+	poweredByHeader: false,
+	async headers() {
+		return [
+			{
+				source: '/(.*)',
+				headers: securityHeaders
+			}
+		];
+	}
 };
 
 module.exports = withOffline(nextConfig);

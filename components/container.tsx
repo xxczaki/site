@@ -22,21 +22,21 @@ const solutions = [
 		name: 'Home',
 		description: 'Main page with general information',
 		href: '/',
-		icon: Home
+		icon: Home,
 	},
 	{
 		name: 'Projects',
 		description: 'Redirects to my GitHub profile',
 		href: 'https://github.com/xxczaki',
 		icon: Code,
-		isExternal: true
+		isExternal: true,
 	},
 	{
 		name: 'Uses',
 		description: 'My apps and settings.',
 		href: '/uses',
-		icon: Settings
-	}
+		icon: Settings,
+	},
 ];
 
 const Box = ({href, label, onClick, children}: BoxProps) => (
@@ -127,43 +127,42 @@ const Container = ({children}: Props): JSX.Element => {
 												href={item.href}
 												target="_blank"
 												rel="noopener noreferrer"
-										className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-									>
-										<div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-											<item.icon size={35} aria-hidden="true" className="rounded-md bg-gray-100 dark:bg-gray-800 p-2 text-gray-700 dark:text-gray-400"/>
-										</div>
-										<div className="ml-4">
-											<p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-												{item.name}
-											</p>
-											<p className="text-sm text-gray-500 dark:text-gray-300">
-												{item.description}
-											</p>
-										</div>
-									</a>
-										)
-									} else {
-
-										return (
-											<Link key={item.name} href={item.href}>
-									<a
-										className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-									>
-										<div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-											<item.icon size={35} aria-hidden="true" className="rounded-md bg-gray-100 dark:bg-gray-800 p-2 text-gray-700 dark:text-gray-400"/>
-										</div>
-										<div className="ml-4">
-											<p className="text-sm font-medium text-gray-900 dark:text-gray-100">
-												{item.name}
-											</p>
-											<p className="text-sm text-gray-500 dark:text-gray-300">
-												{item.description}
-											</p>
-										</div>
-									</a>
-												</Link>
-										)
+												className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+											>
+												<div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+													<item.icon size={35} aria-hidden="true" className="rounded-md bg-gray-100 dark:bg-gray-800 p-2 text-gray-700 dark:text-gray-400"/>
+												</div>
+												<div className="ml-4">
+													<p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+														{item.name}
+													</p>
+													<p className="text-sm text-gray-500 dark:text-gray-300">
+														{item.description}
+													</p>
+												</div>
+											</a>
+										);
 									}
+
+									return (
+										<Link key={item.name} href={item.href}>
+											<a
+												className="flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+											>
+												<div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
+													<item.icon size={35} aria-hidden="true" className="rounded-md bg-gray-100 dark:bg-gray-800 p-2 text-gray-700 dark:text-gray-400"/>
+												</div>
+												<div className="ml-4">
+													<p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+														{item.name}
+													</p>
+													<p className="text-sm text-gray-500 dark:text-gray-300">
+														{item.description}
+													</p>
+												</div>
+											</a>
+										</Link>
+									);
 								})}
 							</div>
 							<div className="flex p-4 bg-gray-100 dark:bg-gray-800 justify-end w-full">
