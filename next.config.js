@@ -81,7 +81,19 @@ const nextConfig = {
 			}
 		];
 	},
-	pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'md', 'mdx']
+	pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'md', 'mdx'],
+	async rewrites() {
+		return [
+			{
+				source: '/bee.js',
+				destination: 'https://cdn.splitbee.io/sb.js'
+			},
+			{
+				source: '/_hive/:slug',
+				destination: 'https://hive.splitbee.io/:slug'
+			}
+		];
+	}
 };
 
 module.exports = withMDX(nextConfig);

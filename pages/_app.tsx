@@ -26,7 +26,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 				<title>Antoni Kępiński</title>
 				<meta name="theme-color" content={color} />
 			</Head>
-			<Script src="https://cdn.splitbee.io/sb.js"/>
+			<Script data-api="/_hive" src="/bee.js"/>
 			<Container>
 				<Component {...pageProps} />
 				<Toaster />
