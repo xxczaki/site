@@ -1,3 +1,16 @@
+const colors = require('tailwindcss/colors');
+
+const mono = [
+	'ui-monospace',
+	'SFMono-Regular',
+	'Menlo',
+	'Monaco',
+	'Consolas',
+	'Liberation Mono',
+	'Courier New',
+	'monospace'
+];
+
 module.exports = {
 	mode: 'jit',
 	purge: {
@@ -10,11 +23,19 @@ module.exports = {
 	},
 	darkMode: 'class',
 	theme: {
-		extend: {},
-	},
-	variants: {
-		extend: {
-			filter: ['hover'],
+		fontFamily: {
+			mono: ['"iA Quattro"', ...mono],
+			sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
 		},
-	}
-}
+		colors: {
+			white: '#fff',
+			gray: colors.trueGray,
+			'gray-1000': '#050505',
+			violet: colors.violet
+		},
+		extends: {}
+	},
+	plugins: [
+		require('@tailwindcss/forms')
+	]
+};

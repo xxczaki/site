@@ -1,0 +1,158 @@
+import {
+	CgLaptop,
+	CgSmartphone,
+	CgKeyboard,
+	CgMouse,
+	CgHeadset,
+	CgDatabase,
+	CgKey,
+	CgCalendar,
+	CgNotes,
+	CgCalculator,
+	CgGlobeAlt
+} from "react-icons/cg";
+import {IoLogoChrome} from "react-icons/io";
+import {Si1Password, SiSpotify, SiVisualstudiocode, SiProtonmail, SiZeit} from "react-icons/si";
+import {FiCommand, FiTerminal} from "react-icons/fi";
+import {CgLinear} from 'react-icons/cg';
+
+import Article from '../components/article';
+import Link from '../components/link';
+import ResponsiveGrid from '../components/responsive-grid';
+import Item from '../components/item';
+
+export default Article;
+
+# Uses
+
+I really enjoy applications, tools and devices that boost my productivity and therefore make my life easier. This is exactly what this page is all about.
+
+Inspired by Wes Bos' [/uses](https://uses.tech).
+
+## Desk
+
+<ResponsiveGrid>
+	<Item
+		icon={<CgLaptop size={20}/>}
+		title={`MacBook Pro 13"`}
+		description="Processor 3.8 GHz 4-Core and Memory: 16 GB"
+	/>
+	<Item
+		icon={<CgSmartphone size={20}/>}
+		title="iPhone 12"
+		description="iOS 15 and Storage: 64 GB"
+	/>
+	<Item
+		icon={<CgKeyboard size={20}/>}
+		title="Keychron K1"
+		description="87-key, white backlight and brown switches"
+	/>
+	<Item
+		icon={<CgMouse size={20}/>}
+		title="Logitech MX Master 3"
+		description="Best mouse ever"
+	/>
+	<Item
+		icon={<CgHeadset size={20}/>}
+		title="Bang &amp; Olufsen H9"
+		description="3rd generation"
+	/>
+	<Item
+		icon={<CgDatabase size={20}/>}
+		title="Samsung Portable SSD T7"
+		description="500 GB, no touch &mdash; great for backups"
+	/>
+	<Item
+		icon={<CgKey size={20}/>}
+		title="YubiKey 5C NFC"
+		description="Reliable hardware security key"
+	/>
+</ResponsiveGrid>
+
+Other: [Twelve South Curve](https://www.twelvesouth.com/products/curve-for-macbook) stand, [Green Cell 8in1](https://greencell.global/en/hub-usb-c/3034-green-cell-hub-gc-connect60-8in1-thunderbolt-3-usb-c-hdmi-3x-usb-30-sd-microsd-for-macbook-pro-1315-2016-2020.html) USB hub.
+
+## General Apps
+
+<ResponsiveGrid>
+	<Item
+		icon={<IoLogoChrome size={20}/>}
+		title="Google Chrome"
+		description="For browsing the interwebz"
+	/>
+	<Item
+		icon={<Si1Password size={20}/>}
+		title="1Password"
+		description="Password manager of my choice"
+	/>
+	<Item
+		icon={<CgCalendar size={20}/>}
+		title="Fantastical"
+		description="Amazing calendar with synchronization"
+	/>
+	<Item
+		icon={<CgNotes size={20}/>}
+		title="Craft"
+		description="Like Notion, but native and, ergo, faster"
+	/>
+	<Item
+		icon={<FiCommand size={20}/>}
+		title="Raycast"
+		description="Like Alfred, but even more extendable"
+	/>
+	<Item
+		icon={<SiSpotify size={20}/>}
+		title="Spotify"
+		description="I mainly listen to classical music"
+	/>
+	<Item
+		icon={<CgCalculator size={20}/>}
+		title="Parsify Desktop"
+		description={<>Text-based calculator by <i>yours truly</i></>}
+	/>
+	<Item
+		icon={<CgGlobeAlt size={20}/>}
+		title="Little Snitch 5"
+		description="Powerful network management for maximum privacy"
+	/>
+</ResponsiveGrid>
+
+## Development apps
+
+<ResponsiveGrid>
+	<Item
+		icon={<SiVisualstudiocode size={20}/>}
+		title="Visual Studio Code"
+		description={<>Best code editor &mdash; see my <Link href="" isExternal text="configuration"/></>}
+	/>
+	<Item
+		icon={<FiTerminal size={20}/>}
+		title="iTerm 2"
+		description="Highly customizable"
+	/>
+	<Item
+		icon={<CgLinear size={20}/>}
+		title="Linear"
+		description="Highly customizable"
+	/>
+</ResponsiveGrid>
+
+## Other
+
+<ResponsiveGrid>
+	<Item
+		icon={<SiProtonmail size={20}/>}
+		title="ProtonMail"
+		description="Encrypted email with custom domain support"
+	/>
+	<Item
+		icon={<SiZeit size={20}/>}
+		title="Vercel"
+		description={<>I host all my projects there, including <i>this</i> site</>}
+	/>
+</ResponsiveGrid>
+
+## Am I missing something out?
+
+If you have an app or device that you think should be listed here, [let me know](mailto:antoni@kepinski.ch?subject=[Website]%20Software/Device%20Proposal).
+
+<div className="h-32"/>

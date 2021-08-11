@@ -1,26 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
-import {ThemeProvider, useTheme} from 'next-themes';
+import {Toaster} from 'react-hot-toast';
+import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 
 import Container from '../components/container';
 
-import 'tailwindcss/tailwind.css';
+import '../public/css/tailwind.css';
 
 const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
-	const {resolvedTheme} = useTheme();
+	const [color, setColor] = useState('#171717');
+
+	useScrollPosition(({currPos}) => {
+		if (currPos.y < -55) {
+			setColor('#050505');
+		} else {
+			setColor('#171717');
+		}
+	});
 
 	return (
-		<ThemeProvider attribute="class">
+		<>
 			<Head>
-				<title>Antoni Kepinski</title>
+				<title>Antoni Kępiński</title>
+				<meta name="theme-color" content={color} />
 			</Head>
 			<Container>
-				<main className="flex flex-col m-auto leading max-w-4xl items-start p-5">
-					<Component {...pageProps}/>
-				</main>
+				<Component {...pageProps} />
+				<Toaster />
 			</Container>
-		</ThemeProvider>
+		</>
 	);
 };
 

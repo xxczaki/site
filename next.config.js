@@ -1,7 +1,13 @@
-const withOffline = require('next-offline');
+const withMDX = require('@next/mdx')({
+	extension: /\.mdx?$/,
+	options: {
+		remarkPlugins: [],
+		rehypePlugins: []
+	}
+});
 
-const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-inline\'; img-src \'self\' data:';
-const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\'; img-src \'self\' data:';
+const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:';
+const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:';
 const securityHeaders = [
 	{
 		key: 'X-DNS-Prefetch-Control',
@@ -74,8 +80,9 @@ const nextConfig = {
 				headers: securityHeaders
 			}
 		];
-	}
+	},
+	pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'md', 'mdx']
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withMDX(nextConfig);
 

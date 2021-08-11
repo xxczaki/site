@@ -1,0 +1,50 @@
+import {SiReact, SiNextDotJs, SiTailwindcss, SiMarkdown} from "react-icons/si";
+
+import Article from '../components/article';
+import ResponsiveGrid from '../components/responsive-grid';
+import Item from '../components/item';
+
+export default Article;
+
+# Legal
+
+This personal website was created by Antoni Kępiński, an individual based in Poland (EU), and its source code is available for everyone on [GitHub](https://github.com/xxczaki/site), under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Credits
+
+Font used on some parts of this site is iA Quattro by [iA](https://ia.net/). While building this site, I was inspired by the work of [Paco Coursey](https://paco.sh/) and [Brian Lovin](https://brianlovin.com/).
+
+## Privacy
+
+- No cookies
+- No trackers
+- No third-party analytics
+- Hosted on [Vercel](https://vercel.com/)
+
+## Technology stack
+
+<ResponsiveGrid>
+	<Item
+		icon={<SiReact size={20}/>}
+		title="React"
+		description="Base library for the UI"
+	/>
+	<Item
+		icon={<SiNextDotJs size={20}/>}
+		title="Next.js"
+		description="Provides great performance and DX"
+	/>
+	<Item
+		icon={<SiTailwindcss size={20}/>}
+		title="Tailwind CSS"
+		description="Generated accessible styles"
+	/>
+	<Item
+		icon={<SiMarkdown size={20}/>}
+		title="MDX"
+		description="For easy content management"
+	/>
+</ResponsiveGrid>
+
+<div className="h-32"/>
+

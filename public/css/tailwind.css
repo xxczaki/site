@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'iA Quattro';
+  font-stretch: 25% 150%;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('/fonts/iAWriterQuattroV.ttf') format('truetype-variations');
+}
+
+@font-face {
+  font-family: 'iA Quattro';
+  font-stretch: 25% 150%;
+  font-weight: 100 1000;
+  font-display: swap;
+  font-style: italic;
+  src: url('/fonts/iAWriterQuattroV-Italic.ttf') format('truetype-variations');
+}
+
+@layer base {
+  body {
+    @apply font-mono;
+  }
+}
