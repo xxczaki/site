@@ -7,7 +7,7 @@
   font-stretch: 25% 150%;
   font-weight: 100 1000;
   font-display: swap;
-  src: url('/fonts/iAWriterQuattroV.ttf') format('truetype-variations');
+  src: url('/fonts/iAWriterQuattroV.woff2') format('woff2-variations');
 }
 
 @font-face {
@@ -16,7 +16,7 @@
   font-weight: 100 1000;
   font-display: swap;
   font-style: italic;
-  src: url('/fonts/iAWriterQuattroV-Italic.ttf') format('truetype-variations');
+  src: url('/fonts/iAWriterQuattroV-Italic.woff2') format('woff2-variations');
 }
 
 @layer base {
