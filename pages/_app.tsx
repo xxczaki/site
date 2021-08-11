@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import {Toaster} from 'react-hot-toast';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 
@@ -25,6 +26,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 				<title>Antoni Kępiński</title>
 				<meta name="theme-color" content={color} />
 			</Head>
+			<Script src="https://cdn.splitbee.io/sb.js"/>
 			<Container>
 				<Component {...pageProps} />
 				<Toaster />

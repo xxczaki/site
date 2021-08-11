@@ -13,8 +13,8 @@
     "xo": {
         "rules": {
             "import/no-unassigned-import": "off",
-			"@typescript-eslint/triple-slash-reference": "off",
-			"@typescript-eslint/no-unsafe-assignment": "off"
+            "@typescript-eslint/triple-slash-reference": "off",
+            "@typescript-eslint/no-unsafe-assignment": "off"
         }
     },
     "dependencies": {
@@ -25,7 +25,7 @@
         "hcaptcha": "^0.1.0",
         "lru-cache": "^6.0.0",
         "mailgun-js": "^0.22.0",
-        "next": "^11.0.1",
+        "next": "^11.1.0",
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-hook-form": "^7.12.2",
@@ -35,7 +35,7 @@
     "devDependencies": {
         "@babel/core": "^7.15.0",
         "@mdx-js/loader": "^1.6.22",
-        "@next/mdx": "^11.0.1",
+        "@next/mdx": "^11.1.0",
         "@types/lru-cache": "^5.1.1",
         "@types/mailgun-js": "^0.22.12",
         "@types/mdx-js__react": "^1.5.4",

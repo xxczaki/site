@@ -6,8 +6,8 @@ const withMDX = require('@next/mdx')({
 	}
 });
 
-const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:';
-const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:';
+const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:';
+const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:';
 const securityHeaders = [
 	{
 		key: 'X-DNS-Prefetch-Control',

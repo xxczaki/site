@@ -11,7 +11,7 @@
 - **Performant** - Perfect score on Google Lighthouse.
 - **Accessible** - follows [WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics).
 - **Secure** - uses strong CSP, has perfect score on [Security Headers](https://securityheaders.com).
-- **Private** - No trackers, analytics, or CDN.
+- **Private** - No trackers, no CDN, only lightweight, privacy-friendly analytics.
 - **Responsive** - Looks great on all devices.
 - Written in TypeScript
 
