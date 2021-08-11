@@ -26,7 +26,7 @@ const Link = ({href, text, isExternal}: Props) => {
 	}
 
 	return (
-		<NextLink href={href}>
+		<NextLink href={href} passHref>
 			<a
 				className="underline font-medium transition"
 				style={{
