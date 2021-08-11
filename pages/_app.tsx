@@ -29,7 +29,13 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 			<Script data-api="/_hive" src="/bee.js"/>
 			<Container>
 				<Component {...pageProps} />
-				<Toaster />
+				<Toaster toastOptions={{
+					style: {
+						border: '1px solid #52525B',
+						backgroundColor: '#404040',
+						color: '#E4E4E7',
+					},
+				}}/>
 			</Container>
 		</>
 	);

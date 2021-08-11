@@ -13,7 +13,7 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		fontFamily: {
-			mono: ['"iA Quattro"', 'monospace'],
+			mono: ['"iA Quattro"', 'Monaco', 'Menlo', 'Liberation Mono', 'ui-monospace', 'monospace'],
 			sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
 		},
 		colors: {
