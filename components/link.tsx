@@ -26,18 +26,18 @@ const Link = ({href, text, isExternal}: Props) => {
 	}
 
 	return (
-		<a
-			className="underline font-medium transition"
-			style={{
-				textDecorationColor: '#525252',
-				textUnderlinePosition: 'under',
-				textDecorationThickness: '.15rem',
-			}}
-		>
-			<NextLink href={href}>
+		<NextLink href={href}>
+			<a
+				className="underline font-medium transition"
+				style={{
+					textDecorationColor: '#525252',
+					textUnderlinePosition: 'under',
+					textDecorationThickness: '.15rem',
+				}}
+			>
 				{text}
-			</NextLink>
-		</a>
+			</a>
+		</NextLink>
 	);
 };
 
