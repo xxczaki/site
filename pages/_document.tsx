@@ -29,7 +29,20 @@ export default class MyDocument extends Document {
 					<link rel="icon" href="/favicon.ico"/>
 					<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 					<link rel="apple-touch-icon" href="/apple-icon-180.png"/>
-					<link rel="manifest" href="/manifest.webmanifest"/>
+					<link rel="manifest" href="/manifest.webmanifest" />
+
+					<link
+						rel="preload"
+						href="/public/fonts/iAWriterQuattroV.woff2"
+						crossOrigin="anonymous"
+						as="font"
+					/>
+					<link
+						rel="preload"
+						href="/public/fonts/iAWriterQuattroV-Italic.woff2"
+						crossOrigin="anonymous"
+						as="font"
+					/>
 				</Head>
 				<body className="bg-gray-1000 text-gray-200 relative h-full min-h-screen">
 					<Main/>
