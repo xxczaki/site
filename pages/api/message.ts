@@ -29,7 +29,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
 
 			const data = {
 				from: `Mailgun <${process.env.NEXT_MAILGUN_MAIL!}>`,
-				to: 'xxczaki@pm.me',
+				to: 'mailgun@kepinski.ch',
 				subject: '[Website] New contact form submission',
 				text: `Name: ${message.name}
 Email: ${message.email}

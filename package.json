@@ -18,7 +18,7 @@
         }
     },
     "dependencies": {
-        "@hcaptcha/react-hcaptcha": "^0.3.6",
+        "@hcaptcha/react-hcaptcha": "^0.3.7",
         "@mdx-js/react": "^1.6.22",
         "@n8tb1t/use-scroll-position": "^2.0.3",
         "@tailwindcss/forms": "^0.3.3",
@@ -39,9 +39,9 @@
         "@types/lru-cache": "^5.1.1",
         "@types/mailgun-js": "^0.22.12",
         "@types/mdx-js__react": "^1.5.4",
-        "@types/react": "^17.0.17",
-        "@typescript-eslint/eslint-plugin": "^4.29.1",
-        "@typescript-eslint/parser": "^4.29.1",
+        "@types/react": "^17.0.19",
+        "@typescript-eslint/eslint-plugin": "^4.29.2",
+        "@typescript-eslint/parser": "^4.29.2",
         "autoprefixer": "^10.3.1",
         "critters": "0.0.10",
         "eslint-config-xo-react": "^0.25.0",
