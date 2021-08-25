@@ -12,6 +12,7 @@ const Signature = () => (
 			<Image
 				src={photo}
 				alt="My face"
+				placeholder="blur"
 				className="rounded-full"
 			/>
 		</div>
