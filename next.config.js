@@ -1,4 +1,3 @@
-const withTranslate = require('next-translate')
 const withMDX = require('@next/mdx')({
 	extension: /\.mdx?$/,
 	options: {
@@ -97,5 +96,5 @@ const nextConfig = {
 	}
 };
 
-module.exports = withTranslate(withMDX(nextConfig));
+module.exports = withMDX(nextConfig);
 

@@ -2,7 +2,6 @@ import React from 'react';
 import Document, {Html, Head, Main, NextScript, DocumentContext} from 'next/document';
 import Link from '../components/link';
 
-
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
 		const page = ctx.renderPage();
@@ -12,7 +11,7 @@ export default class MyDocument extends Document {
 
 	render(): JSX.Element {
 		return (
-			<Html>
+			<Html lang="en">
 				<Head>
 					<meta charSet="utf-8"/>
 
@@ -34,13 +33,13 @@ export default class MyDocument extends Document {
 
 					<link
 						rel="preload"
-						href="/fonts/iAWriterQuattroV.woff2"
+						href="/public/fonts/iAWriterQuattroV.woff2"
 						crossOrigin="anonymous"
 						as="font"
 					/>
 					<link
 						rel="preload"
-						href="/fonts/iAWriterQuattroV-Italic.woff2"
+						href="/public/fonts/iAWriterQuattroV-Italic.woff2"
 						crossOrigin="anonymous"
 						as="font"
 					/>

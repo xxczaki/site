@@ -1,6 +1,5 @@
 import {useRouter} from 'next/dist/client/router';
 import React from 'react';
-import useTranslation from 'next-translate/useTranslation';
 
 import GhostButton from './ghost-button';
 
@@ -10,7 +9,6 @@ interface Props {
 
 const Container = ({children}: Props) => {
 	const router = useRouter();
-	const {t} = useTranslation('common');
 
 	return (
 		<>
@@ -21,21 +19,21 @@ const Container = ({children}: Props) => {
 						onMouseEnter={async () => router.prefetch('/')}
 						onClick={async () => router.push('/')}
 					>
-						{t('home')}
+						Home
 					</GhostButton>
 					<GhostButton
 						shouldHover={router.pathname === '/about'}
 						onMouseEnter={async () => router.prefetch('/about')}
 						onClick={async () => router.push('/about')}
 					>
-						{t('about')}
+						About
 					</GhostButton>
 					<GhostButton
 						shouldHover={router.pathname === '/uses'}
 						onMouseEnter={async () => router.prefetch('/uses')}
 						onClick={async () => router.push('/uses')}
 					>
-						{t('uses')}
+						Uses
 					</GhostButton>
 				</nav>
 			</div>
