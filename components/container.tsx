@@ -13,7 +13,7 @@ const Container = ({children}: Props) => {
 	return (
 		<>
 			<div className="sticky h-14 border-b border-gray-800 bg-gray-900 flex justify-center">
-				<nav className="max-w-xl w-full flex content-center justify-between p-2 font-sans">
+				<nav className="max-w-xl w-full flex content-center justify-between p-2 font-sans gap-1">
 					<GhostButton
 						shouldHover={router.pathname === '/'}
 						onMouseEnter={async () => router.prefetch('/')}
@@ -27,6 +27,13 @@ const Container = ({children}: Props) => {
 						onClick={async () => router.push('/about')}
 					>
 						About
+					</GhostButton>
+					<GhostButton
+						shouldHover={router.pathname.includes('/blog')}
+						onMouseEnter={async () => router.prefetch('/blog')}
+						onClick={async () => router.push('/blog')}
+					>
+						Blog
 					</GhostButton>
 					<GhostButton
 						shouldHover={router.pathname === '/uses'}

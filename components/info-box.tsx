@@ -2,7 +2,7 @@ import {FiAlertTriangle, FiCheckCircle, FiInfo, FiXCircle} from 'react-icons/fi'
 
 interface Props {
 	children: string;
-	type?: 'info' | 'warning' | 'error' | 'success';
+	type?: 'info' | 'warning' | 'error' | 'success' | 'quote';
 }
 
 const getColorsFromType = (type: Pick<Props, 'type'>) => {
@@ -31,6 +31,12 @@ const getColorsFromType = (type: Pick<Props, 'type'>) => {
 				iconColor: 'text-emerald-500',
 				icon: FiCheckCircle,
 			};
+		case 'quote':
+			return {
+				border: 'border-gray-500',
+				iconColor: 'text-gray-500',
+				icon: () => null,
+			};
 		default:
 			return {
 				border: 'border-blue-600',
@@ -49,12 +55,14 @@ const InfoBox = (props: Props) => {
 
 	return (
 		<div className="relative">
-			<div className={`${colors.border} bg-gray-900 rounded-md border-l-4 p-6 grid gap-2`}>
+			<div className={`${colors.border} ${type === 'quote' ? 'italic' : 'not-italic'} bg-gray-900 rounded-md border-l-4 p-6 grid gap-2`}>
 				{children}
 			</div>
-			<div className="rounded-full bg-gray-1000 w-11 h-11 absolute -top-6 -left-5">
-				<Icon size="2.75rem" className={`${colors.iconColor} p-2`}/>
-			</div>
+			{type !== 'quote' && (
+				<div className="rounded-full bg-gray-1000 w-11 h-11 absolute -top-6 -left-5">
+					<Icon size="2.75rem" className={`${colors.iconColor} p-2`}/>
+				</div>
+			)}
 		</div>
 	);
 };
