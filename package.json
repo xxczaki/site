@@ -18,39 +18,39 @@
         }
     },
     "dependencies": {
-        "@hcaptcha/react-hcaptcha": "^0.3.8",
+        "@hcaptcha/react-hcaptcha": "^0.3.9",
         "@mdx-js/react": "^1.6.22",
         "@n8tb1t/use-scroll-position": "^2.0.3",
         "@tailwindcss/forms": "^0.3.4",
         "hcaptcha": "^0.1.0",
         "lru-cache": "^6.0.0",
         "mailgun-js": "^0.22.0",
-        "next": "^12.0.1",
+        "next": "^12.0.3",
         "react": "17.0.2",
         "react-dom": "17.0.2",
-        "react-hook-form": "^7.18.0",
+        "react-hook-form": "^7.19.1",
         "react-hot-toast": "^2.1.1",
-        "react-icons": "4.2.0"
+        "react-icons": "4.3.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.15.8",
+        "@babel/core": "^7.16.0",
         "@mdx-js/loader": "^1.6.22",
-        "@next/mdx": "^12.0.1",
+        "@next/mdx": "^12.0.3",
         "@types/lru-cache": "^5.1.1",
         "@types/mailgun-js": "^0.22.12",
         "@types/mdx-js__react": "^1.5.5",
-        "@types/react": "^17.0.33",
-        "@typescript-eslint/eslint-plugin": "^5.2.0",
-        "@typescript-eslint/parser": "^5.2.0",
+        "@types/react": "^17.0.34",
+        "@typescript-eslint/eslint-plugin": "^5.3.1",
+        "@typescript-eslint/parser": "^5.3.1",
         "autoprefixer": "^10.4.0",
         "critters": "0.0.14",
         "eslint-config-xo-react": "^0.25.0",
         "eslint-config-xo-typescript": "^0.47.1",
         "eslint-plugin-react": "^7.26.1",
-        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
         "postcss": "^8.3.11",
-        "tailwindcss": "^2.2.17",
+        "tailwindcss": "^2.2.19",
         "typescript": "^4.4.4",
-        "xo": "^0.46.3"
+        "xo": "^0.46.4"
     }
 }

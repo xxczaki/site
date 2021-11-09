@@ -1,5 +1,8 @@
 import Article from '../components/article';
 import Form from '../components/form';
+import {Toaster} from 'react-hot-toast';
+
+import InfoBox from '../components/info-box';
 
 export default Article;
 
@@ -7,7 +10,20 @@ export default Article;
 
 Feel free to get in touch regarding anything tech-related or not. I usually respond within 48 hours, but you may need to wait a bit longer if I'm really busy.
 
+<InfoBox type="info">
+	<b>Information for recruiters</b>
+	<p className="text-sm">Please note that I'm currently <b>not</b> looking for new career opportunities. Feel free to send your offers, but don't expect a quick reply.</p>
+</InfoBox>
+
 <Form/>
+
+<Toaster toastOptions={{
+	style: {
+		border: '1px solid #52525B',
+		backgroundColor: '#404040',
+		color: '#E4E4E7',
+	},
+}}/>
 
 <div className="h-32"/>
 
