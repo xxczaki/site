@@ -44,7 +44,7 @@ const Container = ({children}: Props) => {
 					</GhostButton>
 				</nav>
 			</div>
-			<div className="w-full flex justify-center">
+			<div className="w-full flex justify-center relative">
 				{children}
 			</div>
 		</>
