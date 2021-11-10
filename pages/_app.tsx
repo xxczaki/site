@@ -8,25 +8,18 @@ import {MDXProvider} from '@mdx-js/react';
 import Container from '../components/container';
 import Link from '../components/link';
 import InfoBox from '../components/info-box';
+import BackToTop from '../components/back-to-top';
 
 import '../public/css/tailwind.css';
-import BackToTop from '../components/back-to-top';
 
 const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 	const [color, setColor] = useState('#171717');
-	const [showBTT, setBTT] = useState(false);
 
 	useScrollPosition(({currPos}) => {
 		if (currPos.y < -55) {
 			setColor('#050505');
 		} else {
 			setColor('#171717');
-		}
-
-		if (currPos.y < -450) {
-			setBTT(true);
-		} else {
-			setBTT(false);
 		}
 	});
 
@@ -40,7 +33,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 			</Head>
 			<Script data-api="/_hive" src="/bee.js"/>
 			<Container>
-				{showBTT && <BackToTop />}
+				<BackToTop/>
 				<MDXProvider components={{
 					h1: props => (
 						<>

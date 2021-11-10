@@ -22,6 +22,7 @@
         "@mdx-js/react": "^2.0.0-rc.1",
         "@n8tb1t/use-scroll-position": "^2.0.3",
         "@tailwindcss/forms": "^0.3.4",
+        "framer-motion": "^5.2.1",
         "hcaptcha": "^0.1.0",
         "lru-cache": "^6.0.0",
         "mailgun-js": "^0.22.0",
