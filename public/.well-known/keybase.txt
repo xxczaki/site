@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/xxczaki
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.kepinski.ch
+  * I am xxczaki (https://keybase.io/xxczaki) on keybase.
+  * I have a public key ASAZrUUtrcfnMaSJNlhY_-uawXu9eI6STqkolbEz3vNG-wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012019ad452dadc7e731a489365858ffeb9ac17bbd788e924ea92895b133def346fb0a",
+      "host": "keybase.io",
+      "kid": "012019ad452dadc7e731a489365858ffeb9ac17bbd788e924ea92895b133def346fb0a",
+      "uid": "dc0df328e6d67883d8a641b6380ffa19",
+      "username": "xxczaki"
+    },
+    "merkle_root": {
+      "ctime": 1637099654,
+      "hash": "478c7b1ae1f52ccc9e3aad402a2fcd7ba20d45f47a6b1a9c0635f478682da6fcc6883b8e23f55e809352c61ca0364138af9e2eb7fdc88fd8d8b6cd8fe35a3942",
+      "hash_meta": "f3977220d937904a58189cec08a1e2d0d4a2aa46f1ec531ff08b112d616f4915",
+      "seqno": 21239324
+    },
+    "service": {
+      "entropy": "L2WzRCU2LcVpdIs5nhMIr1uf",
+      "hostname": "www.kepinski.ch",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.8.0"
+  },
+  "ctime": 1637099670,
+  "expire_in": 504576000,
+  "prev": "e45031da51b72417a31c5379a1eab786f4d6a6a166c04b1f67e5b9ae8d56253d",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGa1FLa3H5zGkiTZYWP/rmsF7vXiOkk6pKJWxM97zRvsKp3BheWxvYWTESpcCEcQg5FAx2lG3JBejHFN5oeq3hvTWpqFmwEsfZ+W5ro1WJT3EIIRwCwoDZB8qgsZH7OIeIeIihMGkAEZH6915RyizkeDgAgHCo3NpZ8RAt0IcHmsipYXScQD3e/8fjf9w35Kah4cm69P9pZ6B3eoz33yXIa+p3QubVc3qCUgJLPXBCQWQ+2bWemGbToCIAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINqZE/t0RMYG7R8grOjiCjvdNwxAOv8MeCsnOLxtJBLno3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/xxczaki
+
+==================================================================

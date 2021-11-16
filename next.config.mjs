@@ -1,3 +1,5 @@
+import gfm from 'remark-gfm';
+import prism from 'remark-prism';
 import smartypants from '@silvenon/remark-smartypants';
 import math from 'remark-math';
 import katex from 'rehype-katex';
@@ -78,6 +80,8 @@ export default withMDX({
 	options: {
 		providerImportSource: '@mdx-js/react',
 		remarkPlugins: [
+			gfm,
+			prism,
 			math,
 			smartypants,
 		],
