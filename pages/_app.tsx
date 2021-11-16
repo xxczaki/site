@@ -66,7 +66,6 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 						),
 					}}
 				>
-					{/* @ts-expect-error Invalid types */}
 					<Component {...pageProps} />
 				</MDXProvider>
 			</Container>
