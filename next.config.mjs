@@ -1,6 +1,6 @@
 import gfm from 'remark-gfm';
 import prism from 'remark-prism';
-import smartypants from '@silvenon/remark-smartypants';
+import smartypants from 'remark-smartypants';
 import math from 'remark-math';
 import katex from 'rehype-katex';
 import withMDX from '@next/mdx';

@@ -59,7 +59,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 							<Link href={props.href!} isExternal text={props.children as string} />
 						),
 						ul: props => (
-							<ul className="list-disc list-inside rou" {...props} />
+							<ul className="list-disc list-inside" {...props} />
 						),
 						blockquote: props => (
 							<InfoBox type="quote" children={props.children as string} />
