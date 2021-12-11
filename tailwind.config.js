@@ -1,16 +1,10 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	mode: 'jit',
-	purge: {
-		mode: 'all',
-		preserveHtmlElements: false,
-		content: [
-			'./pages/**/*.{js,ts,jsx,tsx}',
-			'./components/**/*.{js,ts,jsx,tsx}',
-		],
-	},
-	darkMode: 'class',
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+	],
 	theme: {
 		fontFamily: {
 			mono: ['"iA Quattro"', 'Monaco', 'Menlo', 'Liberation Mono', 'ui-monospace', 'monospace'],
@@ -18,7 +12,7 @@ module.exports = {
 		},
 		colors: {
 			white: '#fff',
-			gray: colors.trueGray,
+			gray: colors.neutral,
 			'gray-1000': '#050505',
 			violet: colors.violet,
 			blue: colors.blue,
