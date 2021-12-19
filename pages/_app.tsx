@@ -56,13 +56,19 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 							</div>
 						),
 						a: props => (
-							<Link href={props.href!} isExternal text={props.children as string} />
+							<Link href={props.href!} text={props.children as string} />
 						),
 						ul: props => (
 							<ul className="list-disc list-inside" {...props} />
 						),
 						blockquote: props => (
 							<InfoBox type="quote" children={props.children as string} />
+						),
+						img: props => (
+							<figure className="grid gap-2 justify-center">
+								<img className="rounded-md" draggable={false} {...props} />
+								<figcaption className="text-xs text-right text-gray-400">{props.title}</figcaption>
+							</figure>
 						),
 					}}
 				>
