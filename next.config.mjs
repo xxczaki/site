@@ -81,9 +81,9 @@ export default withMDX({
 		providerImportSource: '@mdx-js/react',
 		remarkPlugins: [
 			gfm,
+			smartypants,
 			prism,
 			math,
-			smartypants,
 		],
 		rehypePlugins: [
 			katex,
