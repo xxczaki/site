@@ -5,8 +5,8 @@ import math from 'remark-math';
 import katex from 'rehype-katex';
 import withMDX from '@next/mdx';
 
-const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net; script-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:; font-src \'self\' https://cdn.jsdelivr.net';
-const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:; font-src \'self\' https://cdn.jsdelivr.net';
+const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net; script-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io https://utteranc.es; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com https://utteranc.es; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:; font-src \'self\' https://cdn.jsdelivr.net';
+const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.jsdelivr.net; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io https://utteranc.es; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com https://utteranc.es; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:; font-src \'self\' https://cdn.jsdelivr.net';
 const securityHeaders = [
 	{
 		key: 'X-DNS-Prefetch-Control',

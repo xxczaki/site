@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	content: [
@@ -20,7 +21,10 @@ module.exports = {
 			red: colors.red,
 			emerald: colors.emerald,
 		},
-		extends: {},
+		screens: {
+			...defaultTheme.screens,
+			'2xl': '1700px',
+		},
 	},
 	plugins: [
 		require('@tailwindcss/forms'),

@@ -33,13 +33,13 @@ export default class MyDocument extends Document {
 
 					<link
 						rel="preload"
-						href="/public/fonts/iAWriterQuattroV.woff2"
+						href="/fonts/iAWriterQuattroV.woff2"
 						crossOrigin="anonymous"
 						as="font"
 					/>
 					<link
 						rel="preload"
-						href="/public/fonts/iAWriterQuattroV-Italic.woff2"
+						href="/fonts/iAWriterQuattroV-Italic.woff2"
 						crossOrigin="anonymous"
 						as="font"
 					/>
@@ -47,6 +47,7 @@ export default class MyDocument extends Document {
 				<body className="bg-gray-1000 text-gray-200 relative h-full min-h-screen">
 					<Main/>
 					<NextScript />
+					<div className="h-32"/>
 					<footer className="text-right text-xs text-gray-400 absolute bottom-2 right-4">
 						<p>&copy; {new Date().getFullYear()} Antoni Kępiński &mdash; <Link href="/legal" text="Legal"/></p>
 					</footer>

@@ -62,7 +62,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 							<ul className="list-disc list-inside" {...props} />
 						),
 						blockquote: props => (
-							<InfoBox type="quote" children={props.children as string} />
+							<InfoBox type="quote" children={props.children} />
 						),
 						img: props => (
 							<figure className="grid gap-2 justify-center">

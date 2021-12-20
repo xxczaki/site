@@ -14,6 +14,7 @@ const Signature = () => (
 				alt="My face"
 				placeholder="blur"
 				className="rounded-full"
+				draggable={false}
 			/>
 		</div>
 		<div className="flex flex-col w-40 justify-evenly items-center">

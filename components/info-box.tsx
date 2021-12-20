@@ -1,7 +1,7 @@
 import {FiAlertTriangle, FiCheckCircle, FiInfo, FiXCircle} from 'react-icons/fi';
 
 interface Props {
-	children: string;
+	children: React.ReactNode;
 	type?: 'info' | 'warning' | 'error' | 'success' | 'quote';
 }
 

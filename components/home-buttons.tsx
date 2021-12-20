@@ -7,7 +7,7 @@ const HomeButtons = () => {
 	return (
 		<div className="inline-grid grid-cols-2 gap-4 max-w-xs">
 			<Button
-				isCTA
+				colorScheme="violet"
 				onMouseEnter={async () => router.prefetch('/contact')}
 				onClick={async () => router.push('/contact')}
 			>
