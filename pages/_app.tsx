@@ -12,6 +12,7 @@ import InfoBox from '../components/info-box';
 import BackToTop from '../components/back-to-top';
 
 import '../public/css/tailwind.css';
+import '../public/css/katex.css';
 import 'prism-theme-one-light-dark/prism-onedark.css';
 
 const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
@@ -30,8 +31,6 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 			<Head>
 				<title>Antoni Kępiński</title>
 				<meta name="theme-color" content={color} />
-				{/* TODO: Consider self-hosting */}
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css" integrity="sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs" crossOrigin="anonymous"/>
 			</Head>
 			<Script data-api="/_hive" src="/bee.js"/>
 			<Container>
