@@ -68,13 +68,11 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 							<InfoBox type="quote" children={props.children} />
 						),
 						img: props => (
-							<figure className="grid gap-2 justify-center">
+							<figure className="grid gap-2 justify-center w-full h-52 relative">
 								<Image
-									className="rounded-md"
 									draggable={false}
-									width={636}
-									height={205}
-									objectFit="cover"
+									layout="fill"
+									objectFit="contain"
 									{...props}
 								/>
 								<figcaption className="text-xs text-right text-gray-400">{props.title}</figcaption>
