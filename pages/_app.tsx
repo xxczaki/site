@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 import {MDXProvider} from '@mdx-js/react';
+import Image from 'next/image';
 
 import Container from '../components/container';
 import Link from '../components/link';
@@ -68,7 +69,14 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 						),
 						img: props => (
 							<figure className="grid gap-2 justify-center">
-								<img className="rounded-md" draggable={false} {...props} />
+								<Image
+									className="rounded-md"
+									draggable={false}
+									width={636}
+									height={205}
+									objectFit="cover"
+									{...props}
+								/>
 								<figcaption className="text-xs text-right text-gray-400">{props.title}</figcaption>
 							</figure>
 						),
