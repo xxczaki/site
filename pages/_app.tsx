@@ -42,9 +42,6 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 								<Head>
 									<title>{props.children} | Antoni Kępiński</title>
 									<meta property="og:title" content={`${props.children as string} | Antoni Kępiński`}/>
-									<meta property="og:type" content="article"/>
-									<meta name="description" content="Read this blog post from Antoni Kępiński."/>
-									<meta property="og:description" content="Read this blog post from Antoni Kępiński."/>
 								</Head>
 								<header>
 									<h1 className={`${(props.children as string).length > 20 ? 'text-3xl' : 'text-5xl'} font-bold italic leading-tight`} {...props} />
@@ -68,6 +65,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 						),
 						img: props => (
 							<figure className="grid gap-2 justify-center w-full h-52 relative">
+								{/* @ts-expect-error No need to worry right now */}
 								<Image
 									draggable={false}
 									layout="fill"
