@@ -5,8 +5,8 @@ import math from 'remark-math';
 import katex from 'rehype-katex';
 import withMDX from '@next/mdx';
 
-const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:; font-src \'self\'';
-const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://hcaptcha.com https://*.hcaptcha.com https://cdn.splitbee.io; img-src \'self\' data:; frame-src https://hcaptcha.com https://*.hcaptcha.com; connect-src \'self\' https://hcaptcha.com https://*.hcaptcha.com; object-src data:; font-src \'self\'';
+const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-inline\' https://cdn.splitbee.io; img-src \'self\' data:; connect-src \'self\'; object-src data:; font-src \'self\'';
+const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://cdn.splitbee.io; img-src \'self\' data:; connect-src \'self\'; object-src data:; font-src \'self\'';
 const securityHeaders = [
 	{
 		key: 'X-DNS-Prefetch-Control',

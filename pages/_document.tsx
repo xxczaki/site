@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
 					<NextScript />
 					<div className="h-32"/>
 					<footer className="text-right text-xs text-gray-400 absolute bottom-2 right-4">
-						<p>&copy; {new Date().getFullYear()} Antoni Kępiński &mdash; <Link href="/legal" text="Legal"/></p>
+						<p>&copy; {new Date().getFullYear()} Antoni Kępiński &mdash; <Link href="/legal" text="Colophon"/></p>
 					</footer>
 				</body>
 			</Html>
