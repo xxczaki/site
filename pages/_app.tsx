@@ -6,10 +6,10 @@ import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 import {MDXProvider} from '@mdx-js/react';
 import Image from 'next/image';
 
-import Container from '../components/container.js';
-import Link from '../components/link.js';
-import InfoBox from '../components/info-box.js';
-import BackToTop from '../components/back-to-top.js';
+import Container from '../components/container';
+import Link from '../components/link';
+import InfoBox from '../components/info-box';
+import BackToTop from '../components/back-to-top';
 
 import '../public/css/tailwind.css';
 import '../public/css/katex.css';

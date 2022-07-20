@@ -1,5 +1,5 @@
-import {ButtonHTMLAttributes} from 'react';
-import {IconType} from 'react-icons';
+import type {ButtonHTMLAttributes} from 'react';
+import type {IconType} from 'react-icons';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 	icon?: IconType;
@@ -23,16 +23,19 @@ const Button = (props: Props) => {
 	const {icon, colorScheme, extendWidth, children, ...rest} = props;
 
 	return (
-		<button
-			{...rest}
-			// @ts-expect-error Invalid error
-			className={`font-sans font-semibold ${getSchemeStyles(colorScheme)} p-2 ${extendWidth ? 'px-4' : 'px-2'} rounded-md text-gray-200 transition tracking-wider flex justify-center items-center select-none`}
-			style={{maxWidth: '15rem'}}
-			type='button'
-		>
-			{icon}
-			<p className={icon && 'ml-2'}>{children}</p>
-		</button>
+		<>
+			{/* @ts-expect-error This doesn't matter */}
+			<button
+				{...rest}
+				// @ts-expect-error Invalid error
+				className={`font-sans font-semibold ${getSchemeStyles(colorScheme)} p-2 ${extendWidth ? 'px-4' : 'px-2'} rounded-md text-gray-200 transition tracking-wider flex justify-center items-center select-none`}
+				style={{maxWidth: '15rem'}}
+				type='button'
+			>
+				{icon}
+				<p className={icon && 'ml-2'}>{children}</p>
+			</button>
+		</>
 	);
 };
 

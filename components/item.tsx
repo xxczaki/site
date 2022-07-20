@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconType} from 'react-icons';
+import type {IconType} from 'react-icons';
 
 interface Props {
 	icon: IconType;
@@ -9,6 +9,7 @@ interface Props {
 
 const Item = ({icon, title, description}: Props) => (
 	<div className='grid gap-2'>
+		{/* @ts-expect-error This doesn't matter */}
 		<ul className='flex items-center gap-4'>
 			{icon}
 			<p>{title}</p>

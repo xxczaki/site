@@ -1,7 +1,7 @@
 import {useRouter} from 'next/dist/client/router';
 import React from 'react';
 
-import GhostButton from './ghost-button.js';
+import GhostButton from './ghost-button';
 
 interface Props {
 	children: React.ReactNode;

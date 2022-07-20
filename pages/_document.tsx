@@ -1,7 +1,7 @@
 import React from 'react';
 import {Html, Head, Main, NextScript} from 'next/document';
 
-import Link from '../components/link.js';
+import Link from '../components/link';
 
 export default function Document() {
 	return (

@@ -47,7 +47,9 @@ const nextConfig = {
 	experimental: {
 		optimizeImages: true,
 		optimizeCss: true,
-		allowFutureImage: true,
+		images: {
+			allowFutureImage: true,
+		},
 	},
 	future: {
 		strictPostcssConfiguration: true,
