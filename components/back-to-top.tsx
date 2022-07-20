@@ -5,12 +5,8 @@ import {FiArrowUp} from 'react-icons/fi';
 const BackToTop = () => {
 	const controls = useAnimation();
 
-	useScrollPosition(({currPos}) => {
-		if (currPos.y < -450) {
-			controls.start('visible');
-		} else {
-			controls.start('hidden');
-		}
+	useScrollPosition(async ({currPos}) => {
+		await (currPos.y < -450 ? controls.start('visible') : controls.start('hidden'));
 	});
 
 	return (
@@ -19,8 +15,8 @@ const BackToTop = () => {
 			onClick={() => {
 				window.scrollTo({top: 0, behavior: 'smooth'});
 			}}
-			initial="hidden"
-  			animate={controls}
+			initial='hidden'
+			animate={controls}
 			variants={{
 				visible: {y: 16, opacity: 1, display: 'flex'},
 				hidden: {

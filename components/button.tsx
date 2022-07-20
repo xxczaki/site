@@ -28,7 +28,7 @@ const Button = (props: Props) => {
 			// @ts-expect-error Invalid error
 			className={`font-sans font-semibold ${getSchemeStyles(colorScheme)} p-2 ${extendWidth ? 'px-4' : 'px-2'} rounded-md text-gray-200 transition tracking-wider flex justify-center items-center select-none`}
 			style={{maxWidth: '15rem'}}
-			type="button"
+			type='button'
 		>
 			{icon}
 			<p className={icon && 'ml-2'}>{children}</p>

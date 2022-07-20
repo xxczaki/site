@@ -45,4 +45,6 @@ See https://www.kepinski.ch/legal.
 
 MIT
 
+---
+
 <a href="https://www.browserstack.com/"><img src="https://imgur.com/l3iy9C6.png" width="512" alt="Sponsored by BrowserStack"></a>

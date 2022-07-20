@@ -6,10 +6,10 @@ import {useScrollPosition} from '@n8tb1t/use-scroll-position';
 import {MDXProvider} from '@mdx-js/react';
 import Image from 'next/image';
 
-import Container from '../components/container';
-import Link from '../components/link';
-import InfoBox from '../components/info-box';
-import BackToTop from '../components/back-to-top';
+import Container from '../components/container.js';
+import Link from '../components/link.js';
+import InfoBox from '../components/info-box.js';
+import BackToTop from '../components/back-to-top.js';
 
 import '../public/css/tailwind.css';
 import '../public/css/katex.css';
@@ -30,9 +30,9 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 		<>
 			<Head>
 				<title>Antoni Kępiński</title>
-				<meta name="theme-color" content={color} />
+				<meta name='theme-color' content={color} />
 			</Head>
-			<Script data-api="/_hive" src="/bee.js"/>
+			<Script data-api='/_hive' src='/bee.js'/>
 			<Container>
 				<BackToTop/>
 				<MDXProvider
@@ -41,16 +41,16 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 							<>
 								<Head>
 									<title>{props.children} | Antoni Kępiński</title>
-									<meta property="og:title" content={`${props.children as string} | Antoni Kępiński`}/>
+									<meta property='og:title' content={`${props.children as string} | Antoni Kępiński`}/>
 								</Head>
 								<header>
 									<h1 className={`${(props.children as string).length > 20 ? 'text-3xl' : 'text-5xl'} font-bold italic leading-tight`} {...props} />
 								</header>
 							</>
 						),
-						h2: props => <h1 className="text-2xl font-bold pt-6" {...props} />,
+						h2: props => <h1 className='text-2xl font-bold pt-6' {...props} />,
 						p: props => (
-							<div className="text-lg text-gray-200 leading-8 tracking-wide">
+							<div className='text-lg text-gray-200 leading-8 tracking-wide'>
 								<p {...props} />
 							</div>
 						),
@@ -58,21 +58,21 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 							<Link href={props.href!} text={props.children as string} />
 						),
 						ul: props => (
-							<ul className="list-disc list-inside" {...props} />
+							<ul className='list-disc list-inside' {...props} />
 						),
 						blockquote: props => (
-							<InfoBox type="quote" children={props.children} />
+							<InfoBox type='quote' children={props.children} />
 						),
 						img: props => (
-							<figure className="grid gap-2 justify-center w-full h-52 relative">
+							<figure className='grid gap-2 justify-center w-full h-52 relative'>
 								{/* @ts-expect-error No need to worry right now */}
 								<Image
 									draggable={false}
-									layout="fill"
-									objectFit="contain"
+									layout='fill'
+									objectFit='contain'
 									{...props}
 								/>
-								<figcaption className="text-xs text-right text-gray-400">{props.title}</figcaption>
+								<figcaption className='text-xs text-right text-gray-400'>{props.title}</figcaption>
 							</figure>
 						),
 					}}

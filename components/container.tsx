@@ -1,7 +1,7 @@
 import {useRouter} from 'next/dist/client/router';
 import React from 'react';
 
-import GhostButton from './ghost-button';
+import GhostButton from './ghost-button.js';
 
 interface Props {
 	children: React.ReactNode;
@@ -12,8 +12,8 @@ const Container = ({children}: Props) => {
 
 	return (
 		<>
-			<div className="sticky h-14 border-b border-gray-800 bg-gray-900 flex justify-center">
-				<nav className="max-w-xl w-full flex content-center justify-between p-2 font-sans gap-1">
+			<div className='sticky h-14 border-b border-gray-800 bg-gray-900 flex justify-center'>
+				<nav className='max-w-xl w-full flex content-center justify-between p-2 font-sans gap-1'>
 					<GhostButton
 						shouldHover={router.pathname === '/'}
 						onMouseEnter={async () => router.prefetch('/')}
@@ -29,13 +29,6 @@ const Container = ({children}: Props) => {
 						About
 					</GhostButton>
 					<GhostButton
-						shouldHover={router.pathname.includes('/blog')}
-						onMouseEnter={async () => router.prefetch('/blog')}
-						onClick={async () => router.push('/blog')}
-					>
-						Blog
-					</GhostButton>
-					<GhostButton
 						shouldHover={router.pathname === '/uses'}
 						onMouseEnter={async () => router.prefetch('/uses')}
 						onClick={async () => router.push('/uses')}
@@ -44,7 +37,7 @@ const Container = ({children}: Props) => {
 					</GhostButton>
 				</nav>
 			</div>
-			<div className="w-full flex justify-center relative">
+			<div className='w-full flex justify-center relative'>
 				{children}
 			</div>
 		</>

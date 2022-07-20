@@ -11,9 +11,9 @@ const Link = ({href, text, isExternal}: Props) => {
 		return (
 			<a
 				href={href}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="underline font-medium transition"
+				target='_blank'
+				rel='noopener noreferrer'
+				className='underline font-medium transition'
 				style={{
 					textDecorationColor: '#525252',
 					textUnderlinePosition: 'under',
@@ -28,7 +28,7 @@ const Link = ({href, text, isExternal}: Props) => {
 	return (
 		<NextLink href={href} passHref>
 			<a
-				className="underline font-medium transition"
+				className='underline font-medium transition'
 				style={{
 					textDecorationColor: '#525252',
 					textUnderlinePosition: 'under',

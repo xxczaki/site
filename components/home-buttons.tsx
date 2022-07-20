@@ -1,13 +1,13 @@
 import {useRouter} from 'next/router';
-import Button from './button';
+import Button from './button.js';
 
 const HomeButtons = () => {
 	const router = useRouter();
 
 	return (
-		<div className="inline-grid grid-cols-2 gap-4 max-w-xs">
+		<div className='inline-grid grid-cols-2 gap-4 max-w-xs'>
 			<Button
-				colorScheme="violet"
+				colorScheme='violet'
 				onMouseEnter={async () => router.prefetch('/contact')}
 				onClick={async () => router.push('/contact')}
 			>

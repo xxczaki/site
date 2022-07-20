@@ -54,13 +54,13 @@ const InfoBox = (props: Props) => {
 	const Icon = colors.icon;
 
 	return (
-		<div className="relative">
+		<div className='relative'>
 			<div className={`${colors.border} ${type === 'quote' ? 'italic' : 'not-italic'} bg-gray-900 rounded-md border-l-4 p-6 grid gap-2`}>
 				{children}
 			</div>
 			{type !== 'quote' && (
-				<div className="rounded-full bg-gray-1000 w-11 h-11 absolute -top-6 -left-5">
-					<Icon size="2.75rem" className={`${colors.iconColor} p-2`}/>
+				<div className='rounded-full bg-gray-1000 w-11 h-11 absolute -top-6 -left-5'>
+					<Icon size='2.75rem' className={`${colors.iconColor} p-2`}/>
 				</div>
 			)}
 		</div>
