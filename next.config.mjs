@@ -45,7 +45,6 @@ const securityHeaders = [
 const nextConfig = {
 	reactStrictMode: true,
 	experimental: {
-		optimizeImages: true,
 		optimizeCss: true,
 		images: {
 			allowFutureImage: true,
