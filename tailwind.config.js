@@ -8,8 +8,9 @@ module.exports = {
 	],
 	theme: {
 		fontFamily: {
-			mono: ['"iA Quattro"', 'Monaco', 'Menlo', 'Liberation Mono', 'ui-monospace', 'monospace'],
-			sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+			serif: ['"Laica"', ...defaultTheme.fontFamily.serif],
+			sans: ['"Whyte"', ...defaultTheme.fontFamily.sans],
+			mono: ['"Favorit Mono"', ...defaultTheme.fontFamily.mono],
 		},
 		colors: {
 			white: '#fff',
@@ -26,7 +27,4 @@ module.exports = {
 			'2xl': '1700px',
 		},
 	},
-	plugins: [
-		require('@tailwindcss/forms'),
-	],
 };

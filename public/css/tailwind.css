@@ -3,25 +3,35 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'iA Quattro';
+  font-family: 'Whyte';
   font-weight: 100 1000;
-  font-display: swap;
-  src: url('/fonts/iAWriterQuattroV.woff2') format('woff2-variations');
+  font-display: optional;
+  src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
   unicode-range: U+000-5FF;
 }
 
 @font-face {
-  font-family: 'iA Quattro';
-  font-weight: 100 1000;
-  font-display: swap;
+  font-family: 'Laica';
+  font-weight: 500;
+  font-display: optional;
   font-style: italic;
-  src: url('/fonts/iAWriterQuattroV-Italic.woff2') format('woff2-variations');
+  src: url('/fonts/ABCLaicaAItalicVariableEdu.woff2') format('woff2-variations');
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Favorit Mono';
+  font-weight: 100;
+  font-display: optional;
+  src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
   unicode-range: U+000-5FF;
 }
 
 @layer base {
   body {
-    @apply font-mono;
+    @apply font-sans;
+		@apply font-serif;
+		@apply font-mono;
   }
 
 	table, th, td {

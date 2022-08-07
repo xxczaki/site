@@ -14,7 +14,7 @@ const Item = ({icon, title, description}: Props) => (
 			{icon}
 			<p>{title}</p>
 		</ul>
-		<p className='text-sm text-gray-400'>{description}</p>
+		<p className='text-sm text-gray-600 dark:text-gray-400'>{description}</p>
 	</div>
 );
 

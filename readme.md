@@ -1,30 +1,14 @@
 # [Personal Site](https://www.kepinski.ch)
 
-> Personal website, built with React, Next.js, Tailwind CSS and MDX, focused on performance, a11y and privacy 🚀
+> My personal one page website 🚀
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 ---
 
-## Highlights
-
-- **Performant** - Perfect score on Google Lighthouse.
-- **Accessible** - follows [WAI-ARIA](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics).
-- **Secure** - uses strong CSP, has perfect score on [Security Headers](https://securityheaders.com).
-- **Private** - No trackers, no CDN, only lightweight, privacy-friendly analytics.
-- **Responsive** - Looks great on all devices.
-- Written in TypeScript
-
-## Built with:
-
-**Main:**
-
-- [React](https://preactjs.com/)
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [MDX](https://mdxjs.com/)
-
 ## Development
+
+> Heads up: this repository doesn't include fonts.
 
 ```bash
 # Run in development mode
@@ -37,13 +21,17 @@ $ npm run build
 $ npm test
 ```
 
-## Acknowledgments
+## Technology stack
 
-See https://www.kepinski.ch/legal.
+- [React](https://preactjs.com/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [MDX](https://mdxjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ### License
 
-MIT
+[Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 

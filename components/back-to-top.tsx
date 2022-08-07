@@ -11,7 +11,7 @@ const BackToTop = () => {
 
 	return (
 		<motion.button
-			className={'fixed top-0 p-2 rounded-lg w-40 backdrop-filter bg-[#000000aa] backdrop-blur-sm border border-gray-600 hover:border-gray-500 text-center drop-shadow-lg cursor-pointer flex justify-evenly items-center z-10'}
+			className='fixed top-0 p-2 rounded-lg w-40 backdrop-filter bg-[#ffffffaa] dark:bg-[#171717aa] backdrop-blur-sm border border-gray-600 hover:border-gray-500 text-center drop-shadow-lg cursor-pointer flex justify-evenly items-center z-10'
 			onClick={() => {
 				window.scrollTo({top: 0, behavior: 'smooth'});
 			}}
@@ -32,7 +32,7 @@ const BackToTop = () => {
 			}}
 		>
 			<FiArrowUp/>
-			<b>Back to top</b>
+			<p className='font-medium'>Back to top</p>
 		</motion.button>
 	);
 };

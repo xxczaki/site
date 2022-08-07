@@ -13,7 +13,7 @@ const Signature = () => (
 				src={photo}
 				alt='My face'
 				placeholder='blur'
-				className='rounded-full'
+				className='rounded-full grayscale'
 				draggable={false}
 			/>
 		</div>
@@ -22,8 +22,8 @@ const Signature = () => (
 				<Image src={signature} alt='Signature'/>
 			</div>
 			<div>
-				<hr className='h-px w-32 bg-gray-300'/>
-				<p className='text-gray-400 font-sm'>Antoni Kępiński</p>
+				<hr className='h-px w-40 bg-gray-300'/>
+				<p className='text-gray-400 font-sm text-center'>Antoni Kępiński</p>
 			</div>
 		</div>
 	</section>

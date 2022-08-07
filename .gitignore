@@ -28,3 +28,4 @@ yarn-error.log*
 .linaria-cache
 
 .vercel
+PUBLIC/fonts/ABC*.woff2

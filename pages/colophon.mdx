@@ -1,0 +1,50 @@
+import Article from '../components/article';
+import {SiReact, SiNextdotjs, SiTailwindcss, SiMarkdown} from "react-icons/si";
+
+import ResponsiveGrid from '../components/responsive-grid';
+import Item from '../components/item';
+
+export default Article;
+
+# Colophon
+
+## Copyright
+
+The content on this website is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+## Typography
+
+Whyte, Laica, and Favorit Mono by [Dinamo GmbH](https://abcdinamo.com/) (licensed).
+
+## Privacy
+
+- No cookies
+- No trackers
+- Privacy-friendly analytics from [Splitbee](https://splitbee.io/)
+- Hosted on [Vercel](https://vercel.com/)
+
+## Technology stack
+
+<ResponsiveGrid>
+	<Item
+		icon={<SiReact size={20}/>}
+		title="React"
+		description="Base library for the UI"
+	/>
+	<Item
+		icon={<SiNextdotjs size={20}/>}
+		title="Next.js"
+		description="Provides great performance and DX"
+	/>
+	<Item
+		icon={<SiTailwindcss size={20}/>}
+		title="Tailwind CSS"
+		description="Generated accessible styles"
+	/>
+	<Item
+		icon={<SiMarkdown size={20}/>}
+		title="MDX"
+		description="For easy content management"
+	/>
+</ResponsiveGrid>
+
