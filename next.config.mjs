@@ -46,12 +46,6 @@ const nextConfig = {
 	reactStrictMode: true,
 	experimental: {
 		optimizeCss: true,
-		images: {
-			allowFutureImage: true,
-		},
-	},
-	future: {
-		strictPostcssConfiguration: true,
 	},
 	poweredByHeader: false,
 	async headers() {

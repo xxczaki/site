@@ -53,10 +53,12 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 										<meta property='og:title' content={`${seoTitle} | Antoni Kępiński`}/>
 									</Head>
 									<header>
-										<NextLink href='/'>
-											<abbr title={router.pathname === '/' ? undefined : 'Click to go back to home page'} className='transition no-underline'>
-												<h1 className={`${(props.children as string).length >= 15 ? 'text-3xl' : 'text-5xl'} font-bold w-fit italic leading-tight font-serif content ${router.pathname === '/' ? 'cursor-auto' : 'cursor-pointer'}`} {...props} />
-											</abbr>
+										<NextLink href='/' passHref>
+											<a>
+												<abbr title={router.pathname === '/' ? undefined : 'Click to go back to home page'} className='transition no-underline'>
+													<h1 className={`${(props.children as string).length >= 15 ? 'text-3xl' : 'text-5xl'} font-bold w-fit italic leading-tight font-serif content ${router.pathname === '/' ? 'cursor-auto' : 'cursor-pointer'}`} {...props} />
+												</abbr>
+											</a>
 										</NextLink>
 									</header>
 								</>
