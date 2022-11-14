@@ -7,18 +7,14 @@ interface Props {
 	isExternal?: boolean;
 }
 
-const getRel = (text: string, isExternal: boolean) => {
-	const result = [];
+const getRel = (text: string, isExternal?: boolean) => {
+	if (isExternal) {
+		return 'noopener noreferrer'
+	}
 
 	if (text === 'Mastodon') {
-		result.push('me');
+		return 'me';
 	}
-
-	if (isExternal) {
-		result.push('noopener', 'noreferrer');
-	}
-
-	return result.join(' ');
 }
 
 const BaseLink = forwardRef(({isExternal, text, ...rest}: Props, ref) => {

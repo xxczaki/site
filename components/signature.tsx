@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 import photo from '../public/images/me.jpg';
 import signature from '../public/images/signature.svg';
