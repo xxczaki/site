@@ -46,19 +46,19 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 						h1(props) {
 							const seoTitle = props.children === 'Antoni Kępiński' ? 'Resume' : props.children as string;
 
+							console.log(router.pathname)
+
 							return (
 								<>
 									<Head>
 										<title>{seoTitle} | Antoni Kępiński</title>
 										<meta property='og:title' content={`${seoTitle} | Antoni Kępiński`}/>
 									</Head>
-									<header>
+									<header className={router.pathname === '/' ? 'cursor-default' : 'cursor-pointer'}>
 										<NextLink href='/' passHref>
-											<a>
 												<abbr title={router.pathname === '/' ? undefined : 'Click to go back to home page'} className='transition no-underline'>
-													<h1 className={`${(props.children as string).length >= 15 ? 'text-3xl' : 'text-5xl'} font-bold w-fit italic leading-tight font-serif content ${router.pathname === '/' ? 'cursor-auto' : 'cursor-pointer'}`} {...props} />
+													<h1 className={`${(props.children as string).length >= 15 ? 'text-3xl' : 'text-5xl'} font-bold w-fit italic leading-tight font-serif content`} {...props} />
 												</abbr>
-											</a>
 										</NextLink>
 									</header>
 								</>
