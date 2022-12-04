@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
-import Script from 'next/script';
 import {MDXProvider} from '@mdx-js/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
@@ -38,15 +37,12 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 				<title>Antoni Kępiński</title>
 				<meta name='theme-color' content='#171717' />
 			</Head>
-			<Script data-api='/_hive' src='/bee.js'/>
 			<Container>
 				<BackToTop/>
 				<MDXProvider
 					components={{
 						h1(props) {
 							const seoTitle = props.children === 'Antoni Kępiński' ? 'Resume' : props.children as string;
-
-							console.log(router.pathname)
 
 							return (
 								<>

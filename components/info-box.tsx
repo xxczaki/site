@@ -5,7 +5,7 @@ interface Props {
 	type?: 'info' | 'warning' | 'error' | 'success' | 'quote';
 }
 
-const getColorsFromType = (type: Pick<Props, 'type'>) => {
+const getColorsFromType = (type: Props['type']) => {
 	switch (type) {
 		case 'info':
 			return {
@@ -48,7 +48,6 @@ const getColorsFromType = (type: Pick<Props, 'type'>) => {
 
 const InfoBox = (props: Props) => {
 	const {children, type} = props;
-	// @ts-expect-error Invalid TypeScript error
 	const colors = getColorsFromType(type ?? 'info');
 
 	const Icon = colors.icon;

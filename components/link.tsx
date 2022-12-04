@@ -1,5 +1,4 @@
 import NextLink from 'next/link';
-import {forwardRef} from 'react';
 
 interface Props {
 	href?: string;
@@ -17,11 +16,12 @@ const getRel = (text: string, isExternal?: boolean) => {
 	}
 }
 
-const BaseLink = forwardRef(({isExternal, text, ...rest}: Props, ref) => {
+const BaseLink = ({isExternal, text, href}: Props) => {
 	const rel = getRel(text, isExternal);
 
 	return (
 		<a
+			href={href}
 			target={isExternal ? '_blank' : '_self'}
 			rel={rel}
 			className='underline font-medium tracking-wide transition decoration-gray-400 hover:decoration-gray-500 dark:decoration-gray-600 dark:hover:decoration-gray-500 cursor-pointer'
@@ -29,14 +29,11 @@ const BaseLink = forwardRef(({isExternal, text, ...rest}: Props, ref) => {
 				textUnderlinePosition: 'from-font',
 				textDecorationThickness: '.15rem',
 			}}
-			// @ts-expect-error Legacy ref
-			ref={ref}
-			{...rest}
 		>
 			{text}
 		</a>
 	)
-});
+};
 
 const Link = ({isExternal, href = '/', text}: Props) => {
 	if (isExternal) {
@@ -44,8 +41,15 @@ const Link = ({isExternal, href = '/', text}: Props) => {
 	}
 
 	return (
-		<NextLink href={href} passHref>
-			<BaseLink text={text}/>
+		<NextLink 
+			href={href} 
+			className='underline font-medium tracking-wide transition decoration-gray-400 hover:decoration-gray-500 dark:decoration-gray-600 dark:hover:decoration-gray-500 cursor-pointer'
+			style={{
+				textUnderlinePosition: 'from-font',
+				textDecorationThickness: '.15rem',
+			}}
+		>
+			{text}
 		</NextLink>
 	);
 };
