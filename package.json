@@ -20,6 +20,7 @@
     "dependencies": {
         "@mdx-js/react": "^2.1.5",
         "@n8tb1t/use-scroll-position": "^2.0.3",
+        "@vercel/analytics": "^0.1.6",
         "framer-motion": "^7.6.6",
         "next": "^13.0.3",
         "prism-theme-one-light-dark": "^1.0.4",

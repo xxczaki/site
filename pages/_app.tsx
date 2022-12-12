@@ -5,6 +5,7 @@ import {MDXProvider} from '@mdx-js/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import {useRouter} from 'next/router';
+import {Analytics} from '@vercel/analytics/react';
 
 import Container from '../components/container';
 import Link from '../components/link';
@@ -108,6 +109,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 					}}
 				>
 					<Component {...pageProps} />
+					<Analytics />
 				</MDXProvider>
 			</Container>
 			<div className='h-32'/>
