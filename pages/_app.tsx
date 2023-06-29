@@ -5,7 +5,6 @@ import {MDXProvider} from '@mdx-js/react';
 import Image from 'next/image';
 import NextLink from 'next/link';
 import {useRouter} from 'next/router';
-import {Analytics} from '@vercel/analytics/react';
 
 import Container from '../components/container';
 import Link from '../components/link';
@@ -13,6 +12,7 @@ import InfoBox from '../components/info-box';
 import BackToTop from '../components/back-to-top';
 
 import '../public/css/tailwind.css';
+import Script from 'next/script';
 // Import '../public/css/katex.css';
 // import 'prism-theme-one-light-dark/prism-onedark.css';
 
@@ -109,7 +109,7 @@ const App = ({Component, pageProps}: Readonly<AppProps>): JSX.Element => {
 					}}
 				>
 					<Component {...pageProps} />
-					<Analytics />
+					<Script src="https://analytics.parsify.app/script.js" data-website-id="b9db6944-0669-405e-9521-fc6ff8539e94"/>
 				</MDXProvider>
 			</Container>
 			<div className='h-32'/>
