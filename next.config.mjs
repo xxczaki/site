@@ -5,8 +5,6 @@ import math from 'remark-math';
 import katex from 'rehype-katex';
 import withMDX from '@next/mdx';
 
-const cspProd = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-inline\' https://vitals.vercel-insights.com; img-src \'self\' data:; connect-src \'self\' https://vitals.vercel-insights.com; object-src data:; font-src \'self\'';
-const cspDev = 'default-src \'self\'; style-src \'self\' \'unsafe-inline\'; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://vitals.vercel-insights.com; img-src \'self\' data:; connect-src \'self\'; object-src data:; font-src \'self\'';
 const securityHeaders = [
 	{
 		key: 'X-DNS-Prefetch-Control',
@@ -31,10 +29,6 @@ const securityHeaders = [
 	{
 		key: 'Referrer-Policy',
 		value: 'no-referrer',
-	},
-	{
-		key: 'Content-Security-Policy',
-		value: process.env.NODE_ENV === 'production' ? cspProd : cspDev,
 	},
 	{
 		key: 'Sec-GPC',
