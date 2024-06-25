@@ -10,6 +10,6 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [smartypants]
   },
-  output: "static",
+  output: "hybrid",
   adapter: cloudflare({imageService: 'compile'})
 });
