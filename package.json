@@ -1,0 +1,27 @@
+{
+  "name": "xxczaki-com",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "biome check --write ./src"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^11.0.1",
+    "@astrojs/mdx": "^3.1.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.11.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@biomejs/biome": "1.8.2",
+    "remark-smartypants": "^3.0.1",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.2"
+  }
+}

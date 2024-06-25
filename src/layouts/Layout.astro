@@ -1,0 +1,53 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+
+import Content from '../components/Content.astro';
+
+type Props = MarkdownLayoutProps<{
+	title: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title} | Antoni Kępiński</title>
+	</head>
+	<body class="bg-gray-200 text-gray-700 dark:bg-gray-900 dark:text-gray-300 min-h-screen h-full font-sans w-full flex justify-center pt-8 p-4 text-pretty">
+			<Content>
+				<slot />
+			</Content>
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: 'Whyte';
+		font-display: optional;
+		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
+		unicode-range: U+000-5FF;
+	}
+
+	@font-face {
+		font-family: 'Playfair';
+		font-display: optional;
+		src: url('/fonts/PlayfairItalicVF.woff2') format('woff2-variations');
+		unicode-range: U+000-5FF;
+	}
+
+	@font-face {
+		font-family: 'Favorit Mono';
+		font-display: optional;
+		src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
+		unicode-range: U+000-5FF;
+	}
+
+	::selection {
+		@apply bg-gray-700 text-gray-200 dark:bg-gray-300 dark:text-gray-900
+	}
+</style>
