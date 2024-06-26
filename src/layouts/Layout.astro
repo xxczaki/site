@@ -23,18 +23,19 @@ const { frontmatter } = Astro.props;
 		<script is:inline type="application/ld+json">
 			{
 				"@context": "https://schema.org",
-				"@type": "Person",
-				"birthDate": "2003-04-03",
-				"image": "https://www.xxczaki.com/me.png",
-				"jobTitle": "Full Stack Developer, Entrepreneur",
-				"name": "Antoni Kępiński",
-				"url": "https://www.xxczaki.com",
-				"gender": "Male",
-				"sameAs": [
-					"https://x.com/xxczaki",
-					"https://github.com/xxczaki",
-					"https://www.linkedin.com/in/xxczaki"
-    		]
+				"@type": "ProfilePage",
+				"mainEntity": {
+					"@type": "Person",
+					"image": "https://www.xxczaki.com/me.png",
+					"name": "Antoni Kępiński",
+					"alternateName": "xxczaki",
+					"description": "Full Stack Developer, Entrepreneur",
+					"sameAs": [
+						"https://x.com/xxczaki",
+						"https://github.com/xxczaki",
+						"https://www.linkedin.com/in/xxczaki"
+					]
+				}
 			}
 		</script>
 	</head>
