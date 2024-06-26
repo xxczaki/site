@@ -14,11 +14,14 @@ const { frontmatter } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Personal website of Antoni Kępiński, a full stack developer and entrepreneur based in Warsaw, Poland." />
 		<meta name="viewport" content="width=device-width" />
+		<title>{frontmatter.title} | Antoni Kępiński</title>
+		<link rel="preload" href="/fonts/ABCWhyteVariableEdu.woff2" crossorigin as="font" type="font/woff2">
+		<link rel="preload" href="/fonts/PlayfairItalicVF.woff2" crossorigin as="font" type="font/woff2">
+		<link rel="preload" href="/fonts/ABCFavoritMonoVariableEdu.woff2" crossorigin as="font" type="font/woff2">
+		<meta name="description" content="Personal website of Antoni Kępiński, a full stack developer and entrepreneur based in Warsaw, Poland." />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href="https://www.xxczaki.com" />
-		<title>{frontmatter.title} | Antoni Kępiński</title>
 		<meta property="og:image" content="https://www.xxczaki.com/og.jpg"/>
 		<meta name="twitter:card" content="summary_large_image"/>
 		<meta name="twitter:site" content="@xxczaki"/>
@@ -52,25 +55,22 @@ const { frontmatter } = Astro.props;
 	@font-face {
 		font-family: 'Whyte';
 		font-weight: 400 500;
-		font-display: fallback;
+		font-display: optional;
 		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
-		unicode-range: U+000-5FF;
 	}
 
 	@font-face {
 		font-family: 'Playfair';
 		font-weight: 400;
-		font-display: fallback;
+		font-display: swap;
 		src: url('/fonts/PlayfairItalicVF.woff2') format('woff2-variations');
-		unicode-range: U+000-5FF;
 	}
 
 	@font-face {
 		font-family: 'Favorit Mono';
 		font-weight: 300;
-		font-display: fallback;
+		font-display: swap;
 		src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
-		unicode-range: U+000-5FF;
 	}
 
 	::selection {
