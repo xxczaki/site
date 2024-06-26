@@ -17,7 +17,26 @@ const { frontmatter } = Astro.props;
 		<meta name="description" content="Personal website of Antoni Kępiński, a full stack developer and entrepreneur based in Warsaw, Poland." />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href="https://www.xxczaki.com" />
 		<title>{frontmatter.title} | Antoni Kępiński</title>
+		<meta property="og:image" content="https://www.xxczaki.com/og.svg"/>
+		<script is:inline type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"birthDate": "2003-04-03",
+				"image": "https://www.xxczaki.com/me.png",
+				"jobTitle": "Full Stack Developer, Entrepreneur",
+				"name": "Antoni Kępiński",
+				"url": "https://www.xxczaki.com",
+				"gender": "Male",
+				"sameAs": [
+					"https://x.com/xxczaki",
+					"https://github.com/xxczaki",
+					"https://www.linkedin.com/in/xxczaki"
+    		]
+			}
+		</script>
 	</head>
 	<body class="bg-gray-200 text-gray-700 dark:bg-gray-900 dark:text-gray-300 min-h-screen h-full font-sans w-full flex justify-center pt-8 p-4 text-pretty">
 			<Content>
@@ -28,6 +47,7 @@ const { frontmatter } = Astro.props;
 <style is:global>
 	@font-face {
 		font-family: 'Whyte';
+		font-weight: 400 500;
 		font-display: fallback;
 		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
@@ -35,6 +55,7 @@ const { frontmatter } = Astro.props;
 
 	@font-face {
 		font-family: 'Playfair';
+		font-weight: 400;
 		font-display: fallback;
 		src: url('/fonts/PlayfairItalicVF.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
@@ -42,6 +63,7 @@ const { frontmatter } = Astro.props;
 
 	@font-face {
 		font-family: 'Favorit Mono';
+		font-weight: 300;
 		font-display: fallback;
 		src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
