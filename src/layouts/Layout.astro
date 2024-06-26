@@ -28,21 +28,21 @@ const { frontmatter } = Astro.props;
 <style is:global>
 	@font-face {
 		font-family: 'Whyte';
-		font-display: optional;
+		font-display: fallback;
 		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
 	}
 
 	@font-face {
 		font-family: 'Playfair';
-		font-display: optional;
+		font-display: fallback;
 		src: url('/fonts/PlayfairItalicVF.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
 	}
 
 	@font-face {
 		font-family: 'Favorit Mono';
-		font-display: optional;
+		font-display: fallback;
 		src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
 	}
