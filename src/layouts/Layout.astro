@@ -14,7 +14,7 @@ const { frontmatter } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Personal website of Antoni Kępiński, a full stack developer and entrepreneur based in Warsaw, Poland." />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{frontmatter.title} | Antoni Kępiński</title>
@@ -28,21 +28,21 @@ const { frontmatter } = Astro.props;
 <style is:global>
 	@font-face {
 		font-family: 'Whyte';
-		font-display: optional;
+		font-display: swap;
 		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
 	}
 
 	@font-face {
 		font-family: 'Playfair';
-		font-display: optional;
+		font-display: swap;
 		src: url('/fonts/PlayfairItalicVF.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
 	}
 
 	@font-face {
 		font-family: 'Favorit Mono';
-		font-display: optional;
+		font-display: swap;
 		src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
 		unicode-range: U+000-5FF;
 	}
