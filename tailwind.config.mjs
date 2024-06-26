@@ -1,4 +1,4 @@
-import defaultTheme from 'tailwindcss/defaultTheme'
+import defaultTheme from 'tailwindcss/defaultTheme';
 import colors from 'tailwindcss/colors';
 
 /** @type {import('tailwindcss').Config} */
@@ -9,14 +9,11 @@ export default {
 			fontFamily: {
 				sans: ['Whyte', ...defaultTheme.fontFamily.sans],
 				serif: ['Playfair', ...defaultTheme.fontFamily.serif],
-        mono: ['Favorit Mono', ...defaultTheme.fontFamily.mono],
-      },
+				mono: ['Favorit Mono', ...defaultTheme.fontFamily.mono],
+			},
 			colors: {
 				...defaultTheme.colors,
-				gray: {
-					...colors.neutral,
-					1000: '#050505'
-				},
+				gray: colors.neutral,
 			},
 			screens: {
 				...defaultTheme.screens,
@@ -25,4 +22,4 @@ export default {
 		},
 	},
 	plugins: [],
-}
+};
