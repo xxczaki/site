@@ -1,0 +1,13 @@
+{
+	"name": "Personal website of Antoni Kępiński",
+	"short_name": "xxczaki.com",
+	"icons": [
+		{
+			"src": "me.png",
+			"sizes": "512x512"
+		}
+	],
+	"background_color": "light-dark(#e5e5e5, #171717)",
+	"theme_color": "light-dark(#e5e5e5, #171717)",
+	"display": "fullscreen"
+}
