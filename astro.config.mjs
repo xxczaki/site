@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import mdx from '@astrojs/mdx';
 import sitemap from "@astrojs/sitemap";
-import cloudflare from "@astrojs/cloudflare";
 import robotsTxt from 'astro-robots-txt';
 import smartypants from "remark-smartypants";
 
@@ -13,8 +12,4 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [smartypants]
   },
-  output: "hybrid",
-  adapter: cloudflare({
-    imageService: 'compile'
-  })
 });

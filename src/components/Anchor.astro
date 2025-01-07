@@ -5,7 +5,12 @@ const isMastodonLink = props.href.includes('mastodon.social');
 ---
 
 <>
-	<a {...props} rel={isMastodonLink ? 'me' : undefined} target="_blank" class='underline font-medium transition decoration-gray-400 hover:decoration-gray-500 dark:decoration-gray-600 dark:hover:decoration-gray-500 cursor-pointer'>
+	<a 
+		{...props} 
+		rel={isMastodonLink ? 'me' : undefined} 
+		target="_blank" 
+		class='underline font-medium transition decoration-gray-400 hover:decoration-gray-500 dark:decoration-gray-600 dark:hover:decoration-gray-500 cursor-pointer'
+	>
 		<slot/>
 	</a>
 	<style>
