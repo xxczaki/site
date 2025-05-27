@@ -23,7 +23,8 @@
     "remark-smartypants": "^3.0.2",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.7",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "wrangler": "^4.17.0"
   },
   "packageManager": "pnpm@10.11.0",
   "pnpm": {
@@ -31,7 +32,8 @@
       "@biomejs/biome",
       "@tailwindcss/oxide",
       "esbuild",
-      "sharp"
+      "sharp",
+      "workerd"
     ]
   }
 }
