@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 import type { MarkdownLayoutProps } from 'astro';
 
 import Content from '../components/Content.astro';
@@ -19,7 +21,7 @@ const { frontmatter } = Astro.props;
 		<link rel="preload" href="/fonts/ABCWhyteVariableEdu.woff2" crossorigin as="font" type="font/woff2" />
 		<link rel="preload" href="/fonts/PlayfairItalicVF.woff2" crossorigin as="font" type="font/woff2" />
 		<link rel="preload" href="/fonts/ABCFavoritMonoVariableEdu.woff2" crossorigin as="font" type="font/woff2" />
-		<meta name="description" content="Personal website of Antoni Kępiński, a software developer based in Warsaw, Poland." />
+		<meta name="description" content="Personal website of Antoni Kępiński, a software enginner based in Warsaw, Poland." />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href="https://www.xxczaki.com" />
 		<meta property="og:image" content="https://www.xxczaki.com/og.jpg" />
@@ -39,7 +41,7 @@ const { frontmatter } = Astro.props;
 					"image": "https://www.xxczaki.com/me.jpg",
 					"name": "Antoni Kępiński",
 					"alternateName": "xxczaki",
-					"description": "Software Developer",
+					"description": "Software Engineer",
 					"sameAs": [
 						"https://x.com/xxczaki",
 						"https://github.com/xxczaki",
@@ -49,7 +51,7 @@ const { frontmatter } = Astro.props;
 			}
 		</script>
 	</head>
-	<body class="bg-gray-200 text-gray-700 dark:bg-gray-900 dark:text-gray-300 min-h-screen h-full font-sans w-full flex justify-center pt-8 p-4 text-pretty">
+	<body class="bg-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 min-h-screen h-full font-sans w-full flex justify-center pt-8 p-4 text-pretty">
 			<Content>
 				<slot />
 			</Content>
@@ -78,6 +80,15 @@ const { frontmatter } = Astro.props;
 	}
 
 	::selection {
-		@apply bg-gray-700 text-gray-200 dark:bg-gray-300 dark:text-gray-900
+		background-color: var(--color-neutral-700);
+		color: var(--color-neutral-200);
+
+		@media (prefers-color-scheme: dark) {
+    	background-color: var(--color-neutral-300);
+  	}
+
+		@media (prefers-color-scheme: dark) {
+    	color: var(--color-neutral-900);
+  	}
 	}
 </style>

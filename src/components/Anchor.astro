@@ -9,13 +9,12 @@ const isMastodonLink = props.href.includes('mastodon.social');
 		{...props} 
 		rel={isMastodonLink ? 'me' : undefined} 
 		target="_blank" 
-		class='underline font-medium transition decoration-gray-400 hover:decoration-gray-500 dark:decoration-gray-600 dark:hover:decoration-gray-500 cursor-pointer'
+		class='underline font-medium transition decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 dark:hover:decoration-neutral-500 cursor-pointer'
 	>
 		<slot/>
 	</a>
 	<style>
 		a {
-			text-underline-position: under;
 			text-decoration-thickness: 1.5px;
 		}
 	</style>
