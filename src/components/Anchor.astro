@@ -1,21 +1,5 @@
 ---
 const props = Astro.props;
-
-const isMastodonLink = props.href.includes('mastodon.social');
 ---
 
-<>
-	<a 
-		{...props} 
-		rel={isMastodonLink ? 'me' : undefined} 
-		target="_blank" 
-		class='underline font-medium transition decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 dark:hover:decoration-neutral-500 cursor-pointer'
-	>
-		<slot/>
-	</a>
-	<style>
-		a {
-			text-decoration-thickness: 1.5px;
-		}
-	</style>
-</>
+<a {...props} target="_blank" class='underline font-medium transition decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 dark:hover:decoration-neutral-500 cursor-pointer decoration-2'><slot/></a>
