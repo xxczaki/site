@@ -2,6 +2,7 @@
   "name": "xxczaki-com",
   "type": "module",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,7 +14,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.11.1"
+    "astro": "^5.11.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
@@ -24,7 +25,7 @@
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
-    "wrangler": "^4.24.3"
+    "wrangler": "^4.24.4"
   },
   "packageManager": "pnpm@10.13.1",
   "pnpm": {

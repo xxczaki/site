@@ -13,7 +13,6 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	markdown: {
-		// @ts-expect-error Invalid types
 		remarkPlugins: [smartypants],
 	},
 });

@@ -19,7 +19,6 @@ const { frontmatter } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<title>{frontmatter.title} | Antoni Kępiński</title>
 		<link rel="preload" href="/fonts/ABCWhyteVariableEdu.woff2" crossorigin as="font" type="font/woff2" />
-		<link rel="preload" href="/fonts/PlayfairItalicVF.woff2" crossorigin as="font" type="font/woff2" />
 		<link rel="preload" href="/fonts/ABCFavoritMonoVariableEdu.woff2" crossorigin as="font" type="font/woff2" />
 		<meta name="description" content="Personal website of Antoni Kępiński, a software enginner based in Warsaw, Poland." />
 		<meta name="generator" content={Astro.generator} />
@@ -63,13 +62,6 @@ const { frontmatter } = Astro.props;
 		font-weight: 400 500;
 		font-display: optional;
 		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
-	}
-
-	@font-face {
-		font-family: 'Playfair';
-		font-weight: 400;
-		font-display: swap;
-		src: url('/fonts/PlayfairItalicVF.woff2') format('woff2-variations');
 	}
 
 	@font-face {
