@@ -12,20 +12,20 @@
     "lint": "biome check --write ./src"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/mdx": "^4.3.1",
     "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.11.2"
+    "astro": "^5.12.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
-    "@biomejs/biome": "2.1.1",
+    "@biomejs/biome": "2.1.2",
     "@tailwindcss/vite": "^4.1.11",
     "astro-robots-txt": "^1.0.0",
     "remark-smartypants": "^3.0.2",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
-    "wrangler": "^4.24.4"
+    "wrangler": "^4.26.0"
   },
   "packageManager": "pnpm@10.13.1",
   "pnpm": {
