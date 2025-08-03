@@ -13,6 +13,7 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	markdown: {
+		// @ts-expect-error Not fully compatible with newer versions of Astro (?)
 		remarkPlugins: [smartypants],
 	},
 });
