@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.3.3
-        version: 4.3.3(astro@5.12.9(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0))
+        version: 4.3.3(astro@5.13.0(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0))
       '@astrojs/sitemap':
-        specifier: ^3.4.2
-        version: 3.4.2
+        specifier: ^3.5.0
+        version: 3.5.0
       astro:
-        specifier: ^5.12.9
-        version: 5.12.9(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0)
+        specifier: ^5.13.0
+        version: 5.13.0(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.4
@@ -92,8 +92,8 @@ packages:
     resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/sitemap@3.4.2':
-    resolution: {integrity: sha512-wfN2dZzdkto6yaMtOFa/J9gc60YE3wl3rgSBoNJ+MU3lJVUMsDY9xf9uAVi8Mp/zEQKFDSJlQzBvqQUpw0Hf6g==}
+  '@astrojs/sitemap@3.5.0':
+    resolution: {integrity: sha512-ldOvoBxuRgpcdndzksskOTzU55g76tkHC/POpejUbPGz6zR4rJKiXh8thX4WEPWDhCTZUafhJ1qf7k1muStHfg==}
 
   '@astrojs/telemetry@3.3.0':
     resolution: {integrity: sha512-UFBgfeldP06qu6khs/yY+q1cDAaArM2/7AEIqQ9Cuvf7B1hNLq0xDrZkct+QoIGyjq56y8IaE2I3CTvG99mlhQ==}
@@ -1197,8 +1197,8 @@ packages:
   astro-robots-txt@1.0.0:
     resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
 
-  astro@5.12.9:
-    resolution: {integrity: sha512-cZ7kZ61jyE5nwSrFKSRyf5Gds+uJELqQxJFqMkcgiWQvhWZJUSShn8Uz3yc9WLyLw5Kim5P5un9SkJSGogfEZQ==}
+  astro@5.13.0:
+    resolution: {integrity: sha512-kWahyvrrxUtgxFRRWSH5X0DESvgg4ZZ0fk6tU7blVZRgmj4PY79nzfaXFT+N+Ac2vWXX7eYUPYs1kLLk5IjBfQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2800,12 +2800,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.3(astro@5.12.9(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0))':
+  '@astrojs/mdx@4.3.3(astro@5.13.0(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.5
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.12.9(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0)
+      astro: 5.13.0(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2823,7 +2823,7 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/sitemap@3.4.2':
+  '@astrojs/sitemap@3.5.0':
     dependencies:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
@@ -3684,7 +3684,7 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro@5.12.9(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0):
+  astro@5.13.0(@types/node@20.14.9)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.41.1)(typescript@5.9.2)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.1
