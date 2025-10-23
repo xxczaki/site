@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.5",
-    "@biomejs/biome": "2.2.6",
+    "@biomejs/biome": "2.2.7",
     "@tailwindcss/vite": "^4.1.15",
     "astro-robots-txt": "^1.0.0",
     "remark-smartypants": "^3.0.2",
