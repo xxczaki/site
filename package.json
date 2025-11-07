@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.1.16",
     "astro-robots-txt": "^1.0.0",
     "remark-smartypants": "^3.0.2",
-    "sharp": "^0.34.4",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "wrangler": "^4.45.4"
