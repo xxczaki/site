@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.3.10
-        version: 4.3.10(astro@5.15.4(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0))
+        version: 4.3.10(astro@5.15.5(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0))
       '@astrojs/sitemap':
         specifier: ^3.6.0
         version: 3.6.0
       astro:
-        specifier: ^5.15.4
-        version: 5.15.4(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0)
+        specifier: ^5.15.5
+        version: 5.15.5(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.5
@@ -1202,8 +1202,8 @@ packages:
   astro-robots-txt@1.0.0:
     resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
 
-  astro@5.15.4:
-    resolution: {integrity: sha512-0g/68hLHEJZF2nYUcZM5O0kOnzCsCIf8eA9+0jfBAxp4ycujrIHRgIOdZCFKL9GoTsn8AypWbziypH5aEIF+aA==}
+  astro@5.15.5:
+    resolution: {integrity: sha512-A56u4H6gFHEb0yRHcGTOADBb7jmEwfDjQpkqVV/Z+ZWlu6mYuwCrIcOUtZjNno0chrRKmOeZWDofW23ql18y3w==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1731,9 +1731,6 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
-
-  magic-string@0.30.19:
-    resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -2764,12 +2761,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.10(astro@5.15.4(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.3.10(astro@5.15.5(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.8
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.15.4(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0)
+      astro: 5.15.5(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -3650,7 +3647,7 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro@5.15.4(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0):
+  astro@5.15.5(@types/node@20.14.9)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(typescript@5.9.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.7.4
@@ -3684,7 +3681,7 @@ snapshots:
       http-cache-semantics: 4.2.0
       import-meta-resolve: 4.2.0
       js-yaml: 4.1.0
-      magic-string: 0.30.19
+      magic-string: 0.30.21
       magicast: 0.3.5
       mrmime: 2.0.1
       neotraverse: 0.6.18
@@ -3695,7 +3692,7 @@ snapshots:
       picomatch: 4.0.3
       prompts: 2.4.2
       rehype: 13.0.2
-      semver: 7.7.2
+      semver: 7.7.3
       shiki: 3.13.0
       smol-toml: 1.4.2
       tinyexec: 1.0.1
@@ -4339,10 +4336,6 @@ snapshots:
   longest-streak@3.1.0: {}
 
   lru-cache@10.4.3: {}
-
-  magic-string@0.30.19:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.5
 
   magic-string@0.30.21:
     dependencies:
@@ -5288,7 +5281,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.3:
     dependencies:
-      semver: 7.7.2
+      semver: 7.7.3
 
   typescript@5.9.3: {}
 
