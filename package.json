@@ -12,12 +12,12 @@
     "lint": "biome check --write ./src"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/sitemap": "^3.7.0",
-    "astro": "^5.18.0"
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/sitemap": "^3.7.1",
+    "astro": "^5.18.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.6",
+    "@astrojs/check": "^0.9.7",
     "@biomejs/biome": "2.4.6",
     "@tailwindcss/vite": "^4.2.1",
     "astro-robots-txt": "^1.0.0",
