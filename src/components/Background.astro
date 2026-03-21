@@ -7,10 +7,12 @@
 	#matrix-bg {
 		position: fixed;
 		inset: 0;
-		width: 100%;
-		height: 100%;
+		width: 100dvw;
+		height: 100dvh;
 		z-index: 0;
 		pointer-events: none;
+		transform: translateZ(0);
+		-webkit-transform: translateZ(0);
 	}
 </style>
 
@@ -172,8 +174,8 @@ void main(){
 
 			function resize() {
 				const dpr = Math.min(devicePixelRatio, 2);
-				const w = window.innerWidth;
-				const h = window.innerHeight;
+				const w = screen.availWidth || window.innerWidth;
+				const h = screen.availHeight || window.innerHeight;
 
 				canvas.width = w * dpr;
 				canvas.height = h * dpr;
