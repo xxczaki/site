@@ -7,8 +7,8 @@
 	#matrix-bg {
 		position: fixed;
 		inset: 0;
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		z-index: 0;
 		pointer-events: none;
 	}
@@ -16,7 +16,7 @@
 
 <script>
 	const CHARS = '0123456789abcdef{}<>()[];=*/&|^~!#';
-	const CELL = 18;
+	const CELL = 10;
 	const GLYPH = 48;
 
 	const canvas = document.getElementById('matrix-bg') as HTMLCanvasElement;
@@ -166,19 +166,21 @@ void main(){
 			const uCell = gl.getUniformLocation(prog, 'u_cell');
 			const uDark = gl.getUniformLocation(prog, 'u_dark');
 
-			gl.uniform1f(uN, n);
-			gl.uniform1f(uCell, CELL);
+		gl.uniform1f(uN, n);
 			gl.enable(gl.BLEND);
 			gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
 
 			function resize() {
 				const dpr = Math.min(devicePixelRatio, 2);
+				const w = window.innerWidth;
+				const h = window.innerHeight;
 
-				canvas.width = canvas.clientWidth * dpr;
-				canvas.height = canvas.clientHeight * dpr;
-				
+				canvas.width = w * dpr;
+				canvas.height = h * dpr;
+
 				gl!.viewport(0, 0, canvas.width, canvas.height);
 				gl!.uniform2f(uRes, canvas.width, canvas.height);
+				gl!.uniform1f(uCell, CELL * dpr);
 			}
 
 			function updateTheme() {
