@@ -18,7 +18,7 @@ const { frontmatter } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, viewport-fit=cover" />
 		<title>{frontmatter.title} | Antoni Kępiński</title>
 		<Font cssVariable="--font-whyte" preload />
 		<Font cssVariable="--font-favorit-mono" preload />
@@ -54,7 +54,7 @@ const { frontmatter } = Astro.props;
 	</head>
 	<body class="bg-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 min-h-screen font-sans text-pretty">
 		<Background />
-		<div class="relative z-10 w-full flex justify-center pt-8 p-4">
+		<div class="relative z-10 w-full flex justify-center pt-8 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
 			<Content>
 				<slot />
 			</Content>
