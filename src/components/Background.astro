@@ -6,14 +6,11 @@
 <style>
 	#matrix-bg {
 		position: fixed;
-		top: -5vh;
-		left: 0;
-		width: 100vw;
-		height: calc(100vh + 10vh);
+		top: 50%;
+		left: 50%;
 		z-index: 0;
 		pointer-events: none;
-		transform: translateZ(0);
-		-webkit-transform: translateZ(0);
+		transform: translate(-50%, -50%) translateZ(0);
 	}
 </style>
 
@@ -175,8 +172,11 @@ void main(){
 
 			function resize() {
 				const dpr = Math.min(devicePixelRatio, 2);
-				const w = canvas.clientWidth;
-				const h = canvas.clientHeight;
+				const w = Math.max(screen.width, window.innerWidth);
+				const h = Math.max(screen.height, window.innerHeight);
+
+				canvas.style.width = `${w}px`;
+				canvas.style.height = `${h}px`;
 
 				canvas.width = w * dpr;
 				canvas.height = h * dpr;
@@ -190,8 +190,9 @@ void main(){
 				gl!.uniform1f(uDark, window.matchMedia('(prefers-color-scheme: dark)').matches ? 1 : 0);
 			}
 
+			resize();
 			updateTheme();
-			new ResizeObserver(() => resize()).observe(canvas);
+			screen.orientation?.addEventListener('change', resize);
 			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
 			const t0 = performance.now();
