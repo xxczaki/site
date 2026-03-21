@@ -59,6 +59,7 @@ const { frontmatter } = Astro.props;
 				<slot />
 			</Content>
 		</div>
+		{frontmatter.title !== 'Impressum' && <a href="/impressum" class="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] z-10 text-sm text-neutral-500 hover:text-neutral-600 dark:text-neutral-500 dark:hover:text-neutral-400 transition-colors select-none underline decoration-neutral-400 hover:decoration-neutral-500 dark:decoration-neutral-600 dark:hover:decoration-neutral-500 decoration-[1.25px]">Impressum</a>}
 	</body>
 </html>
 <style is:global>
@@ -67,11 +68,8 @@ const { frontmatter } = Astro.props;
 		color: var(--color-neutral-200);
 
 		@media (prefers-color-scheme: dark) {
-    	background-color: var(--color-neutral-300);
-  	}
-
-		@media (prefers-color-scheme: dark) {
-    	color: var(--color-neutral-900);
-  	}
+    		background-color: var(--color-neutral-300);
+    		color: var(--color-neutral-900);
+  		}
 	}
 </style>
