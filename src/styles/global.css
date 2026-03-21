@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-	--font-sans:
-		"Whyte", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-mono:
-		"Favorit Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-		"Liberation Mono", "Courier New", monospace;
+	--font-sans: var(--font-whyte);
+	--font-mono: var(--font-favorit-mono);
 }

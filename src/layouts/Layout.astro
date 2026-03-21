@@ -2,6 +2,7 @@
 import '../styles/global.css';
 
 import type { MarkdownLayoutProps } from 'astro';
+import { Font } from 'astro:assets';
 
 import Content from '../components/Content.astro';
 
@@ -18,8 +19,8 @@ const { frontmatter } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{frontmatter.title} | Antoni Kępiński</title>
-		<link rel="preload" href="/fonts/ABCWhyteVariableEdu.woff2" crossorigin as="font" type="font/woff2" />
-		<link rel="preload" href="/fonts/ABCFavoritMonoVariableEdu.woff2" crossorigin as="font" type="font/woff2" />
+		<Font cssVariable="--font-whyte" preload />
+		<Font cssVariable="--font-favorit-mono" preload />
 		<meta name="description" content="Personal website of Antoni Kępiński, a software enginner based in Warsaw, Poland." />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href="https://www.xxczaki.com" />
@@ -57,20 +58,6 @@ const { frontmatter } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	@font-face {
-		font-family: 'Whyte';
-		font-weight: 400 500;
-		font-display: optional;
-		src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
-	}
-
-	@font-face {
-		font-family: 'Favorit Mono';
-		font-weight: 300;
-		font-display: swap;
-		src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
-	}
-
 	::selection {
 		background-color: var(--color-neutral-700);
 		color: var(--color-neutral-200);

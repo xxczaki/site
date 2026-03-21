@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
@@ -16,4 +16,40 @@ export default defineConfig({
 		// @ts-expect-error Not fully compatible with newer versions of Astro (?)
 		remarkPlugins: [smartypants],
 	},
+	fonts: [
+		{
+			name: 'Whyte',
+			cssVariable: '--font-whyte',
+			provider: fontProviders.local(),
+			weights: ['400 500'],
+			styles: ['normal'],
+			display: 'optional',
+			fallbacks: ['sans-serif'],
+			options: {
+				variants: [
+					{
+						src: ['./src/fonts/ABCWhyteVariableEdu.woff2'],
+						weight: '400 500',
+					},
+				],
+			},
+		},
+		{
+			name: 'Favorit Mono',
+			cssVariable: '--font-favorit-mono',
+			provider: fontProviders.local(),
+			weights: ['300'],
+			styles: ['normal'],
+			display: 'swap',
+			fallbacks: ['monospace'],
+			options: {
+				variants: [
+					{
+						src: ['./src/fonts/ABCFavoritMonoVariableEdu.woff2'],
+						weight: '300',
+					},
+				],
+			},
+		},
+	],
 });
