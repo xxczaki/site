@@ -6,9 +6,10 @@
 <style>
 	#matrix-bg {
 		position: fixed;
-		inset: 0;
-		width: 100dvw;
-		height: 100dvh;
+		top: -5vh;
+		left: 0;
+		width: 100vw;
+		height: calc(100vh + 10vh);
 		z-index: 0;
 		pointer-events: none;
 		transform: translateZ(0);
@@ -174,8 +175,8 @@ void main(){
 
 			function resize() {
 				const dpr = Math.min(devicePixelRatio, 2);
-				const w = screen.availWidth || window.innerWidth;
-				const h = screen.availHeight || window.innerHeight;
+				const w = screen.width;
+				const h = screen.height;
 
 				canvas.width = w * dpr;
 				canvas.height = h * dpr;
