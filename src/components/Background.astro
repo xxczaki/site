@@ -173,17 +173,10 @@ void main(){
 			gl.enable(gl.BLEND);
 			gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
 
-			let prevW = 0;
-			let prevH = 0;
-
 			function resize() {
 				const dpr = Math.min(devicePixelRatio, 2);
 				const w = canvas.clientWidth;
 				const h = canvas.clientHeight;
-
-				if (prevW > 0 && Math.abs(w - prevW) < 100 && Math.abs(h - prevH) < 100) return;
-				prevW = w;
-				prevH = h;
 
 				canvas.width = w * dpr;
 				canvas.height = h * dpr;
