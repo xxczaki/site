@@ -190,9 +190,8 @@ void main(){
 				gl!.uniform1f(uDark, window.matchMedia('(prefers-color-scheme: dark)').matches ? 1 : 0);
 			}
 
-			resize();
 			updateTheme();
-			window.addEventListener('resize', resize);
+			new ResizeObserver(() => resize()).observe(canvas);
 			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
 			const t0 = performance.now();
