@@ -4,6 +4,7 @@ import '../styles/global.css';
 import type { MarkdownLayoutProps } from 'astro';
 import { Font } from 'astro:assets';
 
+import Background from '../components/Background.astro';
 import Content from '../components/Content.astro';
 
 type Props = MarkdownLayoutProps<{
@@ -51,10 +52,13 @@ const { frontmatter } = Astro.props;
 			}
 		</script>
 	</head>
-	<body class="bg-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 min-h-screen h-full font-sans w-full flex justify-center pt-8 p-4 text-pretty">
+	<body class="bg-neutral-200 text-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 min-h-screen font-sans text-pretty">
+		<Background />
+		<div class="relative z-10 w-full flex justify-center pt-8 p-4">
 			<Content>
 				<slot />
 			</Content>
+		</div>
 	</body>
 </html>
 <style is:global>

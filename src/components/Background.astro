@@ -1,0 +1,201 @@
+---
+---
+
+<canvas id="matrix-bg" aria-hidden="true"></canvas>
+
+<style>
+	#matrix-bg {
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 0;
+		pointer-events: none;
+	}
+</style>
+
+<script>
+	const CHARS = '0123456789abcdef{}<>()[];=*/&|^~!#';
+	const CELL = 18;
+	const GLYPH = 48;
+
+	const canvas = document.getElementById('matrix-bg') as HTMLCanvasElement;
+
+	if (canvas && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		const gl = canvas.getContext('webgl', {
+			alpha: true,
+			premultipliedAlpha: true,
+			antialias: false,
+		});
+
+		if (gl) {
+			const n = CHARS.length;
+
+			// Build character atlas
+			const atlas = document.createElement('canvas');
+
+			atlas.width = n * GLYPH;
+			atlas.height = GLYPH;
+
+			const actx = atlas.getContext('2d')!;
+
+			actx.fillStyle = '#000';
+			actx.fillRect(0, 0, atlas.width, atlas.height);
+			actx.fillStyle = '#fff';
+			actx.font = `${GLYPH * 0.7}px ui-monospace,"Cascadia Code","Source Code Pro",Menlo,Consolas,monospace`;
+			actx.textAlign = 'center';
+			actx.textBaseline = 'middle';
+
+			for (let i = 0; i < n; i++) {
+				actx.fillText(CHARS.charAt(i), (i + 0.5) * GLYPH, GLYPH * 0.52);
+			}
+
+			const tex = gl.createTexture();
+
+			gl.bindTexture(gl.TEXTURE_2D, tex);
+			gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, atlas);
+			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+			function compile(type: number, src: string) {
+				const s = gl!.createShader(type)!;
+
+				gl!.shaderSource(s, src);
+				gl!.compileShader(s);
+
+				return s;
+			}
+
+			const vs = compile(
+				gl.VERTEX_SHADER,
+				`attribute vec2 a_pos;
+void main(){gl_Position=vec4(a_pos,0,1);}`,
+			);
+
+			const fs = compile(
+				gl.FRAGMENT_SHADER,
+				`precision highp float;
+uniform float u_t;
+uniform vec2 u_res;
+uniform sampler2D u_atlas;
+uniform float u_n;
+uniform float u_cell;
+uniform float u_dark;
+
+float hash(vec2 p){
+  return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);
+}
+
+void main(){
+  vec2 cell=floor(gl_FragCoord.xy/u_cell);
+  vec2 cuv=fract(gl_FragCoord.xy/u_cell);
+  cuv.y=1.0-cuv.y;
+
+  float h=hash(cell);
+  float h2=hash(cell+237.0);
+
+  // Character index cycles at varying speeds per cell
+  float ci=floor(mod(h*u_n+u_t*(0.3+h2*1.8),u_n));
+  float au=(ci+cuv.x)/u_n;
+  float ch=texture2D(u_atlas,vec2(au,cuv.y)).r;
+
+  float t=u_t;
+
+  // Tight, high-frequency waves for smaller bright patches
+  float w1=sin(cell.y*0.12-t*0.32+sin(cell.x*0.08+t*0.12)*2.5);
+  float w2=sin(cell.x*0.15+t*0.22+cos(cell.y*0.1-t*0.08)*2.0);
+  float w3=sin((cell.x-cell.y)*0.09+t*0.15);
+  float w4=sin(length(cell-u_res/u_cell*0.5)*0.05-t*0.25);
+
+  float pattern=(w1+w2+w3+w4)*0.25;
+  pattern=smoothstep(0.15,0.55,pattern);
+  pattern=pow(pattern,2.0);
+
+  // Narrow vertical streams
+  float sp=hash(vec2(cell.x,0.0));
+  float stream=sin(cell.y*0.14-t*(0.6+sp*1.0)+sp*6.283);
+  stream=pow(max(stream,0.0),8.0);
+
+  // Narrow diagonal streams
+  float dp=hash(vec2(cell.x+cell.y,1.0));
+  float diag=sin((cell.x+cell.y)*0.11-t*(0.4+dp*0.8)+dp*6.283);
+  diag=pow(max(diag,0.0),8.0);
+
+  float bright=pattern*0.5+stream*0.3+diag*0.2;
+
+  // Vignette: reduced in center, full at edges, never fully gone
+  vec2 uv=gl_FragCoord.xy/u_res;
+  vec2 center=uv-0.5;
+  float vRaw=length(vec2(center.x*1.4,center.y*0.55))*2.0;
+  vRaw=smoothstep(0.18,0.85,vRaw);
+  float vignette=mix(0.15,1.0,vRaw);
+
+  // Still fade at the very edge of the screen
+  float border=smoothstep(0.0,0.03,uv.x)*smoothstep(0.0,0.03,1.0-uv.x);
+  border*=smoothstep(0.0,0.03,uv.y)*smoothstep(0.0,0.03,1.0-uv.y);
+
+  float a=ch*bright*vignette*border*0.38;
+  vec3 col=mix(vec3(0.25),vec3(0.65),u_dark);
+
+  gl_FragColor=vec4(col*a,a);
+}`,
+			);
+
+			const prog = gl.createProgram()!;
+
+			gl.attachShader(prog, vs);
+			gl.attachShader(prog, fs);
+			gl.linkProgram(prog);
+			gl.useProgram(prog);
+
+			const buf = gl.createBuffer();
+
+			gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+			gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+
+			const aPos = gl.getAttribLocation(prog, 'a_pos');
+
+			gl.enableVertexAttribArray(aPos);
+			gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+			const uT = gl.getUniformLocation(prog, 'u_t');
+			const uRes = gl.getUniformLocation(prog, 'u_res');
+			const uN = gl.getUniformLocation(prog, 'u_n');
+			const uCell = gl.getUniformLocation(prog, 'u_cell');
+			const uDark = gl.getUniformLocation(prog, 'u_dark');
+
+			gl.uniform1f(uN, n);
+			gl.uniform1f(uCell, CELL);
+			gl.enable(gl.BLEND);
+			gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+
+			function resize() {
+				const dpr = Math.min(devicePixelRatio, 2);
+
+				canvas.width = canvas.clientWidth * dpr;
+				canvas.height = canvas.clientHeight * dpr;
+				
+				gl!.viewport(0, 0, canvas.width, canvas.height);
+				gl!.uniform2f(uRes, canvas.width, canvas.height);
+			}
+
+			function updateTheme() {
+				gl!.uniform1f(uDark, window.matchMedia('(prefers-color-scheme: dark)').matches ? 1 : 0);
+			}
+
+			resize();
+			updateTheme();
+			window.addEventListener('resize', resize);
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+
+			const t0 = performance.now();
+			(function frame() {
+				gl!.uniform1f(uT, (performance.now() - t0) / 1000);
+				gl!.drawArrays(gl!.TRIANGLE_STRIP, 0, 4);
+				requestAnimationFrame(frame);
+			})();
+		}
+	}
+</script>
