@@ -1,15 +1,16 @@
 ---
 import '../styles/global.css';
 
-import type { MarkdownLayoutProps } from 'astro';
 import { Font } from 'astro:assets';
 
 import Background from '../components/Background.astro';
 import Content from '../components/Content.astro';
 
-type Props = MarkdownLayoutProps<{
-	title: string;
-}>;
+type Props = {
+	frontmatter: {
+		title: string;
+	};
+};
 
 const { frontmatter } = Astro.props;
 ---
