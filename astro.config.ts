@@ -8,7 +8,7 @@ import smartypants from 'remark-smartypants';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.xxczaki.com',
-	integrations: [mdx(), sitemap(), robotsTxt()],
+	integrations: [mdx(), sitemap({ filter: (page) => !page.includes('/impressum') }), robotsTxt()],
 	vite: {
 		plugins: [tailwindcss()],
 	},

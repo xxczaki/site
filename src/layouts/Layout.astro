@@ -22,10 +22,12 @@ const { frontmatter } = Astro.props;
 		<title>{frontmatter.title} | Antoni Kępiński</title>
 		<Font cssVariable="--font-whyte" preload />
 		<Font cssVariable="--font-favorit-mono" preload />
-		<meta name="description" content="Personal website of Antoni Kępiński, a software enginner based in Warsaw, Poland." />
+		<meta name="description" content="Personal website of Antoni Kępiński, a software engineer based in Berlin, Germany." />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="canonical" href="https://www.xxczaki.com" />
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
 		<meta property="og:image" content="https://www.xxczaki.com/og.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="600" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@xxczaki" />
 		<meta name="twitter:creator" content="@xxczaki" />
@@ -33,18 +35,27 @@ const { frontmatter } = Astro.props;
 		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#e5e5e5" />
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171717" />
 		<link rel="manifest" href="manifest.json" />
+		{frontmatter.title === 'Impressum' && <meta name="robots" content="noindex, nofollow" />}
 		<script is:inline type="application/ld+json">
 			{
 				"@context": "https://schema.org",
 				"@type": "ProfilePage",
 				"mainEntity": {
 					"@type": "Person",
+					"url": "https://www.xxczaki.com",
 					"image": "https://www.xxczaki.com/me.jpg",
 					"name": "Antoni Kępiński",
 					"alternateName": "xxczaki",
 					"description": "Software Engineer",
+					"jobTitle": "Software Engineer",
+					"worksFor": {
+						"@type": "Organization",
+						"name": "Kombo",
+						"url": "https://kombo.dev"
+					},
 					"sameAs": [
 						"https://x.com/xxczaki",
+						"https://bsky.app/profile/xxczaki.com",
 						"https://github.com/xxczaki",
 						"https://www.linkedin.com/in/xxczaki"
 					]
