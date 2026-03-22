@@ -135,9 +135,8 @@ void main(){
   vRaw=smoothstep(0.18,0.85,vRaw);
   float vignette=mix(0.15,1.0,vRaw);
 
-  // Still fade at the very edge of the screen
-  float border=smoothstep(0.0,0.03,uv.x)*smoothstep(0.0,0.03,1.0-uv.x);
-  border*=smoothstep(0.0,0.03,uv.y)*smoothstep(0.0,0.03,1.0-uv.y);
+  // Still fade at the very top/bottom edge of the screen
+  float border=smoothstep(0.0,0.03,uv.y)*smoothstep(0.0,0.03,1.0-uv.y);
 
   float a=ch*bright*vignette*border*0.38;
   vec3 col=mix(vec3(0.25),vec3(0.65),u_dark);
