@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Whyte';
+  font-weight: 100 1000;
+  font-display: optional;
+  src: url('/fonts/ABCWhyteVariableEdu.woff2') format('woff2-variations');
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Laica';
+  font-weight: 500;
+  font-display: optional;
+  font-style: italic;
+  src: url('/fonts/ABCLaicaAItalicVariableEdu.woff2') format('woff2-variations');
+  unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Favorit Mono';
+  font-weight: 100;
+  font-display: optional;
+  src: url('/fonts/ABCFavoritMonoVariableEdu.woff2') format('woff2-variations');
+  unicode-range: U+000-5FF;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+		@apply font-serif;
+		@apply font-mono;
+  }
+
+	table, th, td {
+		border: 1px solid #999;
+		padding: .5rem;
+		width: fit-content;
+	}
+
+	.footnote-label {
+
+		font-size: 1rem;
+	}
+
+	ol {
+		list-style-type: decimal;
+		padding-left: 1rem;
+		padding-top: 1rem;
+	}
+}
