@@ -12,9 +12,9 @@
     "lint": "biome check --write ./src"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.2",
-    "@astrojs/sitemap": "^3.7.1",
-    "astro": "^6.0.8"
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.1.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
