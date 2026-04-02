@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "sh scripts/decrypt-fonts.sh && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "biome check --write ./src"

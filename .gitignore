@@ -17,8 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
-# licensed fonts
-src/fonts/
+# licensed fonts (encrypted versions are tracked)
+src/fonts/*
+!src/fonts/*.enc
 
 # macOS-specific files
 .DS_Store

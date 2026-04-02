@@ -1,3 +1,0 @@
-user-agent: *
-allow: /
-sitemap: https://www.kepinski.ch/sitemap.xml
