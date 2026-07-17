@@ -25,7 +25,7 @@
     "sharp": "^0.35.3",
     "tailwindcss": "^4.3.2",
     "typescript": "^6.0.3",
-    "wrangler": "^4.110.0"
+    "wrangler": "^4.111.0"
   },
   "packageManager": "pnpm@11.13.0",
   "pnpm": {
