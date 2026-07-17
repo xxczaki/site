@@ -19,11 +19,11 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@biomejs/biome": "2.5.4",
-    "@tailwindcss/vite": "^4.3.2",
+    "@tailwindcss/vite": "^4.3.3",
     "astro-robots-txt": "^1.0.0",
     "remark-smartypants": "^3.0.2",
     "sharp": "^0.35.3",
-    "tailwindcss": "^4.3.2",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "wrangler": "^4.111.0"
   },
