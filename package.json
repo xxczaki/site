@@ -27,7 +27,7 @@
     "typescript": "^6.0.3",
     "wrangler": "^4.129.0"
   },
-  "packageManager": "pnpm@11.25.0",
+  "packageManager": "pnpm@12.3.4",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@biomejs/biome",
