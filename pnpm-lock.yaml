@@ -43,7 +43,7 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       wrangler:
-        specifier: ^4.150.0
+        specifier: ^4.151.0
         version: 4.151.1(@types/node@24.12.0)
 
 packages:
